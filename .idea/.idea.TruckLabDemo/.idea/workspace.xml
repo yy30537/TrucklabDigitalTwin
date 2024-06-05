@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a5c38675-2ef1-4773-9f47-0806db99e780" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Core/Utility/DragVehicle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Core/Virtual Space Components/Vehicle/VehicleAnimation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Core/Virtual Space Components/Vehicle/VehicleKinematics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2aoyq4OLhM1e8Pa6JBC43dN6oVT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "Notification.DisplayName-DoNotAsk-WindowsDefender": "Microsoft Defender configuration",
+    "Notification.DoNotAsk-WindowsDefender": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CodeLensConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\yang3\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\yang3\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\yang3\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.16f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\yang3\Desktop\TruckLabDemo v0.1\TruckLabDemo&quot; -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\yang3\Desktop\TruckLabDemo v0.1\TruckLabDemo" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.16f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\Users\yang3\Desktop\TruckLabDemo v0.1\TruckLabDemo&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\yang3\Desktop\TruckLabDemo v0.1\TruckLabDemo" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5c38675-2ef1-4773-9f47-0806db99e780" name="Changes" comment="" />
+      <created>1704999414981</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704999414981</updated>
+      <workItem from="1704999415721" duration="612000" />
+      <workItem from="1705009526190" duration="6764000" />
+      <workItem from="1705070498845" duration="3303000" />
+      <workItem from="1705076836308" duration="87518000" />
+      <workItem from="1705545168754" duration="53245000" />
+      <workItem from="1705645255602" duration="3844000" />
+      <workItem from="1705773026289" duration="10838000" />
+      <workItem from="1705791234288" duration="54835000" />
+      <workItem from="1705884992505" duration="1200000" />
+      <workItem from="1705921683826" duration="3203000" />
+      <workItem from="1705927608697" duration="966000" />
+      <workItem from="1705929164375" duration="242000" />
+      <workItem from="1705929462507" duration="8427000" />
+      <workItem from="1706006305374" duration="22708000" />
+      <workItem from="1706041267125" duration="48640000" />
+      <workItem from="1706203182044" duration="44000" />
+      <workItem from="1706203405537" duration="28686000" />
+      <workItem from="1706269664509" duration="443000" />
+      <workItem from="1706270173143" duration="15305000" />
+      <workItem from="1706305018501" duration="10037000" />
+      <workItem from="1706315714548" duration="4773000" />
+      <workItem from="1706357535667" duration="1116000" />
+      <workItem from="1706361485171" duration="43832000" />
+      <workItem from="1706497710071" duration="28770000" />
+      <workItem from="1706536025735" duration="25867000" />
+      <workItem from="1706671876954" duration="100000" />
+      <workItem from="1706672021489" duration="419000" />
+      <workItem from="1706725273956" duration="41836000" />
+      <workItem from="1706845742429" duration="13818000" />
+      <workItem from="1706914672383" duration="7747000" />
+      <workItem from="1709627417360" duration="22423000" />
+      <workItem from="1709719093545" duration="13210000" />
+      <workItem from="1709798735793" duration="5708000" />
+      <workItem from="1710336142966" duration="1891000" />
+      <workItem from="1711799042822" duration="429000" />
+      <workItem from="1713702230106" duration="18593000" />
+      <workItem from="1713775961951" duration="310000" />
+      <workItem from="1714098994557" duration="356000" />
+      <workItem from="1714312642327" duration="10173000" />
+      <workItem from="1714899499064" duration="15843000" />
+      <workItem from="1714931559658" duration="4343000" />
+      <workItem from="1714991306547" duration="2598000" />
+      <workItem from="1715018407192" duration="11970000" />
+      <workItem from="1715083194183" duration="13433000" />
+      <workItem from="1715111599759" duration="26684000" />
+      <workItem from="1715257369820" duration="140000" />
+      <workItem from="1715436707741" duration="34126000" />
+      <workItem from="1715590980165" duration="2463000" />
+      <workItem from="1715601123027" duration="14295000" />
+      <workItem from="1715629237400" duration="424000" />
+      <workItem from="1715702452614" duration="3000" />
+      <workItem from="1715702507088" duration="519000" />
+      <workItem from="1715703041177" duration="7958000" />
+      <workItem from="1715773979601" duration="28434000" />
+      <workItem from="1715810744635" duration="10474000" />
+      <workItem from="1715865575205" duration="29518000" />
+      <workItem from="1715985284881" duration="64374000" />
+      <workItem from="1716201240295" duration="7799000" />
+      <workItem from="1716370910884" duration="607000" />
+      <workItem from="1716681699633" duration="21408000" />
+      <workItem from="1716805410109" duration="673000" />
+      <workItem from="1716812982870" duration="3688000" />
+      <workItem from="1716837124393" duration="8282000" />
+      <workItem from="1717241458492" duration="20982000" />
+      <workItem from="1717324419959" duration="17965000" />
+      <workItem from="1717409129256" duration="512000" />
+      <workItem from="1717416009863" duration="167000" />
+      <workItem from="1717416236111" duration="13094000" />
+      <workItem from="1717509714790" duration="2511000" />
+      <workItem from="1717609759829" duration="1870000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
