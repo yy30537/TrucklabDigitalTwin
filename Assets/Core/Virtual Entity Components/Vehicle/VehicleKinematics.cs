@@ -77,12 +77,12 @@ namespace Core
 
         private void MotionCapture()
         {
-            x1 = VehicleProduct.tractorRigidBody.position.z * VehicleData.VehicleConfig.scale;
-            y1 = -VehicleProduct.tractorRigidBody.position.x * VehicleData.VehicleConfig.scale;
-            psi1 = -VehicleProduct.tractorRigidBody.rotation.eulerAngles.y * Mathf.Deg2Rad;
-            x2 = VehicleProduct.trailerRigidBody.position.z * VehicleData.VehicleConfig.scale;
-            y2 = -VehicleProduct.trailerRigidBody.position.x * VehicleData.VehicleConfig.scale;
-            psi2 = -VehicleProduct.trailerRigidBody.rotation.eulerAngles.y * Mathf.Deg2Rad;
+            x1 = vehicleProduct.tractorRigidBody.position.z * VehicleData.VehicleConfig.scale;
+            y1 = -vehicleProduct.tractorRigidBody.position.x * VehicleData.VehicleConfig.scale;
+            psi1 = -vehicleProduct.tractorRigidBody.rotation.eulerAngles.y * Mathf.Deg2Rad;
+            x2 = vehicleProduct.trailerRigidBody.position.z * VehicleData.VehicleConfig.scale;
+            y2 = -vehicleProduct.trailerRigidBody.position.x * VehicleData.VehicleConfig.scale;
+            psi2 = -vehicleProduct.trailerRigidBody.rotation.eulerAngles.y * Mathf.Deg2Rad;
             
             // front axle position
             x0 = x1 + VehicleData.l1 * Mathf.Cos(psi1);
@@ -164,8 +164,8 @@ namespace Core
         }
         private void ManualInput()
         {
-            inputVelocity = VehicleProduct.twistSubscriberManual.linearVelocity.y;
-            inputSteerAngle = VehicleProduct.twistSubscriberManual.angularVelocity.x;
+            inputVelocity = vehicleProduct.twistSubscriberManual.linearVelocity.y;
+            inputSteerAngle = vehicleProduct.twistSubscriberManual.angularVelocity.x;
         }
         
         public void SetVehiclePosition(float x, float y, float psi1Degrees, float psi2Degrees)
@@ -291,9 +291,9 @@ namespace Core
                 inputVelocity = path.velocities[i];
                 inputSteerAngle = path.steeringAngles[i];
         
-                VehicleProduct.twistPublisherManual.velocity = inputVelocity;
-                VehicleProduct.twistPublisherManual.steering = inputSteerAngle;
-                VehicleProduct.twistPublisherManual.time = path.time[i] * 1000;
+                vehicleProduct.twistPublisherManual.velocity = inputVelocity;
+                vehicleProduct.twistPublisherManual.steering = inputSteerAngle;
+                vehicleProduct.twistPublisherManual.time = path.time[i] * 1000;
                 
                 Intermedstates();
                 Actuation();

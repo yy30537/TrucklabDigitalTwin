@@ -6,7 +6,7 @@ namespace Core
     /*
      * create and initialize VehicleProduct instances
      */
-    public class VehicleFactory : BaseFactory<VehicleProduct, VehicleConfig>
+    public class VehicleFactory : Factory<VehicleProduct, VehicleConfig>
     {
         
         protected override GameObject CreateProductInstance(VehicleConfig config)
@@ -32,3 +32,5 @@ namespace Core
         }
     }
 }
+
+

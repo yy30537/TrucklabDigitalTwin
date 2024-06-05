@@ -19,7 +19,7 @@ namespace Core
             if (isActive)
             {
                 float offsetY = 1f; // Adjust this value for the desired lift
-                Vector3 rayOrigin = new Vector3(VehicleProduct.vehicleData.x0, offsetY, VehicleProduct.vehicleData.y0);
+                Vector3 rayOrigin = new Vector3(vehicleProduct.vehicleData.x0, offsetY, vehicleProduct.vehicleData.y0);
 
                 // Clear the previous detection information
                 detectedObstacles.Clear();
@@ -31,7 +31,7 @@ namespace Core
                     Vector3 localDirection = Quaternion.Euler(0, localAngle, 0) * Vector3.forward;
 
                     // Convert local direction to world direction
-                    Vector3 worldDirection = VehicleProduct.vehicleAnimation.tractorTransform.TransformDirection(localDirection);
+                    Vector3 worldDirection = vehicleProduct.vehicleAnimation.tractorTransform.TransformDirection(localDirection);
 
                     Ray ray = new Ray(rayOrigin, worldDirection);
                     Debug.DrawRay(rayOrigin, ray.direction * range, Color.red);
@@ -55,7 +55,7 @@ namespace Core
                 {
                     obstacleName = detectedObject.transform.parent.name + " " + detectedObject.name;
 
-                    if (VehicleProduct.productName == detectedObject.transform.parent.name)
+                    if (vehicleProduct.productName == detectedObject.transform.parent.name)
                     {
                         isPartOfOwnVehicle = true;
                     }

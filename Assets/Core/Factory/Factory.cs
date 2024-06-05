@@ -6,7 +6,7 @@ namespace Core
     /*
      Provides a generic factory pattern for creating and managing products
      */
-    public abstract class BaseFactory<TProduct, TConfig> : MonoBehaviour
+    public abstract class Factory<TProduct, TConfig> : MonoBehaviour
         where TProduct : MonoBehaviour where TConfig : ScriptableObject
     {
         public Dictionary<int, TProduct> productLookupTable = new Dictionary<int, TProduct>();

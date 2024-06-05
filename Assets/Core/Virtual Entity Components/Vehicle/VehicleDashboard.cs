@@ -53,7 +53,7 @@ namespace Core
         {
             getClickedObject = FindObjectOfType<GetClickedObject>();
             
-            dashboardInstance = Instantiate(VehicleProduct.vehicleConfig.vehicleDashboardPrefab, dashboardParent);
+            dashboardInstance = Instantiate(vehicleProduct.vehicleConfig.vehicleDashboardPrefab, dashboardParent);
             
             topbar = dashboardInstance.transform.Find("topbar").gameObject;
             page1 = dashboardInstance.transform.Find("Page 1").gameObject;
@@ -84,24 +84,24 @@ namespace Core
             
             ShowPage1();
             
-            ecToggleActive = VehicleProduct.vehicleConfig.ecToggleDashboard;
+            ecToggleActive = vehicleProduct.vehicleConfig.ecToggleDashboard;
             ecToggleActive.onEventRaised += OnToggleActive;
             isToggleActive = true;
         }
         private void UpdateDashboard()
         {
-            Vector3 screenPos = VehicleProduct.mainCamera.WorldToScreenPoint(VehicleProduct.vehicleAnimation.tractorTransform.position);
+            Vector3 screenPos = vehicleProduct.mainCamera.WorldToScreenPoint(vehicleProduct.vehicleAnimation.tractorTransform.position);
             screenPos.y += offset;
             dashboardInstance.transform.position = screenPos;
             
-            topbarText.text = $"{VehicleProduct.productName} Dashboard\n";
+            topbarText.text = $"{vehicleProduct.productName} Dashboard\n";
 
             page1Content.text = 
-                $"Name: {VehicleProduct.productName} \n" +
-                $"ID:{VehicleProduct.vehicleConfig.vehicleID}\n";
+                $"Name: {vehicleProduct.productName} \n" +
+                $"ID:{vehicleProduct.vehicleConfig.vehicleID}\n";
             
             page2Content.text = 
-                $"Scale: {VehicleProduct.vehicleConfig.scale}\n" +
+                $"Scale: {vehicleProduct.vehicleConfig.scale}\n" +
                 $"l1 = {VehicleData.l1}m\n" +
                 $"l1C = {VehicleData.l1C}m\n" +
                 $"l2 = {VehicleData.l2}m\n" +
@@ -118,7 +118,7 @@ namespace Core
             
             page4Content.text = $"Obstacle(s) Detected: \n";
             
-            foreach (var obstacle in VehicleProduct.collisionController.detectedObstacles)
+            foreach (var obstacle in vehicleProduct.collisionController.detectedObstacles)
             {
                 page4Content.text += $"{obstacle.Name} {obstacle.Distance:F2}m {obstacle.Angle:F2}\u00b0\n";
             }
@@ -134,7 +134,7 @@ namespace Core
                     if (hitObject.CompareTag("Tractor") || hitObject.CompareTag("Trailer"))
                     {
                         VehicleProduct clickedVehicle = hitObject.GetComponentInParent<VehicleProduct>();
-                        if (clickedVehicle.productID == VehicleProduct.productID)
+                        if (clickedVehicle.productID == vehicleProduct.productID)
                         {
                             Debug.Log($"VehicleDashboard: {clickedVehicle.name} clicked");
                             isUpdating = true;

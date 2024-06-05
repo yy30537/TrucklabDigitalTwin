@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Core
 {
-    public class SpaceFactory : BaseFactory<SpaceProduct, SpaceConfig>
+    public class SpaceFactory : Factory<SpaceProduct, SpaceConfig>
     {
         private void Awake()
         {
@@ -41,3 +41,4 @@ namespace Core
         }
     }
 }
+

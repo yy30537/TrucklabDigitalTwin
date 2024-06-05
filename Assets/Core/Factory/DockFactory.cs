@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Core
 {
-    public class DockFactory : BaseFactory<DockProduct, DockConfig>
+    public class DockFactory : Factory<DockProduct, DockConfig>
     {
 
         private void Awake()
@@ -41,3 +41,4 @@ namespace Core
         }
     }
 }
+
