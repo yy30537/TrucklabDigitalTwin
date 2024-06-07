@@ -16,8 +16,8 @@ MonoBehaviour:
   spaceName: Dock 447
   spaceDashboard: {fileID: 4125324875618756786, guid: 530fcee3534e74f4299860614c38cd3d, type: 3}
   spacePoints:
-  - {x: 26.10331, y: 0, z: 10.4}
-  - {x: 21.10331, y: 0, z: 10.4}
+  - {x: 26.10331, y: 0, z: 0}
+  - {x: 21.10331, y: 0, z: 0}
   - {x: 21.10331, y: 0, z: 19.11}
   - {x: 26.10331, y: 0, z: 19.11}
   spaceMaterialActive: {fileID: 2100000, guid: f7f2bafd97e72694ba1b1220fd02e97a, type: 2}

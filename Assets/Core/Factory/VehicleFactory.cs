@@ -1,14 +1,9 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Core
 {
-    /*
-     * create and initialize VehicleProduct instances
-     */
     public class VehicleFactory : Factory<VehicleProduct, VehicleConfig>
     {
-        
         protected override GameObject CreateProductInstance(VehicleConfig config)
         {
             var instance = Instantiate(config.vehiclePrototypePrefab, instanceParent);
@@ -32,5 +27,3 @@ namespace Core
         }
     }
 }
-
-

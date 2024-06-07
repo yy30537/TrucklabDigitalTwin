@@ -2,29 +2,29 @@ using UnityEngine;
 
 namespace Core
 {
-    
     public abstract class Product : MonoBehaviour
     {
         public int productID { get; private set; }
         public string productName { get; private set; }
         public GameObject productInstance { get; private set; }
         public Camera mainCamera { get; private set; }
-        
-        public SystemLog systemLog { get; private set; }
-        public GetClickedObject getClickedObject { get; private set; }
 
-        public virtual void Init(int pid, string pname, GameObject instance, Camera cam)
+        protected SystemLog systemLog;
+        protected GetClickedObject getClickedObject;
+
+        public virtual void Init(int pid, string pname, GameObject instance, Camera cam, GameObject uiObserverParent, Transform dashboardParent)
         {
-            systemLog = FindObjectOfType<SystemLog>();
-            getClickedObject = FindObjectOfType<GetClickedObject>();
-            
             productID = pid;
             productName = pname;
             productInstance = instance;
             mainCamera = cam;
+
+            systemLog = FindObjectOfType<SystemLog>();
+            getClickedObject = FindObjectOfType<GetClickedObject>();
+
+            InitComponents(uiObserverParent, dashboardParent);
         }
 
-        public abstract void InitComponents();
+        protected abstract void InitComponents(GameObject uiObserverParent, Transform dashboardParent);
     }
 }
-

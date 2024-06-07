@@ -6,7 +6,6 @@ namespace Core
 {
     public class ApplicationManager : MonoBehaviour
     {
-        
         public List<VehicleConfig> vehiclesConfig;
         public VehicleFactory vehicleFactory;
         
@@ -16,13 +15,16 @@ namespace Core
         public List<DockConfig> docksConfig;
         public DockFactory dockFactory;
 
-        
         public PathManager pathManager;
         public GameObject mainUICanvas;
 
-
-        
         private void Awake()
+        {
+            InitializeFactories();
+            ActivateMainUI();
+        }
+
+        private void InitializeFactories()
         {
             foreach (var spaceConfig in spacesConfig)
             {
@@ -33,6 +35,15 @@ namespace Core
             {
                 dockFactory.ManufactureProduct(dockConfig);
             }
+
+            foreach (var vehicleConfig in vehiclesConfig)
+            {
+                vehicleFactory.ManufactureProduct(vehicleConfig);
+            }
+        }
+
+        private void ActivateMainUI()
+        {
             mainUICanvas.SetActive(true);
         }
     }

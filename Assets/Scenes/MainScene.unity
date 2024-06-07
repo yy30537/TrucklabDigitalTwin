@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1022,8 +1022,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 801.97, y: -520.37}
-  m_SizeDelta: {x: 316.02, y: 39.258}
+  m_AnchoredPosition: {x: -872.6889, y: -520.37}
+  m_SizeDelta: {x: 174.6222, y: 39.258}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &228400022
 MonoBehaviour:
@@ -1461,7 +1461,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 26.26, y: 0, z: 19.11}
-  - {x: 26.26, y: 0, z: 10.4}
+  - {x: 26.26, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1938,7 +1938,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.18431373, g: 0.20784314, b: 0.25882354, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2215,7 +2215,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 70.98, y: 0, z: 19.11}
-  - {x: 70.98, y: 0, z: 10.4}
+  - {x: 70.98, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -3116,8 +3116,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 801.97, y: 39.27001}
-  m_SizeDelta: {x: 316.02, y: 1001.5}
+  m_AnchoredPosition: {x: 801.97, y: 19.639}
+  m_SizeDelta: {x: 316.02, y: 1040.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &537658747
 MonoBehaviour:
@@ -3631,8 +3631,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0050107, y: 481.29004}
-  m_SizeDelta: {x: 316.03, y: 38.924}
+  m_AnchoredPosition: {x: -0.0050107, y: 504.23}
+  m_SizeDelta: {x: 316.03, y: 32.343}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &634093836
 MonoBehaviour:
@@ -4150,7 +4150,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 48.62, y: 0, z: 19.11}
-  - {x: 48.62, y: 0, z: 10.4}
+  - {x: 48.62, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -5693,8 +5693,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: 481.29}
-  m_SizeDelta: {x: 0, y: -962.57}
+  m_AnchoredPosition: {x: 0.000030517578, y: 504.23203}
+  m_SizeDelta: {x: 0, y: -1008.4541}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &773950333
 MonoBehaviour:
@@ -6019,7 +6019,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 43.03, y: 0, z: 19.11}
-  - {x: 43.03, y: 0, z: 10.4}
+  - {x: 43.03, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -6533,7 +6533,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 54.21, y: 0, z: 19.11}
-  - {x: 54.21, y: 0, z: 10.4}
+  - {x: 54.21, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -6669,7 +6669,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 54.21, y: 0, z: 19.11}
-  - {x: 54.21, y: 0, z: 10.4}
+  - {x: 54.21, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -9774,8 +9774,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 32377067}
   - {fileID: 931234444}
+  - {fileID: 32377067}
   - {fileID: 1116583014}
   - {fileID: 1041708184}
   m_Father: {fileID: 0}
@@ -9856,7 +9856,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 37.44, y: 0, z: 19.11}
-  - {x: 37.44, y: 0, z: 10.4}
+  - {x: 37.44, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -10313,7 +10313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 801.97, y: -481.11}
+  m_AnchoredPosition: {x: 801.97, y: -520.37}
   m_SizeDelta: {x: 316.02, y: 39.256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1413864921
@@ -10561,7 +10561,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 65.39, y: 0, z: 19.11}
-  - {x: 65.39, y: 0, z: 10.4}
+  - {x: 65.39, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -12643,7 +12643,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 59.8, y: 0, z: 19.11}
-  - {x: 59.8, y: 0, z: 10.4}
+  - {x: 59.8, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -13224,8 +13224,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jsonFiles:
-  - {fileID: 4900000, guid: 98270f2fe6e2426448da0fbd233bdda1, type: 3}
   - {fileID: 4900000, guid: 68e979101cd5b3c4d87ce792b41f5b3c, type: 3}
+  - {fileID: 4900000, guid: a14f875699ed9a846b46545934600dfe, type: 3}
+  - {fileID: 4900000, guid: 16e5ee4e3d4ecb94284b5db635e5c12b, type: 3}
+  - {fileID: 4900000, guid: 649335883e10938439d7af00525321d2, type: 3}
+  - {fileID: 4900000, guid: 7e1b06f7185561e4c975d5be0ea13531, type: 3}
+  - {fileID: 4900000, guid: c9535e1bc46779646bf742ecb0efb582, type: 3}
+  - {fileID: 4900000, guid: 81137888bae54044799662c0d0b78a28, type: 3}
+  - {fileID: 4900000, guid: a2eef0ef2be186b4e863bb29537c9df4, type: 3}
+  - {fileID: 4900000, guid: 470297bdd04c27c47af3cb2067d943ca, type: 3}
+  - {fileID: 4900000, guid: 9ab5a97a06618174096950c6bea6f59f, type: 3}
+  - {fileID: 4900000, guid: ac21af95b4b1f12418c3e037ea073ac5, type: 3}
+  - {fileID: 4900000, guid: f5e46f86cbf231448bce390ab301f69d, type: 3}
+  - {fileID: 4900000, guid: bd12ea9d9b1104341b0d8f15ea2bcb38, type: 3}
+  - {fileID: 4900000, guid: 2865d98bee457e747adc5b1cfa0bc20c, type: 3}
+  - {fileID: 4900000, guid: 2958da6b0fb88d04b8794e58e9bf28da, type: 3}
+  - {fileID: 4900000, guid: 98270f2fe6e2426448da0fbd233bdda1, type: 3}
   paths: []
 --- !u!1 &1795418327
 GameObject:
@@ -14244,7 +14258,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 31.85, y: 0, z: 19.11}
-  - {x: 31.85, y: 0, z: 10.4}
+  - {x: 31.85, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -14475,8 +14489,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000024033, y: -19.462}
-  m_SizeDelta: {x: 316.03, y: 962.58}
+  m_AnchoredPosition: {x: 0.000024033, y: -16.171}
+  m_SizeDelta: {x: 316.03, y: 1008.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1958795305
 MonoBehaviour:

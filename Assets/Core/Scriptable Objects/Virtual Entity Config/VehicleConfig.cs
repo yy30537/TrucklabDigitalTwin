@@ -1,19 +1,20 @@
 using UnityEngine;
 using System;
+using UnityEngine.Serialization;
 
 namespace Core
 {
     public enum ActuationInputSource
     {
-        keyboard,
-        manual,
+        thrustmaster,
         controller,
+        keyboard,
     }
     
     public enum KinematicsSource
     {
-        actuation,
-        motioncapture
+        motioncapture,
+        actuation
     }
     
     [CreateAssetMenu(fileName = "VehicleConfig", menuName = "VehicleConfig")]
@@ -44,10 +45,12 @@ namespace Core
         [Header("ROS Configuration")]
         public bool isRosAvaialbe;
         public string rosBridgeServerAddress;
-        public string twistSubscriberTopicManual;
+        
+        public string twistSubscriberTopicThrustmaster;
         public string twistSubscriberTopicController;
         
-        public string twistPublisherTopicManual;
+        public string twistPublisherTopicThrustmaster;
+        public string twistPublisherTopicController;
         
         // TODO: add more fields for ros to pre configure stuff
         

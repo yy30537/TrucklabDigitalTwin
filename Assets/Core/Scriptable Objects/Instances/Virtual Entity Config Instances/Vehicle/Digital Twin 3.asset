@@ -22,17 +22,19 @@ MonoBehaviour:
   l2Scaled: 0.567
   tractorWidthScaled: 0.165
   trailerWidthScaled: 0.169
-  isMocapAvaialbe: 0
+  isMocapAvaialbe: 1
   optitrackServerAddress: 131.155.144.102
   optitrackLocalAddress: 131.155.144.93
-  tractorOptitrackID: 0
-  trailorOptitrackID: 0
+  tractorOptitrackID: 40
+  trailorOptitrackID: 44
   isRosAvaialbe: 1
   rosBridgeServerAddress: ws://131.155.144.97:9090
-  twistSubscriberTopicManual: /tractor3/cmd
-  twistSubscriberTopicController: /tractor3/cmd_tractor3/ve
-  kinematicsSource: 1
-  actuationInputSource: 2
+  twistSubscriberTopicThrustmaster: 
+  twistSubscriberTopicController: /tractor3/...
+  twistPublisherTopicThrustmaster: 
+  twistPublisherTopicController: 
+  kinematicsSource: 0
+  actuationInputSource: 1
   initialTractorPosX: 60
   initialTractorPosY: 100
   initialTractorAngle: -90

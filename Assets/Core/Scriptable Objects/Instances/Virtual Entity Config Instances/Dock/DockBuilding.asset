@@ -15,7 +15,7 @@ MonoBehaviour:
   dockStationID: 0
   dockStationName: TUE TruckLab
   dockBuildingPrefab: {fileID: 1379318108250976701, guid: e0cac78ac9efa434d944ace588b94452, type: 3}
-  dockBuildingPosition: {x: 1, y: 0, z: 4}
+  dockBuildingPosition: {x: 1, y: 0, z: -5}
   dockBuildingRotation: 0
   dockBuildingDashboard: {fileID: 7955526576740311223, guid: d8bc7216e08c83d4ab5ba4b9a819f650, type: 3}
   ecToggleDashboard: {fileID: 11400000, guid: 8a2e090ebd6364c49aa35612693ab376, type: 2}

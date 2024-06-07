@@ -26,6 +26,10 @@ namespace Core
         private Button page2Button;
         private Button page3Button;
         private Button page4Button;
+
+        private TMP_Dropdown kinematicsSourceDropdown;
+        private TMP_Dropdown actuationSourceDropdown;
+        
         
         private Button closeButton;
 
@@ -67,6 +71,11 @@ namespace Core
             page3Content = page3.GetComponent<TextMeshProUGUI>();
             page4Content = page4.GetComponent<TextMeshProUGUI>();
             dashboardInstance.SetActive(false);
+
+            kinematicsSourceDropdown = page1.transform.Find("Kinematics Source Dropdown").gameObject.GetComponent<TMP_Dropdown>();
+            actuationSourceDropdown = page1.transform.Find("Actuation Source Dropdown").gameObject.GetComponent<TMP_Dropdown>();
+            kinematicsSourceDropdown.onValueChanged.AddListener(OnKinematicsSourceChanged);
+            actuationSourceDropdown.onValueChanged.AddListener(OnActuationSourceChanged);
             
             
             // Initialize buttons
@@ -82,6 +91,7 @@ namespace Core
             page4Button.onClick.AddListener(ShowPage4);
             closeButton.onClick.AddListener(CloseDashboard);
             
+            PopulateDropdowns();
             ShowPage1();
             
             ecToggleActive = vehicleProduct.vehicleConfig.ecToggleDashboard;
@@ -177,7 +187,26 @@ namespace Core
             page4.SetActive(true);
         }
         
-        
+        private void PopulateDropdowns()
+        {
+            kinematicsSourceDropdown.ClearOptions();
+            kinematicsSourceDropdown.AddOptions(new List<string> { "Motion Capture", "Actuation" });
+            kinematicsSourceDropdown.value = (int)vehicleProduct.vehicleKinematics.kinematicsSource;
+
+            actuationSourceDropdown.ClearOptions();
+            actuationSourceDropdown.AddOptions(new List<string> { "Thrust Master", "Controller", "Keyboard" });
+            actuationSourceDropdown.value = (int)vehicleProduct.vehicleKinematics.actuationInputSource;
+        }
+
+        private void OnKinematicsSourceChanged(int index)
+        {
+            vehicleProduct.vehicleKinematics.kinematicsSource = (KinematicsSource)index;
+        }
+
+        private void OnActuationSourceChanged(int index)
+        {
+            vehicleProduct.vehicleKinematics.actuationInputSource = (ActuationInputSource)index;
+        }
         private void CloseDashboard()
         {
             isUpdating = false;

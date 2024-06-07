@@ -27,12 +27,14 @@ MonoBehaviour:
   optitrackLocalAddress: 0
   tractorOptitrackID: 0
   trailorOptitrackID: 0
-  isRosAvaialbe: 0
+  isRosAvaialbe: 1
   rosBridgeServerAddress: ws://131.155.144.97:9090
-  twistSubscriberTopicManual: tractor2/virtual
+  twistSubscriberTopicThrustmaster: 
   twistSubscriberTopicController: 
-  kinematicsSource: 0
-  actuationInputSource: 1
+  twistPublisherTopicThrustmaster: 
+  twistPublisherTopicController: 
+  kinematicsSource: 1
+  actuationInputSource: 0
   initialTractorPosX: 80
   initialTractorPosY: 85.46169
   initialTractorAngle: -90

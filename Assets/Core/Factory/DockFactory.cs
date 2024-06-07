@@ -1,12 +1,10 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Core
 {
     public class DockFactory : Factory<DockProduct, DockConfig>
     {
-
-        private void Awake()
+        protected override void InitializeFactory()
         {
             productUIObserverParent = new GameObject("DockUIObservers");
             productUIObserverParent.transform.SetParent(instanceParent);
@@ -22,17 +20,8 @@ namespace Core
         protected override DockProduct InitializeProductComponent(GameObject instance, DockConfig config)
         {
             var product = instance.AddComponent<DockProduct>();
-            product.Init(config, instance, mainCamera);
-            InitializeDockUIObserver(product);
+            product.Init(config, instance, mainCamera, productUIObserverParent, dashboardParentTransform);
             return product;
-        }
-
-        private void InitializeDockUIObserver(DockProduct product)
-        {
-            var uiObserverInstance = new GameObject("DockDashboard");
-            uiObserverInstance.transform.SetParent(uiObserverParent.transform);
-            var uiObserver = uiObserverInstance.AddComponent<DockDashboard>();
-            uiObserver.Initialize(product, dashboardParentTransform);
         }
 
         protected override void RegisterProduct(DockConfig config, DockProduct product)
@@ -41,4 +30,3 @@ namespace Core
         }
     }
 }
-

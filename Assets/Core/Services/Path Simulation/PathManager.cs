@@ -90,7 +90,7 @@ namespace Core
                 recordingPath.time.Add(Time.time - recordStartTime);
                 recordingPath.velocities.Add(vehicleData.v1); // Record the current velocity
                 recordingPath.steeringAngles.Add(vehicleData.delta); // Record the current steering angle
-                Debug.Log($"{(Time.time - recordStartTime) * 1000} ");
+                //Debug.Log($"{(Time.time - recordStartTime) * 1000} ");
             }
         }
     }

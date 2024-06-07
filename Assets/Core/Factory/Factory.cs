@@ -3,9 +3,6 @@ using UnityEngine;
 
 namespace Core
 {
-    /*
-     Provides a generic factory pattern for creating and managing products
-     */
     public abstract class Factory<TProduct, TConfig> : MonoBehaviour
         where TProduct : MonoBehaviour where TConfig : ScriptableObject
     {
@@ -17,19 +14,25 @@ namespace Core
         public Transform dashboardParentTransform;
         public SystemLog systemLog { get; private set; }
 
-        public void Start()
+        private void Awake()
         {
             systemLog = FindObjectOfType<SystemLog>();
+            InitializeFactory();
         }
+
+        protected virtual void InitializeFactory() { }
+
         public virtual void ManufactureProduct(TConfig config)
         {
             var newInstance = CreateProductInstance(config);
             var product = InitializeProductComponent(newInstance, config);
             RegisterProduct(config, product);
         }
+
         protected abstract GameObject CreateProductInstance(TConfig config);
         protected abstract TProduct InitializeProductComponent(GameObject instance, TConfig config);
         protected abstract void RegisterProduct(TConfig config, TProduct product);
+
         public void DeleteProduct(int productID)
         {
             if (productLookupTable.TryGetValue(productID, out var product))
@@ -43,12 +46,11 @@ namespace Core
                 systemLog.LogEvent("Product not found: " + productID);
             }
         }
+
         public TProduct GetProduct(int id)
         {
             productLookupTable.TryGetValue(id, out var product);
             return product;
         }
-        
     }
 }
-

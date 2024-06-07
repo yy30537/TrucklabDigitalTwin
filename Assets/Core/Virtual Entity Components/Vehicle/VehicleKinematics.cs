@@ -17,7 +17,7 @@ namespace Core
         public float inputSteerAngle;
 
         private float keyboardInputVelocity = 2f;
-        private float steerRate = 10f * Mathf.Deg2Rad;
+        private float steerRate = 30f * Mathf.Deg2Rad;
         
         [Header("Variables")]
         public float v1, a, delta, gamma;
@@ -28,23 +28,9 @@ namespace Core
         {
             if (isActive)
             {
-                UpdateVehicleData();
-                Intermedstates();
-                
-                // Get actuation input updates (inputVelocity and inputSteerAngle)
-                if (VehicleData.VehicleConfig.isRosAvaialbe && actuationInputSource == ActuationInputSource.controller)
-                {
-                    ControllerInput();
-                }
-                if (VehicleData.VehicleConfig.isRosAvaialbe && actuationInputSource == ActuationInputSource.manual)
-                {
-                    ManualInput();
-                }
-                else if (actuationInputSource == ActuationInputSource.keyboard)
-                {
-                    KeyboardInput();
-                }
-                
+                // Update actuation input variables
+                UpdateActuationInputs();
+
                 // Update vehicle kinematic variables 
                 if (VehicleData.VehicleConfig.isMocapAvaialbe && kinematicsSource == KinematicsSource.motioncapture)
                 {
@@ -53,6 +39,7 @@ namespace Core
                 else if (kinematicsSource == KinematicsSource.actuation)
                 {
                     Actuation();
+                    Intermedstates();
                 }
 
                 // Update vehicle data
@@ -74,12 +61,30 @@ namespace Core
             kinematicsSource = vehicleProduct.vehicleConfig.kinematicsSource;
             actuationInputSource = vehicleProduct.vehicleConfig.actuationInputSource;
         }
-
+        private void UpdateActuationInputs()
+        {
+            if (VehicleData.VehicleConfig.isRosAvaialbe)
+            {
+                if (actuationInputSource == ActuationInputSource.controller)
+                {
+                    ControllerInput();
+                }
+                else if (actuationInputSource == ActuationInputSource.thrustmaster)
+                {
+                    ThrustmasterInput();
+                }
+            }
+            if (actuationInputSource == ActuationInputSource.keyboard)
+            {
+                KeyboardInput();
+            }
+        }
         private void MotionCapture()
         {
             x1 = vehicleProduct.tractorRigidBody.position.z * VehicleData.VehicleConfig.scale;
             y1 = -vehicleProduct.tractorRigidBody.position.x * VehicleData.VehicleConfig.scale;
             psi1 = -vehicleProduct.tractorRigidBody.rotation.eulerAngles.y * Mathf.Deg2Rad;
+            
             x2 = vehicleProduct.trailerRigidBody.position.z * VehicleData.VehicleConfig.scale;
             y2 = -vehicleProduct.trailerRigidBody.position.x * VehicleData.VehicleConfig.scale;
             psi2 = -vehicleProduct.trailerRigidBody.rotation.eulerAngles.y * Mathf.Deg2Rad;
@@ -112,6 +117,7 @@ namespace Core
             x2 = x1C - VehicleData.l2 * Mathf.Cos(psi2);
             y2 = y1C - VehicleData.l2 * Mathf.Sin(psi2);
         }
+        
         private void Intermedstates()
         {
             x1Prev = x1;
@@ -119,7 +125,7 @@ namespace Core
             psi1Prev = psi1;
             psi2Prev = psi2;
 
-            // Actuation
+            // Update Actuation
             v1 = inputVelocity; // m/s
             delta = inputSteerAngle; // rad
 
@@ -137,35 +143,44 @@ namespace Core
 
             v2 = v1 * Mathf.Cos(gamma) - psi1dot * VehicleData.l1C * Mathf.Sin(gamma);
         }
-
+        
+        private void ControllerInput()
+        {
+            // TODO: change ros topic
+            inputVelocity = vehicleProduct.twistSubscriber.linearVelocity.y;
+            inputSteerAngle = vehicleProduct.twistSubscriber.angularVelocity.x;
+        }
+        private void ThrustmasterInput()
+        {
+            // TODO: change ros topic
+            inputVelocity = vehicleProduct.twistSubscriber.linearVelocity.y;
+            inputSteerAngle = vehicleProduct.twistSubscriber.angularVelocity.x;
+        }
         private void KeyboardInput()
         {
             if (Input.GetKey(KeyCode.W))
             {
                 inputVelocity = keyboardInputVelocity;
-            }
-            if (Input.GetKey(KeyCode.S))
+            } else if (Input.GetKey(KeyCode.S))
             {
                 inputVelocity = keyboardInputVelocity * (-1);
+            }
+            else
+            {
+                inputVelocity = 0;
             }
             if (Input.GetKey(KeyCode.A))
             {
                 inputSteerAngle += steerRate * Time.deltaTime;
-            }
-            if (Input.GetKey(KeyCode.D))
+            } else if (Input.GetKey(KeyCode.D))
             {
                 inputSteerAngle -= steerRate * Time.deltaTime;
             }
-        }
-        private void ControllerInput()
-        {
-            //inputVelocity = VehicleProduct.twistSubscriberController.linearVelocity.y;
-            //inputSteerAngle = VehicleProduct.twistSubscriberController.angularVelocity.x;
-        }
-        private void ManualInput()
-        {
-            inputVelocity = vehicleProduct.twistSubscriberManual.linearVelocity.y;
-            inputSteerAngle = vehicleProduct.twistSubscriberManual.angularVelocity.x;
+            else
+            {
+                inputSteerAngle = 0;
+            }
+            
         }
         
         public void SetVehiclePosition(float x, float y, float psi1Degrees, float psi2Degrees)
@@ -254,8 +269,8 @@ namespace Core
                 Vector2 trailerAxlePosition = path.traileraxle[i];
                 Vector2 orientation = path.psi[i];
                 
-                inputVelocity = path.velocities[i]; 
-                inputSteerAngle = path.steeringAngles[i];
+                //inputVelocity = path.velocities[i]; 
+                //inputSteerAngle = path.steeringAngles[i];
 
                 
                 // front axle position
@@ -275,7 +290,7 @@ namespace Core
                 y2 = trailerAxlePosition.y;
                 psi2 = orientation.y;
                 
-                Intermedstates();
+                //Intermedstates();
                 Actuation();
                 UpdateVehicleData();
 
@@ -291,9 +306,9 @@ namespace Core
                 inputVelocity = path.velocities[i];
                 inputSteerAngle = path.steeringAngles[i];
         
-                vehicleProduct.twistPublisherManual.velocity = inputVelocity;
-                vehicleProduct.twistPublisherManual.steering = inputSteerAngle;
-                vehicleProduct.twistPublisherManual.time = path.time[i] * 1000;
+                //vehicleProduct.twistPublisher.velocity = inputVelocity;
+                //vehicleProduct.twistPublisher.steering = inputSteerAngle;
+                //vehicleProduct.twistPublisher.time = path.time[i] * 1000;
                 
                 Intermedstates();
                 Actuation();
