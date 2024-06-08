@@ -1,7 +1,6 @@
 using UnityEngine;
 using RosSharp.RosBridgeClient;
 using RosSharp.RosBridgeClient.Protocols;
-using UnityEngine.Serialization;
 
 namespace Core
 {
@@ -10,77 +9,83 @@ namespace Core
         [Header("Vehicle Identity")]
         public VehicleData vehicleData;
         public VehicleConfig vehicleConfig;
-
+        
         [Header("Vehicle Components")]
         public VehicleAnimation vehicleAnimation;
         public VehicleKinematics vehicleKinematics;
         public CollisionController collisionController;
         public VehicleDashboard dashboard;
-        public SetSimulationServiceProvider setSimulationServiceProvider;
         
         [Header("Mocap")]
         public OptitrackRigidBody tractorRigidBody;
         public OptitrackRigidBody trailerRigidBody;
         public GameObject tractorOptitrackComponent;
         public GameObject trailerOptitackComponent;
-
+        
         [Header("ROS")]
         public RosConnector rosConnector;
         public GameObject rosComponent;
-        
         public TwistSubscriber twistSubscriber;
         public TwistPublisher twistPublisher;
-
+        
+        // TODO: add more topics or services connection
+        public SetSimulationServiceProvider setSimulationServiceProvider;
+        
         [Header("Dashboard Parent Transform")]
         public Transform vehicleDashboardParent;
 
-        public void Init(VehicleConfig config, GameObject instance, Camera cam, Transform dashboardParent)
+        
+        public void Init(VehicleConfig config, GameObject instance, Camera cam, 
+                         Transform dashboardParent)
         {
-            base.Init(config.vehicleID, config.vehicleName, instance, cam, null, dashboardParent);
+            base.Init(config.vehicleID, config.vehicleName, instance, cam);
             vehicleConfig = config;
             vehicleDashboardParent = dashboardParent;
             setSimulationServiceProvider = FindObjectOfType<SetSimulationServiceProvider>();
+            InitComponents();
         }
-
-        protected override void InitComponents(GameObject uiObserverParent, Transform dashboardParent)
+        public override void InitComponents()
         {
             vehicleData = new VehicleData(vehicleConfig.vehicleID, vehicleConfig.vehicleName, vehicleConfig, productInstance);
-
+            
             vehicleAnimation = productInstance.AddComponent<VehicleAnimation>();
             vehicleAnimation.Initialize(this, vehicleData);
-
+            
             vehicleKinematics = productInstance.AddComponent<VehicleKinematics>();
             vehicleKinematics.Initialize(this, vehicleData);
-
+            
             collisionController = productInstance.AddComponent<CollisionController>();
             collisionController.Initialize(this, vehicleData);
-
+            
             dashboard = productInstance.AddComponent<VehicleDashboard>();
             dashboard.Initialize(this, vehicleData);
-            dashboard.InitVehicleDashboard(dashboardParent);
-
+            dashboard.InitVehicleDashboard(vehicleDashboardParent);
+            
+            
             vehicleAnimation.isActive = true;
             vehicleKinematics.isActive = true;
             collisionController.isActive = true;
+            
             dashboard.isToggleActive = true;
-
+            
             if (vehicleConfig.isMocapAvaialbe)
             {
                 tractorRigidBody = InitOptitrackTractor();
                 trailerRigidBody = InitOptitrackTrailer();
             }
-
+            
             rosConnector = InitRosConnector();
         }
-
-        private OptitrackRigidBody InitOptitrackTractor()
+        public OptitrackRigidBody InitOptitrackTractor()
         {
             tractorOptitrackComponent = new GameObject("TractorMoCap");
             tractorOptitrackComponent.transform.SetParent(vehicleAnimation.vehicleTransform);
 
             tractorRigidBody = tractorOptitrackComponent.AddComponent<OptitrackRigidBody>();
 
-            OptitrackStreamingClient tractorOptitrackStreamingClient = tractorOptitrackComponent.AddComponent<OptitrackStreamingClient>();
+            OptitrackStreamingClient tractorOptitrackStreamingClient =
+                tractorOptitrackComponent.AddComponent<OptitrackStreamingClient>();
+
             tractorRigidBody.StreamingClient = tractorOptitrackStreamingClient;
 
             tractorOptitrackStreamingClient.ServerAddress = vehicleConfig.optitrackServerAddress;
@@ -94,14 +99,14 @@ namespace Core
 
             return tractorRigidBody;
         }
-
-        private OptitrackRigidBody InitOptitrackTrailer()
+        public OptitrackRigidBody InitOptitrackTrailer()
         {
             trailerOptitackComponent = new GameObject("TrailerMoCap");
             trailerOptitackComponent.transform.SetParent(vehicleAnimation.vehicleTransform);
             trailerRigidBody = trailerOptitackComponent.AddComponent<OptitrackRigidBody>();
 
-            OptitrackStreamingClient trailerOptitrackStreamingClient = trailerOptitackComponent.AddComponent<OptitrackStreamingClient>();
+            OptitrackStreamingClient trailerOptitrackStreamingClient =
+                trailerOptitackComponent.AddComponent<OptitrackStreamingClient>();
             trailerRigidBody.StreamingClient = trailerOptitrackStreamingClient;
             trailerRigidBody.StreamingClient = trailerOptitrackStreamingClient;
             trailerRigidBody.RigidBodyId = vehicleConfig.trailorOptitrackID;
@@ -115,8 +120,7 @@ namespace Core
 
             return trailerRigidBody;
         }
-
-        private RosConnector InitRosConnector()
+        public RosConnector InitRosConnector()
         {
             rosComponent = new GameObject("ROSComponent");
             rosComponent.transform.SetParent(vehicleAnimation.vehicleTransform);
@@ -127,23 +131,23 @@ namespace Core
             rosConnector.Serializer = RosSocket.SerializerEnum.Microsoft;
             rosConnector.protocol = Protocol.WebSocketSharp;
 
-
+            
             twistSubscriber = rosComponent.AddComponent<TwistSubscriber>();
-            twistSubscriber.Topic = vehicleConfig.twistSubscriberTopicController;
+            //twistSubscriberController = rosComponent.AddComponent<TwistSubscriber>();
 
+            twistSubscriber.Topic = vehicleConfig.twistSubscriberTopicController;
+            //twistSubscriberController.Topic = vehicleConfig.twistSubscriberTopicController;
+            
             twistPublisher = rosComponent.AddComponent<TwistPublisher>();
             twistPublisher.Topic = vehicleConfig.twistPublisherTopicController;
 
-
             return rosConnector;
         }
-
         public void SetSimulationDetail(int vehicleID, int pathID)
         {
             setSimulationServiceProvider.SetSimulationDetail(vehicleID, pathID);
         }
-
-        private void OnDestroy()
+        void OnDestroy()
         {
             if (vehicleConfig.isMocapAvaialbe)
             {

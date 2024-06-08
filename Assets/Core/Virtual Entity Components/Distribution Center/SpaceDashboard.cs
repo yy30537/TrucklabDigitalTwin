@@ -22,7 +22,7 @@ namespace Core
         public VoidEventChannel ecToggleIsActive;
         
         private Transform mainCanvasParent;
-        private int offset = 100;
+        private int offset = 300;
         
         private Button closeButton;
 
@@ -101,7 +101,7 @@ namespace Core
                     SpaceProduct clickedSpace = hitObject.GetComponent<SpaceProduct>();
                     if (clickedSpace.productID == spaceProduct.productID)
                     {
-                        isUpdating = true;
+                        isUpdating = !isUpdating;
                         dashboardInstance.SetActive(isUpdating);
                     }
                 }

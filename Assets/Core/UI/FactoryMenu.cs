@@ -80,19 +80,39 @@ namespace Core
             vehicleInfoText.text =
                 $"Vehicle Name: {selectedVehicleConfig.vehicleName} \n" +
                 $"Vehicle ID: {selectedVehicleConfig.vehicleID} \n" +
-                $"\n" +
-                $"Vehicle Components:\n" +
-                $"\n" +
-                $"Animation Controller \n" +
-                $"Kinematics Controller \n" +
-                $"Collision Controller \n" +
-                $"\n" +
                 $"Motion Capture: {selectedVehicleConfig.isMocapAvaialbe} \n" +
-                $"ROS Connection: {selectedVehicleConfig.isRosAvaialbe} \n" +
-                $"Kinematic Source: {selectedVehicleConfig.kinematicsSource} \n" +
-                $"Actuation Input Source: {selectedVehicleConfig.actuationInputSource} \n";
-
-
+                $"ROS: {selectedVehicleConfig.isRosAvaialbe} \n";
+            if (selectedVehicleConfig.isMocapAvaialbe)
+            {
+                vehicleInfoText.text +=
+                    $"Tractor Optitrack ID: {selectedVehicleConfig.tractorOptitrackID} \n" +
+                    $"Trailer Optitrack ID: {selectedVehicleConfig.trailorOptitrackID} \n";
+            }
+            
+            // if (selectedVehicleConfig.isRosAvaialbe)
+            // {
+            //     vehicleInfoText.text += $"ROS Topics:\n";
+            //
+            //     if (selectedVehicleConfig.twistSubscriberTopicController != null)
+            //     {
+            //         vehicleInfoText.text += $"Twist Subscriber Controller: {selectedVehicleConfig.twistSubscriberTopicController} \n";
+            //     }
+            //     
+            //     if (selectedVehicleConfig.twistSubscriberTopicThrustmaster != null)
+            //     {
+            //         vehicleInfoText.text += $"Twist Subscriber Controller: {selectedVehicleConfig.twistSubscriberTopicThrustmaster} \n";
+            //     }
+            //     
+            //     if (selectedVehicleConfig.twistPublisherTopicController != null)
+            //     {
+            //         vehicleInfoText.text += $"Twist Subscriber Controller: {selectedVehicleConfig.twistPublisherTopicController} \n";
+            //     }
+            //     
+            //     if (selectedVehicleConfig.twistPublisherTopicThrustmaster != null)
+            //     {
+            //         vehicleInfoText.text += $"Twist Subscriber Controller: {selectedVehicleConfig.twistPublisherTopicThrustmaster} \n";
+            //     }
+            // }
         }
     }
 }

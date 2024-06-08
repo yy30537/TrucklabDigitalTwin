@@ -147,14 +147,14 @@ namespace Core
         private void ControllerInput()
         {
             // TODO: change ros topic
-            inputVelocity = vehicleProduct.twistSubscriber.linearVelocity.y;
-            inputSteerAngle = vehicleProduct.twistSubscriber.angularVelocity.x;
+            //inputVelocity = vehicleProduct.twistSubscriber.linearVelocity.y;
+            //inputSteerAngle = vehicleProduct.twistSubscriber.angularVelocity.x;
         }
         private void ThrustmasterInput()
         {
             // TODO: change ros topic
-            inputVelocity = vehicleProduct.twistSubscriber.linearVelocity.y;
-            inputSteerAngle = vehicleProduct.twistSubscriber.angularVelocity.x;
+            //inputVelocity = vehicleProduct.twistSubscriber.linearVelocity.y;
+            //inputSteerAngle = vehicleProduct.twistSubscriber.angularVelocity.x;
         }
         private void KeyboardInput()
         {
@@ -290,8 +290,8 @@ namespace Core
                 y2 = trailerAxlePosition.y;
                 psi2 = orientation.y;
                 
-                //Intermedstates();
-                Actuation();
+                Intermedstates();
+                //Actuation();
                 UpdateVehicleData();
 
                 // Wait for the next frame

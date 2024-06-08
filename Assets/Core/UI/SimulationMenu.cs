@@ -69,7 +69,6 @@ namespace Core
         public void OnSelectPath()
         {
             pathDrawer.Toggle(true);
-            selectedVehicle.vehicleAnimation.trail.SetActive(false);
             SetSelectedVehicleFromDropdown();
             var selectedPathIndex = pathDropdown.value;
             selectedPath = applicationManager.pathManager.paths[selectedPathIndex];
@@ -92,7 +91,6 @@ namespace Core
 
         public void OnVisualizePath()
         {
-            selectedVehicle.vehicleAnimation.trail.SetActive(true);
             selectedVehicle.vehicleKinematics.VisualizePath(selectedPath);
             // Update UI with simulation status
             StartCoroutine(UpdateSimulationUI());
@@ -100,10 +98,7 @@ namespace Core
 
         public void OnStartPathSimulation()
         {
-            selectedVehicle.vehicleAnimation.trail.SetActive(true);
             selectedVehicle.vehicleKinematics.SimulatePath(selectedPath);
-            
-
             // TODO
 
             // Update UI with simulation status

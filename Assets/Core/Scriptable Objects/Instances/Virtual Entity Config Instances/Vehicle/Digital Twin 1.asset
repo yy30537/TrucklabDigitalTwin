@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Digital Twin 1
   m_EditorClassIdentifier: 
   vehicleID: 1
-  vehicleName: DT1
+  vehicleName: Truck1 Digital Twin
   vehiclePrototypePrefab: {fileID: 5575297634737090259, guid: d6064381c8aa8ac46997a85d357228cb, type: 3}
   vehicleDashboardPrefab: {fileID: 4125324875618756786, guid: 5fa7766b58e84da42961c8df32b92261, type: 3}
   scale: 13.3
@@ -29,10 +29,10 @@ MonoBehaviour:
   trailorOptitrackID: 4
   isRosAvaialbe: 1
   rosBridgeServerAddress: ws://131.155.144.97:9090
-  twistSubscriberTopicThrustmaster: 
-  twistSubscriberTopicController: /tractor1/
-  twistPublisherTopicThrustmaster: 
-  twistPublisherTopicController: 
+  twistSubscriberTopicThrustmaster: /tractor1/tm/UnitySubscribe
+  twistSubscriberTopicController: /tractor1/controller/UnitySubscribe
+  twistPublisherTopicThrustmaster: /tractor1/tm/UnityPublish
+  twistPublisherTopicController: /tractor1/controller/UnityPublish
   kinematicsSource: 0
   actuationInputSource: 1
   initialTractorPosX: 40

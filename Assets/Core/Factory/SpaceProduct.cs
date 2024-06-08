@@ -9,37 +9,36 @@ namespace Core
         public Dictionary<int, VehicleProduct> vehiclesInside;
         public SpaceDashboard dashboard;
         public MeshRenderer meshRenderer;
-        private VehicleFactory vehicleFactory;
-
+        public VehicleFactory vehicleFactory;
+        
         private void Awake()
         {
             vehiclesInside = new Dictionary<int, VehicleProduct>();
         }
-
-        public void Init(SpaceConfig config, GameObject instance, Camera cam, GameObject uiObserverParent, Transform dashboardParent)
+        
+        public void Init(SpaceConfig config, GameObject instance, Camera cam)
         {
-            base.Init(config.spaceID, config.spaceName, instance, cam, uiObserverParent, dashboardParent);
+            base.Init(config.spaceID, config.spaceName, instance, cam);
             spaceConfig = config;
+            InitComponents();
         }
 
-        protected override void InitComponents(GameObject uiObserverParent, Transform dashboardParent)
+        public override void InitComponents()
         {
-            vehicleFactory = FindObjectOfType<VehicleFactory>();
-            ConfigureMeshComponents();
-            InitializeSpaceUIObserver(uiObserverParent, dashboardParent);
-        }
-
-        private void ConfigureMeshComponents()
-        {
+            vehicleFactory = FindObjectsOfType<VehicleFactory>()[0];
+            
+            // Calculate the center point and set the product instance's position
             Vector3 centerPoint = CalculateCenterPoint(spaceConfig.spacePoints);
             productInstance.transform.position = centerPoint;
 
+            // Offset the vertices relative to the center point
             Vector3[] offsetVertices = new Vector3[spaceConfig.spacePoints.Length];
             for (int i = 0; i < spaceConfig.spacePoints.Length; i++)
             {
                 offsetVertices[i] = spaceConfig.spacePoints[i] - centerPoint;
             }
 
+            // Initialize the mesh components
             var meshFilter = productInstance.AddComponent<MeshFilter>();
             meshRenderer = productInstance.AddComponent<MeshRenderer>();
             var meshCollider = productInstance.AddComponent<MeshCollider>();
@@ -50,53 +49,49 @@ namespace Core
             meshFilter.mesh = spaceMesh;
             meshRenderer.material = spaceConfig.spaceMaterial;
             meshCollider.sharedMesh = spaceMesh;
-            meshCollider.convex = false;
-            meshCollider.isTrigger = false;
+            meshCollider.convex = false;  // Set convex to false to create a non-convex collider
+            meshCollider.isTrigger = false;  // Set as trigger collider
 
-            rb.isKinematic = true;
-            rb.useGravity = false;
+            // Configure Rigidbody
+            rb.isKinematic = true;  // Set isKinematic to true so it doesn't interfere with the physics simulation
+            rb.useGravity = false;  // Disable gravity
         }
 
         private void Update()
         {
-            foreach (var vehicle in vehicleFactory.productLookupTable.Values)
+            foreach (var vehicle in vehicleFactory.productLookupTable)
             {
-                Vector3[] tractorBoundingBox = vehicle.vehicleData.GetTractorBoundingBox();
-                Vector3[] trailerBoundingBox = vehicle.vehicleData.GetTrailerBoundingBox();
-
+                Vector3[] tractorBoundingBox = vehicle.Value.vehicleData.GetTractorBoundingBox();
+                Vector3[] trailerBoundingBox = vehicle.Value.vehicleData.GetTrailerBoundingBox();
                 if (IsTruckBoundingBoxInSpace(tractorBoundingBox, trailerBoundingBox, spaceConfig.spacePoints))
                 {
-                    if (!vehiclesInside.ContainsKey(vehicle.productID))
+                    if (!IsVehicleProductInSpace(vehicle.Value.productID))
                     {
-                        vehiclesInside.Add(vehicle.productID, vehicle);
-                        systemLog.LogEvent(productName + ": " + vehicle.productName + " entered.");
+                        vehiclesInside.Add(vehicle.Value.productID, vehicle.Value);
+                        systemLog.LogEvent(productName + ": " + vehicle.Value.productName + " entered.");
                         NotifyUIObservers();
                     }
                 }
                 else
                 {
-                    if (vehiclesInside.ContainsKey(vehicle.productID))
+                    if (IsVehicleProductInSpace(vehicle.Value.productID))
                     {
-                        vehiclesInside.Remove(vehicle.productID);
-                        systemLog.LogEvent(productName + ": " + vehicle.productName + " exited.");
+                        vehiclesInside.Remove(vehicle.Value.productID);
+                        systemLog.LogEvent(productName + ": " + vehicle.Value.productName + " exited.");
                         NotifyUIObservers();
                     }
                 }
             }
         }
 
-        private void InitializeSpaceUIObserver(GameObject uiObserverParent, Transform dashboardParent)
+        public bool IsVehicleProductInSpace(int id)
         {
-            var uiObserverInstance = new GameObject("SpaceDashboard");
-            uiObserverInstance.transform.SetParent(uiObserverParent.transform);
-            var uiObserver = uiObserverInstance.AddComponent<SpaceDashboard>();
-            uiObserver.Initialize(this, dashboardParent);
-            RegisterObserver(uiObserver);
+            return vehiclesInside.ContainsKey(id);
         }
 
         private void NotifyUIObservers()
         {
-            dashboard?.UpdateDashboard();
+            dashboard.UpdateDashboard();
         }
 
         public void RegisterObserver(SpaceDashboard observer)
@@ -111,11 +106,10 @@ namespace Core
 
         private Mesh CreateMesh(Vector3[] vertices)
         {
-            Mesh mesh = new Mesh
-            {
-                vertices = vertices
-            };
+            Mesh mesh = new Mesh();
+            mesh.vertices = vertices;
 
+            // Create two triangles for the quad
             int[] triangles = new int[(vertices.Length - 2) * 3];
             for (int i = 0; i < vertices.Length - 2; i++)
             {
@@ -140,27 +134,6 @@ namespace Core
             }
             center /= vertices.Length;
             return center;
-        }
-
-        private bool IsTruckBoundingBoxInSpace(Vector3[] tractorBoundingBox, Vector3[] trailerBoundingBox, Vector3[] polygon)
-        {
-            foreach (var point in tractorBoundingBox)
-            {
-                if (IsPointInGoalArea(point, polygon))
-                {
-                    return true;
-                }
-            }
-
-            foreach (var point in trailerBoundingBox)
-            {
-                if (IsPointInGoalArea(point, polygon))
-                {
-                    return true;
-                }
-            }
-
-            return false;
         }
 
         public static bool IsPointInGoalArea(Vector3 point, Vector3[] polygon)
@@ -188,6 +161,27 @@ namespace Core
 
             float area = Mathf.Round(A1 + A2 + A3 + A4);
             return area == A;
+        }
+
+        private bool IsTruckBoundingBoxInSpace(Vector3[] tractorBoundingBox, Vector3[] trailerBoundingBox, Vector3[] polygon)
+        {
+            foreach (var point in tractorBoundingBox)
+            {
+                if (IsPointInGoalArea(point, polygon))
+                {
+                    return true;
+                }
+            }
+            
+            foreach (var point in trailerBoundingBox)
+            {
+                if (IsPointInGoalArea(point, polygon))
+                {
+                    return true;
+                }
+            }
+            
+            return false;
         }
     }
 }

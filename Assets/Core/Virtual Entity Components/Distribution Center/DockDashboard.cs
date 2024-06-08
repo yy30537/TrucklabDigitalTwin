@@ -97,7 +97,7 @@ namespace Core
                     DockProduct clickedDock = hitObject.GetComponentInParent<DockProduct>();
                     if (clickedDock.productID == dockProduct.productID)
                     {
-                        isUpdating = true;
+                        isUpdating = !isUpdating;
                         dashboardInstance.SetActive(isUpdating);
                     }
                 }

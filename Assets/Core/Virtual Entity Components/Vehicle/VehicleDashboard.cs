@@ -29,7 +29,7 @@ namespace Core
 
         private TMP_Dropdown kinematicsSourceDropdown;
         private TMP_Dropdown actuationSourceDropdown;
-        
+        private Toggle tractorTrailToggle;
         
         private Button closeButton;
 
@@ -39,7 +39,7 @@ namespace Core
         public bool isUpdating = false;
         
         private VoidEventChannel ecToggleActive;
-        private int offset = 200;
+        private int offset = 300;
         
         
         void Update()
@@ -77,20 +77,20 @@ namespace Core
             kinematicsSourceDropdown.onValueChanged.AddListener(OnKinematicsSourceChanged);
             actuationSourceDropdown.onValueChanged.AddListener(OnActuationSourceChanged);
             
-            
             // Initialize buttons
             page1Button = dashboardInstance.transform.Find("Page 1 Button").GetComponent<Button>();
             page2Button = dashboardInstance.transform.Find("Page 2 Button").GetComponent<Button>();
             page3Button = dashboardInstance.transform.Find("Page 3 Button").GetComponent<Button>();
             page4Button = dashboardInstance.transform.Find("Page 4 Button").GetComponent<Button>();
             closeButton = dashboardInstance.transform.Find("Close Button").GetComponent<Button>();
+            tractorTrailToggle = page1.transform.Find("Tractor Trail Toggle").GetComponent<Toggle>();
             
             page1Button.onClick.AddListener(ShowPage1);
             page2Button.onClick.AddListener(ShowPage2);
             page3Button.onClick.AddListener(ShowPage3);
             page4Button.onClick.AddListener(ShowPage4);
             closeButton.onClick.AddListener(CloseDashboard);
-            
+            tractorTrailToggle.onValueChanged.AddListener(OnToggleTractorTrail);
             PopulateDropdowns();
             ShowPage1();
             
@@ -196,6 +196,13 @@ namespace Core
             actuationSourceDropdown.ClearOptions();
             actuationSourceDropdown.AddOptions(new List<string> { "Thrust Master", "Controller", "Keyboard" });
             actuationSourceDropdown.value = (int)vehicleProduct.vehicleKinematics.actuationInputSource;
+        }
+
+        private void OnToggleTractorTrail(bool status)
+        {
+            TrailRenderer trailRenderer = vehicleProduct.vehicleAnimation.trail.GetComponent<TrailRenderer>();
+            trailRenderer.Clear();
+            vehicleProduct.vehicleAnimation.trail.SetActive(status);
         }
 
         private void OnKinematicsSourceChanged(int index)

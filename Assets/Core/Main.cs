@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -36,10 +35,10 @@ namespace Core
                 dockFactory.ManufactureProduct(dockConfig);
             }
 
-            foreach (var vehicleConfig in vehiclesConfig)
-            {
-                vehicleFactory.ManufactureProduct(vehicleConfig);
-            }
+            // foreach (var vehicleConfig in vehiclesConfig)
+            // {
+            //     vehicleFactory.ManufactureProduct(vehicleConfig);
+            // }
         }
 
         private void ActivateMainUI()
