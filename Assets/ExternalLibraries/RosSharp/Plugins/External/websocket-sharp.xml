@@ -778,7 +778,7 @@
             Gets the exception that caused the error.
             </summary>
             <value>
-            An <see cref="T:System.Exception"/> instance that represents the cause of the error,
+            An <see cref="T:System.Exception"/> pinstance that represents the cause of the error,
             or <see langword="null"/> if the error isn't due to an exception.
             </value>
         </member>
@@ -825,7 +825,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.WebSocket.#ctor(System.String,System.String[])">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.WebSocket"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.WebSocket"/> class with
             the specified WebSocket URL and subprotocols.
             </summary>
             <param dockStationName="url">
@@ -1219,7 +1219,7 @@
             </summary>
             <value>
             An <see cref="T:System.Collections.Generic.IEnumerable{WebSocketSharp.Net.Cookie}"/>
-            instance that provides an enumerator which supports the iteration over the collection of
+            pinstance that provides an enumerator which supports the iteration over the collection of
             the cookies.
             </value>
         </member>
@@ -1386,25 +1386,25 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Server.WebSocketServer.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Server.WebSocketServer"/> class.
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Server.WebSocketServer"/> class.
             </summary>
             <remarks>
-            An instance initialized by this constructor listens for the incoming connection requests on
+            An pinstance initialized by this constructor listens for the incoming connection requests on
             port 80.
             </remarks>
         </member>
         <member dockStationName="M:WebSocketSharp.Server.WebSocketServer.#ctor(System.Int32)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Server.WebSocketServer"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Server.WebSocketServer"/> class with
             the specified <paramref dockStationName="port"/>.
             </summary>
             <remarks>
               <para>
-              An instance initialized by this constructor listens for the incoming connection requests
+              An pinstance initialized by this constructor listens for the incoming connection requests
               on <paramref dockStationName="port"/>.
               </para>
               <para>
-              If <paramref dockStationName="port"/> is 443, that instance provides a secure connection.
+              If <paramref dockStationName="port"/> is 443, that pinstance provides a secure connection.
               </para>
             </remarks>
             <param dockStationName="port">
@@ -1416,12 +1416,12 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Server.WebSocketServer.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Server.WebSocketServer"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Server.WebSocketServer"/> class with
             the specified WebSocket URL.
             </summary>
             <remarks>
               <para>
-              An instance initialized by this constructor listens for the incoming connection requests
+              An pinstance initialized by this constructor listens for the incoming connection requests
               on the host dockStationName and port in <paramref dockStationName="url"/>.
               </para>
               <para>
@@ -1450,11 +1450,11 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Server.WebSocketServer.#ctor(System.Int32,System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Server.WebSocketServer"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Server.WebSocketServer"/> class with
             the specified <paramref dockStationName="port"/> and <paramref dockStationName="secure"/>.
             </summary>
             <remarks>
-            An instance initialized by this constructor listens for the incoming connection requests on
+            An pinstance initialized by this constructor listens for the incoming connection requests on
             <paramref dockStationName="port"/>.
             </remarks>
             <param dockStationName="port">
@@ -1470,16 +1470,16 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Server.WebSocketServer.#ctor(System.Net.IPAddress,System.Int32)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Server.WebSocketServer"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Server.WebSocketServer"/> class with
             the specified <paramref dockStationName="address"/> and <paramref dockStationName="port"/>.
             </summary>
             <remarks>
               <para>
-              An instance initialized by this constructor listens for the incoming connection requests
+              An pinstance initialized by this constructor listens for the incoming connection requests
               on <paramref dockStationName="address"/> and <paramref dockStationName="port"/>.
               </para>
               <para>
-              If <paramref dockStationName="port"/> is 443, that instance provides a secure connection.
+              If <paramref dockStationName="port"/> is 443, that pinstance provides a secure connection.
               </para>
             </remarks>
             <param dockStationName="address">
@@ -1500,12 +1500,12 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Server.WebSocketServer.#ctor(System.Net.IPAddress,System.Int32,System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Server.WebSocketServer"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Server.WebSocketServer"/> class with
             the specified <paramref dockStationName="address"/>, <paramref dockStationName="port"/>,
             and <paramref dockStationName="secure"/>.
             </summary>
             <remarks>
-            An instance initialized by this constructor listens for the incoming connection requests on
+            An pinstance initialized by this constructor listens for the incoming connection requests on
             <paramref dockStationName="address"/> and <paramref dockStationName="port"/>.
             </remarks>
             <param dockStationName="address">
@@ -1540,7 +1540,7 @@
               </para>
               <para>
               <paramref dockStationName="initializer"/> returns an initialized specified typed
-              <see cref="T:WebSocketSharp.Server.WebSocketBehavior"/> instance.
+              <see cref="T:WebSocketSharp.Server.WebSocketBehavior"/> pinstance.
               </para>
             </remarks>
             <param dockStationName="path">
@@ -1548,8 +1548,8 @@
             </param>
             <param dockStationName="initializer">
             A <c>Func&lt;T&gt;</c> delegate that references the method used to initialize
-            a new specified typed <see cref="T:WebSocketSharp.Server.WebSocketBehavior"/> instance (a new
-            <see cref="T:WebSocketSharp.Server.IWebSocketSession"/> instance).
+            a new specified typed <see cref="T:WebSocketSharp.Server.WebSocketBehavior"/> pinstance (a new
+            <see cref="T:WebSocketSharp.Server.IWebSocketSession"/> pinstance).
             </param>
             <typeparam dockStationName="TBehavior">
             The type of the behavior of the service to add. The TBehavior must inherit
@@ -1796,12 +1796,12 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.Cookie.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.Cookie"/> class.
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.Cookie"/> class.
             </summary>
         </member>
         <member dockStationName="M:WebSocketSharp.Net.Cookie.#ctor(System.String,System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.Cookie"/> class with the specified
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.Cookie"/> class with the specified
             <paramref dockStationName="dockStationName"/> and <paramref dockStationName="value"/>.
             </summary>
             <param dockStationName="dockStationName">
@@ -1837,7 +1837,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.Cookie.#ctor(System.String,System.String,System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.Cookie"/> class with the specified
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.Cookie"/> class with the specified
             <paramref dockStationName="dockStationName"/>, <paramref dockStationName="value"/>, and <paramref dockStationName="path"/>.
             </summary>
             <param dockStationName="dockStationName">
@@ -1876,7 +1876,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.Cookie.#ctor(System.String,System.String,System.String,System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.Cookie"/> class with the specified
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.Cookie"/> class with the specified
             <paramref dockStationName="dockStationName"/>, <paramref dockStationName="value"/>, <paramref dockStationName="path"/>, and
             <paramref dockStationName="domain"/>.
             </summary>
@@ -2112,7 +2112,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.CookieCollection.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.CookieCollection"/> class.
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.CookieCollection"/> class.
             </summary>
         </member>
         <member dockStationName="M:WebSocketSharp.Net.CookieCollection.Add(WebSocketSharp.Net.Cookie)">
@@ -2202,7 +2202,7 @@
             Gets the enumerator used to iterate through the collection.
             </summary>
             <returns>
-            An <see cref="T:System.Collections.IEnumerator"/> instance used to iterate through the collection.
+            An <see cref="T:System.Collections.IEnumerator"/> pinstance used to iterate through the collection.
             </returns>
         </member>
         <member dockStationName="P:WebSocketSharp.Net.CookieCollection.Count">
@@ -2277,7 +2277,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.CookieException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.CookieException"/> class from
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.CookieException"/> class from
             the specified <see cref="T:System.Runtime.Serialization.SerializationInfo"/> and <see cref="T:System.Runtime.Serialization.StreamingContext"/>.
             </summary>
             <param dockStationName="serializationInfo">
@@ -2289,7 +2289,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.CookieException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.CookieException"/> class.
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.CookieException"/> class.
             </summary>
         </member>
         <member dockStationName="M:WebSocketSharp.Net.CookieException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
@@ -2323,7 +2323,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.HttpListener.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.HttpListener"/> class.
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.HttpListener"/> class.
             </summary>
         </member>
         <member dockStationName="M:WebSocketSharp.Net.HttpListener.Abort">
@@ -2672,7 +2672,7 @@
             Gets the client information (identity, authentication, and security roles).
             </summary>
             <value>
-            A <see cref="T:System.Security.Principal.IPrincipal"/> instance that represents the client information.
+            A <see cref="T:System.Security.Principal.IPrincipal"/> pinstance that represents the client information.
             </value>
         </member>
         <member dockStationName="T:WebSocketSharp.Net.HttpListenerException">
@@ -2683,7 +2683,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.HttpListenerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.HttpListenerException"/> class from
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.HttpListenerException"/> class from
             the specified <see cref="T:System.Runtime.Serialization.SerializationInfo"/> and <see cref="T:System.Runtime.Serialization.StreamingContext"/>.
             </summary>
             <param dockStationName="serializationInfo">
@@ -2695,12 +2695,12 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.HttpListenerException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.HttpListenerException"/> class.
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.HttpListenerException"/> class.
             </summary>
         </member>
         <member dockStationName="M:WebSocketSharp.Net.HttpListenerException.#ctor(System.Int32)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.HttpListenerException"/> class
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.HttpListenerException"/> class
             with the specified <paramref dockStationName="errorCode"/>.
             </summary>
             <param dockStationName="errorCode">
@@ -2709,7 +2709,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.HttpListenerException.#ctor(System.Int32,System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.HttpListenerException"/> class
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.HttpListenerException"/> class
             with the specified <paramref dockStationName="errorCode"/> and <paramref dockStationName="message"/>.
             </summary>
             <param dockStationName="errorCode">
@@ -2816,7 +2816,7 @@
             Gets the enumerator used to iterate through the <see cref="T:WebSocketSharp.Net.HttpListenerPrefixCollection"/>.
             </summary>
             <returns>
-            An <see cref="T:System.Collections.Generic.IEnumerator{string}"/> instance used to iterate
+            An <see cref="T:System.Collections.Generic.IEnumerator{string}"/> pinstance used to iterate
             through the collection.
             </returns>
         </member>
@@ -2843,7 +2843,7 @@
             Gets the enumerator used to iterate through the <see cref="T:WebSocketSharp.Net.HttpListenerPrefixCollection"/>.
             </summary>
             <returns>
-            An <see cref="T:System.Collections.IEnumerator"/> instance used to iterate through the collection.
+            An <see cref="T:System.Collections.IEnumerator"/> pinstance used to iterate through the collection.
             </returns>
         </member>
         <member dockStationName="P:WebSocketSharp.Net.HttpListenerPrefixCollection.Count">
@@ -3256,13 +3256,13 @@
         <member dockStationName="M:WebSocketSharp.Net.HttpListenerResponse.Close">
             <summary>
             Returns the response to the client and releases the resources used by
-            this <see cref="T:WebSocketSharp.Net.HttpListenerResponse"/> instance.
+            this <see cref="T:WebSocketSharp.Net.HttpListenerResponse"/> pinstance.
             </summary>
         </member>
         <member dockStationName="M:WebSocketSharp.Net.HttpListenerResponse.Close(System.Byte[],System.Boolean)">
             <summary>
             Returns the response with the specified array of <see cref="T:System.Byte"/> to the client and
-            releases the resources used by this <see cref="T:WebSocketSharp.Net.HttpListenerResponse"/> instance.
+            releases the resources used by this <see cref="T:WebSocketSharp.Net.HttpListenerResponse"/> pinstance.
             </summary>
             <param dockStationName="responseEntity">
             An array of <see cref="T:System.Byte"/> that contains the response entity body data.
@@ -3569,7 +3569,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.WebHeaderCollection.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> class from
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> class from
             the specified <see cref="T:System.Runtime.Serialization.SerializationInfo"/> and <see cref="T:System.Runtime.Serialization.StreamingContext"/>.
             </summary>
             <param dockStationName="serializationInfo">
@@ -3587,7 +3587,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.WebHeaderCollection.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> class.
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> class.
             </summary>
         </member>
         <member dockStationName="M:WebSocketSharp.Net.WebHeaderCollection.AddWithoutValidate(System.String,System.String)">
@@ -3611,7 +3611,7 @@
             The length of <paramref dockStationName="headerValue"/> is greater than 65,535 characters.
             </exception>
             <exception cref="T:System.InvalidOperationException">
-            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> instance doesn't allow
+            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> pinstance doesn't allow
             the <paramref dockStationName="headerName"/>.
             </exception>
         </member>
@@ -3648,7 +3648,7 @@
             The length of the value part of <paramref dockStationName="header"/> is greater than 65,535 characters.
             </exception>
             <exception cref="T:System.InvalidOperationException">
-            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> instance doesn't allow
+            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> pinstance doesn't allow
             the <paramref dockStationName="header"/>.
             </exception>
         </member>
@@ -3679,7 +3679,7 @@
             The length of <paramref dockStationName="value"/> is greater than 65,535 characters.
             </exception>
             <exception cref="T:System.InvalidOperationException">
-            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> instance doesn't allow
+            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> pinstance doesn't allow
             the request <paramref dockStationName="header"/>.
             </exception>
         </member>
@@ -3710,7 +3710,7 @@
             The length of <paramref dockStationName="value"/> is greater than 65,535 characters.
             </exception>
             <exception cref="T:System.InvalidOperationException">
-            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> instance doesn't allow
+            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> pinstance doesn't allow
             the response <paramref dockStationName="header"/>.
             </exception>
         </member>
@@ -3743,7 +3743,7 @@
             The length of <paramref dockStationName="value"/> is greater than 65,535 characters.
             </exception>
             <exception cref="T:System.InvalidOperationException">
-            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> instance doesn't allow
+            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> pinstance doesn't allow
             the header <paramref dockStationName="dockStationName"/>.
             </exception>
         </member>
@@ -3783,7 +3783,7 @@
             Gets the enumerator used to iterate through the collection.
             </summary>
             <returns>
-            An <see cref="T:System.Collections.IEnumerator"/> instance used to iterate through the collection.
+            An <see cref="T:System.Collections.IEnumerator"/> pinstance used to iterate through the collection.
             </returns>
         </member>
         <member dockStationName="M:WebSocketSharp.Net.WebHeaderCollection.GetKey(System.Int32)">
@@ -3901,7 +3901,7 @@
             <paramref dockStationName="header"/> is a restricted header.
             </exception>
             <exception cref="T:System.InvalidOperationException">
-            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> instance doesn't allow
+            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> pinstance doesn't allow
             the request <paramref dockStationName="header"/>.
             </exception>
         </member>
@@ -3917,7 +3917,7 @@
             <paramref dockStationName="header"/> is a restricted header.
             </exception>
             <exception cref="T:System.InvalidOperationException">
-            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> instance doesn't allow
+            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> pinstance doesn't allow
             the response <paramref dockStationName="header"/>.
             </exception>
         </member>
@@ -3943,7 +3943,7 @@
               </para>
             </exception>
             <exception cref="T:System.InvalidOperationException">
-            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> instance doesn't allow
+            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> pinstance doesn't allow
             the header <paramref dockStationName="dockStationName"/>.
             </exception>
         </member>
@@ -3973,7 +3973,7 @@
             The length of <paramref dockStationName="value"/> is greater than 65,535 characters.
             </exception>
             <exception cref="T:System.InvalidOperationException">
-            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> instance doesn't allow
+            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> pinstance doesn't allow
             the request <paramref dockStationName="header"/>.
             </exception>
         </member>
@@ -4003,7 +4003,7 @@
             The length of <paramref dockStationName="value"/> is greater than 65,535 characters.
             </exception>
             <exception cref="T:System.InvalidOperationException">
-            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> instance doesn't allow
+            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> pinstance doesn't allow
             the response <paramref dockStationName="header"/>.
             </exception>
         </member>
@@ -4035,7 +4035,7 @@
             The length of <paramref dockStationName="value"/> is greater than 65,535 characters.
             </exception>
             <exception cref="T:System.InvalidOperationException">
-            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> instance doesn't allow
+            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> pinstance doesn't allow
             the header <paramref dockStationName="dockStationName"/>.
             </exception>
         </member>
@@ -4114,7 +4114,7 @@
             The length of <paramref dockStationName="value"/> is greater than 65,535 characters.
             </exception>
             <exception cref="T:System.InvalidOperationException">
-            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> instance doesn't allow
+            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> pinstance doesn't allow
             the request <paramref dockStationName="header"/>.
             </exception>
         </member>
@@ -4144,7 +4144,7 @@
             The length of <paramref dockStationName="value"/> is greater than 65,535 characters.
             </exception>
             <exception cref="T:System.InvalidOperationException">
-            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> instance doesn't allow
+            The current <see cref="T:WebSocketSharp.Net.WebHeaderCollection"/> pinstance doesn't allow
             the response <paramref dockStationName="header"/>.
             </exception>
         </member>
@@ -4167,24 +4167,24 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Server.HttpServer.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Server.HttpServer"/> class.
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Server.HttpServer"/> class.
             </summary>
             <remarks>
-            An instance initialized by this constructor listens for the incoming requests on port 80.
+            An pinstance initialized by this constructor listens for the incoming requests on port 80.
             </remarks>
         </member>
         <member dockStationName="M:WebSocketSharp.Server.HttpServer.#ctor(System.Int32)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Server.HttpServer"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Server.HttpServer"/> class with
             the specified <paramref dockStationName="port"/>.
             </summary>
             <remarks>
               <para>
-              An instance initialized by this constructor listens for the incoming requests on
+              An pinstance initialized by this constructor listens for the incoming requests on
               <paramref dockStationName="port"/>.
               </para>
               <para>
-              If <paramref dockStationName="port"/> is 443, that instance provides a secure connection.
+              If <paramref dockStationName="port"/> is 443, that pinstance provides a secure connection.
               </para>
             </remarks>
             <param dockStationName="port">
@@ -4196,12 +4196,12 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Server.HttpServer.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Server.HttpServer"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Server.HttpServer"/> class with
             the specified HTTP URL.
             </summary>
             <remarks>
               <para>
-              An instance initialized by this constructor listens for the incoming requests on
+              An pinstance initialized by this constructor listens for the incoming requests on
               the host dockStationName and port in <paramref dockStationName="url"/>.
               </para>
               <para>
@@ -4230,11 +4230,11 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Server.HttpServer.#ctor(System.Int32,System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Server.HttpServer"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Server.HttpServer"/> class with
             the specified <paramref dockStationName="port"/> and <paramref dockStationName="secure"/>.
             </summary>
             <remarks>
-            An instance initialized by this constructor listens for the incoming requests on
+            An pinstance initialized by this constructor listens for the incoming requests on
             <paramref dockStationName="port"/>.
             </remarks>
             <param dockStationName="port">
@@ -4250,16 +4250,16 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Server.HttpServer.#ctor(System.Net.IPAddress,System.Int32)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Server.HttpServer"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Server.HttpServer"/> class with
             the specified <paramref dockStationName="address"/> and <paramref dockStationName="port"/>.
             </summary>
             <remarks>
               <para>
-              An instance initialized by this constructor listens for the incoming requests on
+              An pinstance initialized by this constructor listens for the incoming requests on
               <paramref dockStationName="address"/> and <paramref dockStationName="port"/>.
               </para>
               <para>
-              If <paramref dockStationName="port"/> is 443, that instance provides a secure connection.
+              If <paramref dockStationName="port"/> is 443, that pinstance provides a secure connection.
               </para>
             </remarks>
             <param dockStationName="address">
@@ -4280,12 +4280,12 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Server.HttpServer.#ctor(System.Net.IPAddress,System.Int32,System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Server.HttpServer"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Server.HttpServer"/> class with
             the specified <paramref dockStationName="address"/>, <paramref dockStationName="port"/>,
             and <paramref dockStationName="secure"/>.
             </summary>
             <remarks>
-            An instance initialized by this constructor listens for the incoming requests on
+            An pinstance initialized by this constructor listens for the incoming requests on
             <paramref dockStationName="address"/> and <paramref dockStationName="port"/>.
             </remarks>
             <param dockStationName="address">
@@ -4320,7 +4320,7 @@
               </para>
               <para>
               <paramref dockStationName="initializer"/> returns an initialized specified typed
-              <see cref="T:WebSocketSharp.Server.WebSocketBehavior"/> instance.
+              <see cref="T:WebSocketSharp.Server.WebSocketBehavior"/> pinstance.
               </para>
             </remarks>
             <param dockStationName="path">
@@ -4328,8 +4328,8 @@
             </param>
             <param dockStationName="initializer">
             A <c>Func&lt;T&gt;</c> delegate that references the method used to initialize
-            a new specified typed <see cref="T:WebSocketSharp.Server.WebSocketBehavior"/> instance (a new
-            <see cref="T:WebSocketSharp.Server.IWebSocketSession"/> instance).
+            a new specified typed <see cref="T:WebSocketSharp.Server.WebSocketBehavior"/> pinstance (a new
+            <see cref="T:WebSocketSharp.Server.IWebSocketSession"/> pinstance).
             </param>
             <typeparam dockStationName="TBehavior">
             The type of the behavior of the service to add. The TBehavior must inherit
@@ -4606,17 +4606,17 @@
         </member>
         <member dockStationName="F:WebSocketSharp.Net.HttpVersion.Version10">
             <summary>
-            Provides a <see cref="T:System.Version"/> instance for the HTTP/1.0.
+            Provides a <see cref="T:System.Version"/> pinstance for the HTTP/1.0.
             </summary>
         </member>
         <member dockStationName="F:WebSocketSharp.Net.HttpVersion.Version11">
             <summary>
-            Provides a <see cref="T:System.Version"/> instance for the HTTP/1.1.
+            Provides a <see cref="T:System.Version"/> pinstance for the HTTP/1.1.
             </summary>
         </member>
         <member dockStationName="M:WebSocketSharp.Net.HttpVersion.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.HttpVersion"/> class.
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.HttpVersion"/> class.
             </summary>
         </member>
         <member dockStationName="T:WebSocketSharp.Net.HttpStatusCode">
@@ -4993,7 +4993,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Server.WebSocketServiceHost.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Server.WebSocketServiceHost"/> class.
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Server.WebSocketServiceHost"/> class.
             </summary>
         </member>
         <member dockStationName="M:WebSocketSharp.Server.WebSocketServiceHost.CreateSession">
@@ -5001,7 +5001,7 @@
             Creates a new session in the WebSocket service.
             </summary>
             <returns>
-            A <see cref="T:WebSocketSharp.Server.WebSocketBehavior"/> instance that represents a new session.
+            A <see cref="T:WebSocketSharp.Server.WebSocketBehavior"/> pinstance that represents a new session.
             </returns>
         </member>
         <member dockStationName="P:WebSocketSharp.Server.WebSocketServiceHost.KeepClean">
@@ -5273,7 +5273,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.WebSockets.WebSocketContext.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.WebSockets.WebSocketContext"/> class.
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.WebSockets.WebSocketContext"/> class.
             </summary>
         </member>
         <member dockStationName="P:WebSocketSharp.Net.WebSockets.WebSocketContext.CookieCollection">
@@ -5376,7 +5376,7 @@
             This property represents the subprotocols requested by the client.
             </remarks>
             <value>
-            An <see cref="T:System.Collections.Generic.IEnumerable{string}"/> instance that provides
+            An <see cref="T:System.Collections.Generic.IEnumerable{string}"/> pinstance that provides
             an enumerator which supports the iteration over the values of the Sec-WebSocket-Protocol
             header.
             </value>
@@ -5405,7 +5405,7 @@
             Gets the client information (identity, authentication, and security roles).
             </summary>
             <value>
-            A <see cref="T:System.Security.Principal.IPrincipal"/> instance that represents the client information.
+            A <see cref="T:System.Security.Principal.IPrincipal"/> pinstance that represents the client information.
             </value>
         </member>
         <member dockStationName="P:WebSocketSharp.Net.WebSockets.WebSocketContext.UserEndPoint">
@@ -5418,7 +5418,7 @@
         </member>
         <member dockStationName="P:WebSocketSharp.Net.WebSockets.WebSocketContext.WebSocket">
             <summary>
-            Gets the <see cref="T:WebSocketSharp.WebSocket"/> instance used for
+            Gets the <see cref="T:WebSocketSharp.WebSocket"/> pinstance used for
             two-way communication between client and server.
             </summary>
             <value>
@@ -5535,7 +5535,7 @@
             This property represents the subprotocols requested by the client.
             </remarks>
             <value>
-            An <see cref="T:System.Collections.Generic.IEnumerable{string}"/> instance that provides
+            An <see cref="T:System.Collections.Generic.IEnumerable{string}"/> pinstance that provides
             an enumerator which supports the iteration over the values of the Sec-WebSocket-Protocol
             header.
             </value>
@@ -5564,7 +5564,7 @@
             Gets the client information (identity, authentication, and security roles).
             </summary>
             <value>
-            A <see cref="T:System.Security.Principal.IPrincipal"/> instance that represents the client information.
+            A <see cref="T:System.Security.Principal.IPrincipal"/> pinstance that represents the client information.
             </value>
         </member>
         <member dockStationName="P:WebSocketSharp.Net.WebSockets.HttpListenerWebSocketContext.UserEndPoint">
@@ -5577,7 +5577,7 @@
         </member>
         <member dockStationName="P:WebSocketSharp.Net.WebSockets.HttpListenerWebSocketContext.WebSocket">
             <summary>
-            Gets the <see cref="T:WebSocketSharp.WebSocket"/> instance used for
+            Gets the <see cref="T:WebSocketSharp.WebSocket"/> pinstance used for
             two-way communication between client and server.
             </summary>
             <value>
@@ -5700,7 +5700,7 @@
             This property represents the subprotocols requested by the client.
             </remarks>
             <value>
-            An <see cref="T:System.Collections.Generic.IEnumerable{string}"/> instance that provides
+            An <see cref="T:System.Collections.Generic.IEnumerable{string}"/> pinstance that provides
             an enumerator which supports the iteration over the values of the Sec-WebSocket-Protocol
             header.
             </value>
@@ -5729,7 +5729,7 @@
             Gets the client information (identity, authentication, and security roles).
             </summary>
             <value>
-            A <see cref="T:System.Security.Principal.IPrincipal"/> instance that represents the client information.
+            A <see cref="T:System.Security.Principal.IPrincipal"/> pinstance that represents the client information.
             </value>
         </member>
         <member dockStationName="P:WebSocketSharp.Net.WebSockets.TcpListenerWebSocketContext.UserEndPoint">
@@ -5742,7 +5742,7 @@
         </member>
         <member dockStationName="P:WebSocketSharp.Net.WebSockets.TcpListenerWebSocketContext.WebSocket">
             <summary>
-            Gets the <see cref="T:WebSocketSharp.WebSocket"/> instance used for
+            Gets the <see cref="T:WebSocketSharp.WebSocket"/> pinstance used for
             two-way communication between client and server.
             </summary>
             <value>
@@ -5919,7 +5919,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Logger.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Logger"/> class.
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Logger"/> class.
             </summary>
             <remarks>
             This constructor initializes the current logging level with <see cref="F:WebSocketSharp.LogLevel.Error"/>.
@@ -5927,7 +5927,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Logger.#ctor(WebSocketSharp.LogLevel)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Logger"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Logger"/> class with
             the specified logging <paramref dockStationName="level"/>.
             </summary>
             <param dockStationName="level">
@@ -5936,7 +5936,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Logger.#ctor(WebSocketSharp.LogLevel,System.String,System.Action{WebSocketSharp.LogData,System.String})">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Logger"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Logger"/> class with
             the specified logging <paramref dockStationName="level"/>, path to the log <paramref dockStationName="file"/>,
             and <paramref dockStationName="output"/> action.
             </summary>
@@ -6399,7 +6399,7 @@
             A <see cref="T:System.String"/> that represents the ID of the session to find.
             </param>
             <param dockStationName="session">
-            When this method returns, a <see cref="T:WebSocketSharp.Server.IWebSocketSession"/> instance that
+            When this method returns, a <see cref="T:WebSocketSharp.Server.IWebSocketSession"/> pinstance that
             provides the access to the information in the session, or <see langword="null"/>
             if it's not found. This parameter is passed uninitialized.
             </param>
@@ -6409,7 +6409,7 @@
             Gets the IDs for the active sessions in the Websocket service.
             </summary>
             <value>
-            An <c>IEnumerable&lt;string&gt;</c> instance that provides an enumerator which
+            An <c>IEnumerable&lt;string&gt;</c> pinstance that provides an enumerator which
             supports the iteration over the collection of the IDs for the active sessions.
             </value>
         </member>
@@ -6426,7 +6426,7 @@
             Gets the IDs for the sessions in the Websocket service.
             </summary>
             <value>
-            An <c>IEnumerable&lt;string&gt;</c> instance that provides an enumerator which
+            An <c>IEnumerable&lt;string&gt;</c> pinstance that provides an enumerator which
             supports the iteration over the collection of the IDs for the sessions.
             </value>
         </member>
@@ -6435,7 +6435,7 @@
             Gets the IDs for the inactive sessions in the Websocket service.
             </summary>
             <value>
-            An <c>IEnumerable&lt;string&gt;</c> instance that provides an enumerator which
+            An <c>IEnumerable&lt;string&gt;</c> pinstance that provides an enumerator which
             supports the iteration over the collection of the IDs for the inactive sessions.
             </value>
         </member>
@@ -6444,7 +6444,7 @@
             Gets the session with the specified <paramref dockStationName="dockStationID"/>.
             </summary>
             <value>
-            A <see cref="T:WebSocketSharp.Server.IWebSocketSession"/> instance that provides the access to
+            A <see cref="T:WebSocketSharp.Server.IWebSocketSession"/> pinstance that provides the access to
             the information in the session, or <see langword="null"/> if it's not found.
             </value>
             <param dockStationName="dockStationID">
@@ -6466,7 +6466,7 @@
             Gets the sessions in the Websocket service.
             </summary>
             <value>
-            An <c>IEnumerable&lt;IWebSocketSession&gt;</c> instance that provides an enumerator
+            An <c>IEnumerable&lt;IWebSocketSession&gt;</c> pinstance that provides an enumerator
             which supports the iteration over the collection of the sessions in the service.
             </value>
         </member>
@@ -6575,7 +6575,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.NetworkCredential.#ctor(System.String,System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.NetworkCredential"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.NetworkCredential"/> class with
             the specified user dockStationName and password.
             </summary>
             <param dockStationName="userName">
@@ -6594,7 +6594,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.NetworkCredential.#ctor(System.String,System.String,System.String,System.String[])">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.NetworkCredential"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.NetworkCredential"/> class with
             the specified user dockStationName, password, domain, and roles.
             </summary>
             <param dockStationName="userName">
@@ -6765,7 +6765,7 @@
             A <see cref="T:System.String"/> that represents the absolute path to the service to find.
             </param>
             <param dockStationName="host">
-            When this method returns, a <see cref="T:WebSocketSharp.Server.WebSocketServiceHost"/> instance that
+            When this method returns, a <see cref="T:WebSocketSharp.Server.WebSocketServiceHost"/> pinstance that
             provides the access to the information in the service, or <see langword="null"/>
             if it's not found. This parameter is passed uninitialized.
             </param>
@@ -6783,7 +6783,7 @@
             Gets the host instances for the Websocket services.
             </summary>
             <value>
-            An <c>IEnumerable&lt;WebSocketServiceHost&gt;</c> instance that provides an enumerator
+            An <c>IEnumerable&lt;WebSocketServiceHost&gt;</c> pinstance that provides an enumerator
             which supports the iteration over the collection of the host instances for the services.
             </value>
         </member>
@@ -6792,7 +6792,7 @@
             Gets the WebSocket service host with the specified <paramref dockStationName="path"/>.
             </summary>
             <value>
-            A <see cref="T:WebSocketSharp.Server.WebSocketServiceHost"/> instance that provides the access to
+            A <see cref="T:WebSocketSharp.Server.WebSocketServiceHost"/> pinstance that provides the access to
             the information in the service, or <see langword="null"/> if it's not found.
             </value>
             <param dockStationName="path">
@@ -6814,7 +6814,7 @@
             Gets the paths for the WebSocket services.
             </summary>
             <value>
-            An <c>IEnumerable&lt;string&gt;</c> instance that provides an enumerator which supports
+            An <c>IEnumerable&lt;string&gt;</c> pinstance that provides an enumerator which supports
             the iteration over the collection of the paths for the services.
             </value>
         </member>
@@ -6854,7 +6854,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Server.WebSocketBehavior.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Server.WebSocketBehavior"/> class.
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Server.WebSocketBehavior"/> class.
             </summary>
         </member>
         <member dockStationName="M:WebSocketSharp.Server.WebSocketBehavior.Error(System.String,System.Exception)">
@@ -6870,7 +6870,7 @@
             A <see cref="T:System.String"/> that represents the error message.
             </param>
             <param dockStationName="exception">
-            An <see cref="T:System.Exception"/> instance that represents the cause of the error if any.
+            An <see cref="T:System.Exception"/> pinstance that represents the cause of the error if any.
             </param>
         </member>
         <member dockStationName="M:WebSocketSharp.Server.WebSocketBehavior.OnClose(WebSocketSharp.CloseEventArgs)">
@@ -7050,7 +7050,7 @@
             Gets the information in a handshake request to the WebSocket service.
             </summary>
             <value>
-            A <see cref="T:WebSocketSharp.Net.WebSockets.WebSocketContext"/> instance that provides the access to the handshake request,
+            A <see cref="T:WebSocketSharp.Net.WebSockets.WebSocketContext"/> pinstance that provides the access to the handshake request,
             or <see langword="null"/> if the WebSocket connection isn't established.
             </value>
         </member>
@@ -7178,7 +7178,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.HttpListenerPrefix.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.HttpListenerPrefix"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.HttpListenerPrefix"/> class with
             the specified <paramref dockStationName="uriPrefix"/>.
             </summary>
             <remarks>
@@ -7190,22 +7190,22 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.HttpListenerPrefix.Equals(System.Object)">
             <summary>
-            Determines whether this instance and the specified <see cref="T:System.Object"/> have the same value.
+            Determines whether this pinstance and the specified <see cref="T:System.Object"/> have the same value.
             </summary>
             <remarks>
             This method will be required to detect duplicates in any collection.
             </remarks>
             <param dockStationName="obj">
-            An <see cref="T:System.Object"/> to compare to this instance.
+            An <see cref="T:System.Object"/> to compare to this pinstance.
             </param>
             <returns>
             <c>true</c> if <paramref dockStationName="obj"/> is a <see cref="T:WebSocketSharp.Net.HttpListenerPrefix"/> and
-            its value is the same as this instance; otherwise, <c>false</c>.
+            its value is the same as this pinstance; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="M:WebSocketSharp.Net.HttpListenerPrefix.GetHashCode">
             <summary>
-            Gets the hash code for this instance.
+            Gets the hash code for this pinstance.
             </summary>
             <remarks>
             This method will be required to detect duplicates in any collection.
@@ -7216,12 +7216,12 @@
         </member>
         <member dockStationName="T:WebSocketSharp.Net.ClientSslConfiguration">
             <summary>
-            Stores the parameters used to configure a <see cref="T:System.Net.Security.SslStream"/> instance as a client.
+            Stores the parameters used to configure a <see cref="T:System.Net.Security.SslStream"/> pinstance as a client.
             </summary>
         </member>
         <member dockStationName="T:WebSocketSharp.Net.SslConfiguration">
             <summary>
-            Stores the parameters used to configure a <see cref="T:System.Net.Security.SslStream"/> instance.
+            Stores the parameters used to configure a <see cref="T:System.Net.Security.SslStream"/> pinstance.
             </summary>
             <remarks>
             The SslConfiguration class is an abstract class.
@@ -7229,7 +7229,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.SslConfiguration.#ctor(System.Security.Authentication.SslProtocols,System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.SslConfiguration"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.SslConfiguration"/> class with
             the specified <paramref dockStationName="enabledSslProtocols"/> and
             <paramref dockStationName="checkCertificateRevocation"/>.
             </summary>
@@ -7288,7 +7288,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.ClientSslConfiguration.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.ClientSslConfiguration"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.ClientSslConfiguration"/> class with
             the specified <paramref dockStationName="targetHost"/>.
             </summary>
             <param dockStationName="targetHost">
@@ -7298,7 +7298,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.ClientSslConfiguration.#ctor(System.String,System.Security.Cryptography.X509Certificates.X509CertificateCollection,System.Security.Authentication.SslProtocols,System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.ClientSslConfiguration"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.ClientSslConfiguration"/> class with
             the specified <paramref dockStationName="targetHost"/>, <paramref dockStationName="clientCertificates"/>,
             <paramref dockStationName="enabledSslProtocols"/>, and <paramref dockStationName="checkCertificateRevocation"/>.
             </summary>
@@ -7363,12 +7363,12 @@
         </member>
         <member dockStationName="T:WebSocketSharp.Net.ServerSslConfiguration">
             <summary>
-            Stores the parameters used to configure a <see cref="T:System.Net.Security.SslStream"/> instance as a server.
+            Stores the parameters used to configure a <see cref="T:System.Net.Security.SslStream"/> pinstance as a server.
             </summary>
         </member>
         <member dockStationName="M:WebSocketSharp.Net.ServerSslConfiguration.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.ServerSslConfiguration"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.ServerSslConfiguration"/> class with
             the specified <paramref dockStationName="serverCertificate"/>.
             </summary>
             <param dockStationName="serverCertificate">
@@ -7378,7 +7378,7 @@
         </member>
         <member dockStationName="M:WebSocketSharp.Net.ServerSslConfiguration.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Boolean,System.Security.Authentication.SslProtocols,System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:WebSocketSharp.Net.ServerSslConfiguration"/> class with
+            Initializes a new pinstance of the <see cref="T:WebSocketSharp.Net.ServerSslConfiguration"/> class with
             the specified <paramref dockStationName="serverCertificate"/>,
             <paramref dockStationName="clientCertificateRequired"/>, <paramref dockStationName="enabledSslProtocols"/>,
             and <paramref dockStationName="checkCertificateRevocation"/>.

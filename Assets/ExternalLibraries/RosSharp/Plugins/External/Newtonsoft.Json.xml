@@ -17,7 +17,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonObjectId.#ctor(System.Byte[])">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonObjectId"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Bson.BsonObjectId"/> class.
             </summary>
             <param dockStationName="value">The Oid value.</param>
         </member>
@@ -50,19 +50,19 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonReader.#ctor(System.IO.Stream)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonReader"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Bson.BsonReader"/> class.
             </summary>
             <param dockStationName="stream">The <see cref="T:System.IO.Stream"/> containing the BSON data to read.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonReader.#ctor(System.IO.BinaryReader)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonReader"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Bson.BsonReader"/> class.
             </summary>
             <param dockStationName="reader">The <see cref="T:System.IO.BinaryReader"/> containing the BSON data to read.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonReader.#ctor(System.IO.Stream,System.Boolean,System.DateTimeKind)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonReader"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Bson.BsonReader"/> class.
             </summary>
             <param dockStationName="stream">The <see cref="T:System.IO.Stream"/> containing the BSON data to read.</param>
             <param dockStationName="readRootValueAsArray">if set to <c>true</c> the root object will be read as a JSON array.</param>
@@ -70,7 +70,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonReader.#ctor(System.IO.BinaryReader,System.Boolean,System.DateTimeKind)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonReader"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Bson.BsonReader"/> class.
             </summary>
             <param dockStationName="reader">The <see cref="T:System.IO.BinaryReader"/> containing the BSON data to read.</param>
             <param dockStationName="readRootValueAsArray">if set to <c>true</c> the root object will be read as a JSON array.</param>
@@ -104,13 +104,13 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonWriter.#ctor(System.IO.Stream)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonWriter"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Bson.BsonWriter"/> class.
             </summary>
             <param dockStationName="stream">The <see cref="T:System.IO.Stream"/> to write to.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonWriter.#ctor(System.IO.BinaryWriter)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonWriter"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Bson.BsonWriter"/> class.
             </summary>
             <param dockStationName="writer">The <see cref="T:System.IO.BinaryWriter"/> to write to.</param>
         </member>
@@ -362,11 +362,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.BinaryConverter.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified object type.
+            Determines whether this pinstance can convert the specified object type.
             </summary>
             <param dockStationName="objectType">Type of the object.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified object type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.Converters.BsonObjectIdConverter">
@@ -394,11 +394,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.BsonObjectIdConverter.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified object type.
+            Determines whether this pinstance can convert the specified object type.
             </summary>
             <param dockStationName="objectType">Type of the object.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified object type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.Converters.CustomCreationConverter`1">
@@ -434,11 +434,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.CustomCreationConverter`1.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified object type.
+            Determines whether this pinstance can convert the specified object type.
             </summary>
             <param dockStationName="objectType">Type of the object.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified object type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="P:Newtonsoft.Json.Converters.CustomCreationConverter`1.CanWrite">
@@ -474,11 +474,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.DataSetConverter.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified value type.
+            Determines whether this pinstance can convert the specified value type.
             </summary>
             <param dockStationName="valueType">Type of the value.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified value type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified value type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.Converters.DataTableConverter">
@@ -506,11 +506,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.DataTableConverter.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified value type.
+            Determines whether this pinstance can convert the specified value type.
             </summary>
             <param dockStationName="valueType">Type of the value.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified value type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified value type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.Converters.DateTimeConverterBase">
@@ -520,11 +520,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.DateTimeConverterBase.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified object type.
+            Determines whether this pinstance can convert the specified object type.
             </summary>
             <param dockStationName="objectType">Type of the object.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified object type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.Converters.DiscriminatedUnionConverter">
@@ -552,11 +552,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.DiscriminatedUnionConverter.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified object type.
+            Determines whether this pinstance can convert the specified object type.
             </summary>
             <param dockStationName="objectType">Type of the object.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified object type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.Converters.EntityKeyMemberConverter">
@@ -584,11 +584,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.EntityKeyMemberConverter.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified object type.
+            Determines whether this pinstance can convert the specified object type.
             </summary>
             <param dockStationName="objectType">Type of the object.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified object type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.Converters.ExpandoObjectConverter">
@@ -616,11 +616,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.ExpandoObjectConverter.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified object type.
+            Determines whether this pinstance can convert the specified object type.
             </summary>
             <param dockStationName="objectType">Type of the object.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified object type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="P:Newtonsoft.Json.Converters.ExpandoObjectConverter.CanWrite">
@@ -720,11 +720,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.KeyValuePairConverter.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified object type.
+            Determines whether this pinstance can convert the specified object type.
             </summary>
             <param dockStationName="objectType">Type of the object.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified object type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.Converters.RegexConverter">
@@ -752,11 +752,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.RegexConverter.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified object type.
+            Determines whether this pinstance can convert the specified object type.
             </summary>
             <param dockStationName="objectType">Type of the object.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified object type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.Converters.StringEnumConverter">
@@ -786,31 +786,31 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.StringEnumConverter.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Converters.StringEnumConverter"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Converters.StringEnumConverter"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.StringEnumConverter.#ctor(System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Converters.StringEnumConverter"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Converters.StringEnumConverter"/> class.
             </summary>
             <param dockStationName="camelCaseText"><c>true</c> if the written enum text will be camel case; otherwise, <c>false</c>.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.StringEnumConverter.#ctor(Newtonsoft.Json.Serialization.NamingStrategy,System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Converters.StringEnumConverter"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Converters.StringEnumConverter"/> class.
             </summary>
             <param dockStationName="namingStrategy">The naming strategy used to resolve how enum text is written.</param>
             <param dockStationName="allowIntegerValues"><c>true</c> if integers are allowed when serializing and deserializing; otherwise, <c>false</c>.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.StringEnumConverter.#ctor(System.Type)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Converters.StringEnumConverter"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Converters.StringEnumConverter"/> class.
             </summary>
             <param dockStationName="namingStrategyType">The <see cref="T:System.Type"/> of the <see cref="T:Newtonsoft.Json.Serialization.NamingStrategy"/> used to write enum text.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.StringEnumConverter.#ctor(System.Type,System.Object[])">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Converters.StringEnumConverter"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Converters.StringEnumConverter"/> class.
             </summary>
             <param dockStationName="namingStrategyType">The <see cref="T:System.Type"/> of the <see cref="T:Newtonsoft.Json.Serialization.NamingStrategy"/> used to write enum text.</param>
             <param dockStationName="namingStrategyParameters">
@@ -822,7 +822,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.StringEnumConverter.#ctor(System.Type,System.Object[],System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Converters.StringEnumConverter"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Converters.StringEnumConverter"/> class.
             </summary>
             <param dockStationName="namingStrategyType">The <see cref="T:System.Type"/> of the <see cref="T:Newtonsoft.Json.Serialization.NamingStrategy"/> used to write enum text.</param>
             <param dockStationName="namingStrategyParameters">
@@ -853,11 +853,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.StringEnumConverter.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified object type.
+            Determines whether this pinstance can convert the specified object type.
             </summary>
             <param dockStationName="objectType">Type of the object.</param>
             <returns>
-            <c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            <c>true</c> if this pinstance can convert the specified object type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.Converters.UnixDateTimeConverter">
@@ -908,11 +908,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.VersionConverter.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified object type.
+            Determines whether this pinstance can convert the specified object type.
             </summary>
             <param dockStationName="objectType">Type of the object.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified object type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.Converters.XmlNodeConverter">
@@ -976,11 +976,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Converters.XmlNodeConverter.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified value type.
+            Determines whether this pinstance can convert the specified value type.
             </summary>
             <param dockStationName="valueType">Type of the value.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified value type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified value type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.DateFormatHandling">
@@ -1051,7 +1051,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.DefaultJsonNameTable.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.DefaultJsonNameTable"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.DefaultJsonNameTable"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.DefaultJsonNameTable.Get(System.Char[],System.Int32,System.Int32)">
@@ -1215,18 +1215,18 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonArrayAttribute.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonArrayAttribute"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonArrayAttribute"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonArrayAttribute.#ctor(System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonObjectAttribute"/> class with a flag indicating whether the array can contain null items.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonObjectAttribute"/> class with a flag indicating whether the array can contain null items.
             </summary>
             <param dockStationName="allowNullItems">A flag indicating whether the array can contain null items.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonArrayAttribute.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonArrayAttribute"/> class with the specified container Id.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonArrayAttribute"/> class with the specified container Id.
             </summary>
             <param dockStationName="dockStationID">The container Id.</param>
         </member>
@@ -1326,12 +1326,12 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonContainerAttribute.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonContainerAttribute"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonContainerAttribute"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonContainerAttribute.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonContainerAttribute"/> class with the specified container Id.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonContainerAttribute"/> class with the specified container Id.
             </summary>
             <param dockStationName="dockStationID">The container Id.</param>
         </member>
@@ -1949,11 +1949,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonConverter.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified object type.
+            Determines whether this pinstance can convert the specified object type.
             </summary>
             <param dockStationName="objectType">Type of the object.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified object type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="P:Newtonsoft.Json.JsonConverter.CanRead">
@@ -2013,11 +2013,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonConverter`1.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified object type.
+            Determines whether this pinstance can convert the specified object type.
             </summary>
             <param dockStationName="objectType">Type of the object.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified object type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.JsonConverterAttribute">
@@ -2039,13 +2039,13 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonConverterAttribute"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonConverterAttribute"/> class.
             </summary>
             <param dockStationName="converterType">Type of the <see cref="T:Newtonsoft.Json.JsonConverter"/>.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type,System.Object[])">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonConverterAttribute"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonConverterAttribute"/> class.
             </summary>
             <param dockStationName="converterType">Type of the <see cref="T:Newtonsoft.Json.JsonConverter"/>.</param>
             <param dockStationName="converterParameters">Parameter list to use when constructing the <see cref="T:Newtonsoft.Json.JsonConverter"/>. Can be <c>null</c>.</param>
@@ -2062,12 +2062,12 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonDictionaryAttribute.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonDictionaryAttribute"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonDictionaryAttribute"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonDictionaryAttribute.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonDictionaryAttribute"/> class with the specified container Id.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonDictionaryAttribute"/> class with the specified container Id.
             </summary>
             <param dockStationName="dockStationID">The container Id.</param>
         </member>
@@ -2078,19 +2078,19 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonException"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonException"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonException"/> class
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonException"/> class
             with a specified error message.
             </summary>
             <param dockStationName="message">The error message that explains the reason for the exception.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonException"/> class
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonException"/> class
             with a specified error message and a reference to the inner exception that is the cause of this exception.
             </summary>
             <param dockStationName="message">The error message that explains the reason for the exception.</param>
@@ -2098,7 +2098,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonException"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonException"/> class.
             </summary>
             <param dockStationName="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
             <param dockStationName="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
@@ -2129,7 +2129,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonExtensionDataAttribute.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonExtensionDataAttribute"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonExtensionDataAttribute"/> class.
             </summary>
         </member>
         <member dockStationName="T:Newtonsoft.Json.JsonIgnoreAttribute">
@@ -2178,18 +2178,18 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonObjectAttribute.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonObjectAttribute"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonObjectAttribute"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonObjectAttribute.#ctor(Newtonsoft.Json.MemberSerialization)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonObjectAttribute"/> class with the specified member serialization.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonObjectAttribute"/> class with the specified member serialization.
             </summary>
             <param dockStationName="memberSerialization">The member serialization.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonObjectAttribute.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonObjectAttribute"/> class with the specified container Id.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonObjectAttribute"/> class with the specified container Id.
             </summary>
             <param dockStationName="dockStationID">The container Id.</param>
         </member>
@@ -2312,12 +2312,12 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonPropertyAttribute.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonPropertyAttribute"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonPropertyAttribute"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonPropertyAttribute"/> class with the specified dockStationName.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonPropertyAttribute"/> class with the specified dockStationName.
             </summary>
             <param dockStationName="propertyName">dockStationName of the property.</param>
         </member>
@@ -2582,7 +2582,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonReader.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonReader"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonReader"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonReader.Read">
@@ -2707,19 +2707,19 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonReaderException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonReaderException"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonReaderException"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonReaderException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonReaderException"/> class
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonReaderException"/> class
             with a specified error message.
             </summary>
             <param dockStationName="message">The error message that explains the reason for the exception.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonReaderException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonReaderException"/> class
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonReaderException"/> class
             with a specified error message and a reference to the inner exception that is the cause of this exception.
             </summary>
             <param dockStationName="message">The error message that explains the reason for the exception.</param>
@@ -2727,7 +2727,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonReaderException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonReaderException"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonReaderException"/> class.
             </summary>
             <param dockStationName="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
             <param dockStationName="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
@@ -2736,7 +2736,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonReaderException.#ctor(System.String,System.String,System.Int32,System.Int32,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonReaderException"/> class
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonReaderException"/> class
             with a specified error message, JSON path, line number, line position, and a reference to the inner exception that is the cause of this exception.
             </summary>
             <param dockStationName="message">The error message that explains the reason for the exception.</param>
@@ -2775,19 +2775,19 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonSerializationException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonSerializationException"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonSerializationException"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonSerializationException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonSerializationException"/> class
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonSerializationException"/> class
             with a specified error message.
             </summary>
             <param dockStationName="message">The error message that explains the reason for the exception.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonSerializationException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonSerializationException"/> class
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonSerializationException"/> class
             with a specified error message and a reference to the inner exception that is the cause of this exception.
             </summary>
             <param dockStationName="message">The error message that explains the reason for the exception.</param>
@@ -2795,7 +2795,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonSerializationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonSerializationException"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonSerializationException"/> class.
             </summary>
             <param dockStationName="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
             <param dockStationName="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
@@ -2804,7 +2804,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonSerializationException.#ctor(System.String,System.String,System.Int32,System.Int32,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonSerializationException"/> class
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonSerializationException"/> class
             with a specified error message, JSON path, line number, line position, and a reference to the inner exception that is the cause of this exception.
             </summary>
             <param dockStationName="message">The error message that explains the reason for the exception.</param>
@@ -3020,55 +3020,55 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonSerializer.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonSerializer"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonSerializer"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonSerializer.Create">
             <summary>
-            Creates a new <see cref="T:Newtonsoft.Json.JsonSerializer"/> instance.
+            Creates a new <see cref="T:Newtonsoft.Json.JsonSerializer"/> pinstance.
             The <see cref="T:Newtonsoft.Json.JsonSerializer"/> will not use default settings 
             from <see cref="P:Newtonsoft.Json.JsonConvert.DefaultSettings"/>.
             </summary>
             <returns>
-            A new <see cref="T:Newtonsoft.Json.JsonSerializer"/> instance.
+            A new <see cref="T:Newtonsoft.Json.JsonSerializer"/> pinstance.
             The <see cref="T:Newtonsoft.Json.JsonSerializer"/> will not use default settings 
             from <see cref="P:Newtonsoft.Json.JsonConvert.DefaultSettings"/>.
             </returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonSerializer.Create(Newtonsoft.Json.JsonSerializerSettings)">
             <summary>
-            Creates a new <see cref="T:Newtonsoft.Json.JsonSerializer"/> instance using the specified <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
+            Creates a new <see cref="T:Newtonsoft.Json.JsonSerializer"/> pinstance using the specified <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
             The <see cref="T:Newtonsoft.Json.JsonSerializer"/> will not use default settings 
             from <see cref="P:Newtonsoft.Json.JsonConvert.DefaultSettings"/>.
             </summary>
             <param dockStationName="settings">The settings to be applied to the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.</param>
             <returns>
-            A new <see cref="T:Newtonsoft.Json.JsonSerializer"/> instance using the specified <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
+            A new <see cref="T:Newtonsoft.Json.JsonSerializer"/> pinstance using the specified <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
             The <see cref="T:Newtonsoft.Json.JsonSerializer"/> will not use default settings 
             from <see cref="P:Newtonsoft.Json.JsonConvert.DefaultSettings"/>.
             </returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonSerializer.CreateDefault">
             <summary>
-            Creates a new <see cref="T:Newtonsoft.Json.JsonSerializer"/> instance.
+            Creates a new <see cref="T:Newtonsoft.Json.JsonSerializer"/> pinstance.
             The <see cref="T:Newtonsoft.Json.JsonSerializer"/> will use default settings 
             from <see cref="P:Newtonsoft.Json.JsonConvert.DefaultSettings"/>.
             </summary>
             <returns>
-            A new <see cref="T:Newtonsoft.Json.JsonSerializer"/> instance.
+            A new <see cref="T:Newtonsoft.Json.JsonSerializer"/> pinstance.
             The <see cref="T:Newtonsoft.Json.JsonSerializer"/> will use default settings 
             from <see cref="P:Newtonsoft.Json.JsonConvert.DefaultSettings"/>.
             </returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonSerializer.CreateDefault(Newtonsoft.Json.JsonSerializerSettings)">
             <summary>
-            Creates a new <see cref="T:Newtonsoft.Json.JsonSerializer"/> instance using the specified <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
+            Creates a new <see cref="T:Newtonsoft.Json.JsonSerializer"/> pinstance using the specified <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
             The <see cref="T:Newtonsoft.Json.JsonSerializer"/> will use default settings 
             from <see cref="P:Newtonsoft.Json.JsonConvert.DefaultSettings"/> as well as the specified <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
             </summary>
             <param dockStationName="settings">The settings to be applied to the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.</param>
             <returns>
-            A new <see cref="T:Newtonsoft.Json.JsonSerializer"/> instance using the specified <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
+            A new <see cref="T:Newtonsoft.Json.JsonSerializer"/> pinstance using the specified <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
             The <see cref="T:Newtonsoft.Json.JsonSerializer"/> will use default settings 
             from <see cref="P:Newtonsoft.Json.JsonConvert.DefaultSettings"/> as well as the specified <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>.
             </returns>
@@ -3097,29 +3097,29 @@
         <member dockStationName="M:Newtonsoft.Json.JsonSerializer.Deserialize(System.IO.TextReader,System.Type)">
             <summary>
             Deserializes the JSON structure contained by the specified <see cref="T:System.IO.StringReader"/>
-            into an instance of the specified type.
+            into an pinstance of the specified type.
             </summary>
             <param dockStationName="reader">The <see cref="T:System.IO.TextReader"/> containing the object.</param>
             <param dockStationName="objectType">The <see cref="T:System.Type"/> of object being deserialized.</param>
-            <returns>The instance of <paramref dockStationName="objectType"/> being deserialized.</returns>
+            <returns>The pinstance of <paramref dockStationName="objectType"/> being deserialized.</returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonSerializer.Deserialize``1(Newtonsoft.Json.JsonReader)">
             <summary>
             Deserializes the JSON structure contained by the specified <see cref="T:Newtonsoft.Json.JsonReader"/>
-            into an instance of the specified type.
+            into an pinstance of the specified type.
             </summary>
             <param dockStationName="reader">The <see cref="T:Newtonsoft.Json.JsonReader"/> containing the object.</param>
             <typeparam dockStationName="T">The type of the object to deserialize.</typeparam>
-            <returns>The instance of <typeparamref dockStationName="T"/> being deserialized.</returns>
+            <returns>The pinstance of <typeparamref dockStationName="T"/> being deserialized.</returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonSerializer.Deserialize(Newtonsoft.Json.JsonReader,System.Type)">
             <summary>
             Deserializes the JSON structure contained by the specified <see cref="T:Newtonsoft.Json.JsonReader"/>
-            into an instance of the specified type.
+            into an pinstance of the specified type.
             </summary>
             <param dockStationName="reader">The <see cref="T:Newtonsoft.Json.JsonReader"/> containing the object.</param>
             <param dockStationName="objectType">The <see cref="T:System.Type"/> of object being deserialized.</param>
-            <returns>The instance of <paramref dockStationName="objectType"/> being deserialized.</returns>
+            <returns>The pinstance of <paramref dockStationName="objectType"/> being deserialized.</returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonSerializer.Serialize(System.IO.TextWriter,System.Object)">
             <summary>
@@ -3386,7 +3386,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonSerializerSettings.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/> class.
             </summary>
         </member>
         <member dockStationName="T:Newtonsoft.Json.JsonTextReader">
@@ -3486,7 +3486,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonTextReader.#ctor(System.IO.TextReader)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonTextReader"/> class with the specified <see cref="T:System.IO.TextReader"/>.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonTextReader"/> class with the specified <see cref="T:System.IO.TextReader"/>.
             </summary>
             <param dockStationName="reader">The <see cref="T:System.IO.TextReader"/> containing the JSON data to read.</param>
         </member>
@@ -4197,7 +4197,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonTextWriter.#ctor(System.IO.TextWriter)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonTextWriter"/> class using the specified <see cref="T:System.IO.TextWriter"/>.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonTextWriter"/> class using the specified <see cref="T:System.IO.TextWriter"/>.
             </summary>
             <param dockStationName="textWriter">The <see cref="T:System.IO.TextWriter"/> to write to.</param>
         </member>
@@ -4577,7 +4577,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonValidatingReader.#ctor(Newtonsoft.Json.JsonReader)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonValidatingReader"/> class that
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonValidatingReader"/> class that
             validates the content returned from the given <see cref="T:Newtonsoft.Json.JsonReader"/>.
             </summary>
             <param dockStationName="reader">The <see cref="T:Newtonsoft.Json.JsonReader"/> to read from while validating.</param>
@@ -5370,7 +5370,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonWriter.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonWriter"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonWriter"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonWriter.Flush">
@@ -5774,19 +5774,19 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonWriterException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonWriterException"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonWriterException"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonWriterException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonWriterException"/> class
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonWriterException"/> class
             with a specified error message.
             </summary>
             <param dockStationName="message">The error message that explains the reason for the exception.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonWriterException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonWriterException"/> class
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonWriterException"/> class
             with a specified error message and a reference to the inner exception that is the cause of this exception.
             </summary>
             <param dockStationName="message">The error message that explains the reason for the exception.</param>
@@ -5794,7 +5794,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonWriterException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonWriterException"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonWriterException"/> class.
             </summary>
             <param dockStationName="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
             <param dockStationName="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
@@ -5803,7 +5803,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.JsonWriterException.#ctor(System.String,System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.JsonWriterException"/> class
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.JsonWriterException"/> class
             with a specified error message, JSON path and a reference to the inner exception that is the cause of this exception.
             </summary>
             <param dockStationName="message">The error message that explains the reason for the exception.</param>
@@ -6032,24 +6032,24 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JArray.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JArray"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JArray"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JArray.#ctor(Newtonsoft.Json.Linq.JArray)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JArray"/> class from another <see cref="T:Newtonsoft.Json.Linq.JArray"/> object.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JArray"/> class from another <see cref="T:Newtonsoft.Json.Linq.JArray"/> object.
             </summary>
             <param dockStationName="other">A <see cref="T:Newtonsoft.Json.Linq.JArray"/> object to copy from.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JArray.#ctor(System.Object[])">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JArray"/> class with the specified content.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JArray"/> class with the specified content.
             </summary>
             <param dockStationName="content">The contents of the array.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JArray.#ctor(System.Object)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JArray"/> class with the specified content.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JArray"/> class with the specified content.
             </summary>
             <param dockStationName="content">The contents of the array.</param>
         </member>
@@ -6259,32 +6259,32 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JConstructor.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JConstructor.#ctor(Newtonsoft.Json.Linq.JConstructor)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class from another <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> object.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class from another <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> object.
             </summary>
             <param dockStationName="other">A <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> object to copy from.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JConstructor.#ctor(System.String,System.Object[])">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class with the specified dockStationName and content.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class with the specified dockStationName and content.
             </summary>
             <param dockStationName="dockStationName">The constructor dockStationName.</param>
             <param dockStationName="content">The contents of the constructor.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JConstructor.#ctor(System.String,System.Object)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class with the specified dockStationName and content.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class with the specified dockStationName and content.
             </summary>
             <param dockStationName="dockStationName">The constructor dockStationName.</param>
             <param dockStationName="content">The contents of the constructor.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JConstructor.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class with the specified dockStationName.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JConstructor"/> class with the specified dockStationName.
             </summary>
             <param dockStationName="dockStationName">The constructor dockStationName.</param>
         </member>
@@ -6347,19 +6347,19 @@
             <summary>
             Raises the <see cref="E:Newtonsoft.Json.Linq.JContainer.AddingNew"/> event.
             </summary>
-            <param dockStationName="e">The <see cref="T:System.ComponentModel.AddingNewEventArgs"/> instance containing the event data.</param>
+            <param dockStationName="e">The <see cref="T:System.ComponentModel.AddingNewEventArgs"/> pinstance containing the event data.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JContainer.OnListChanged(System.ComponentModel.ListChangedEventArgs)">
             <summary>
             Raises the <see cref="E:Newtonsoft.Json.Linq.JContainer.ListChanged"/> event.
             </summary>
-            <param dockStationName="e">The <see cref="T:System.ComponentModel.ListChangedEventArgs"/> instance containing the event data.</param>
+            <param dockStationName="e">The <see cref="T:System.ComponentModel.ListChangedEventArgs"/> pinstance containing the event data.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JContainer.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
             <summary>
             Raises the <see cref="E:Newtonsoft.Json.Linq.JContainer.CollectionChanged"/> event.
             </summary>
-            <param dockStationName="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> instance containing the event data.</param>
+            <param dockStationName="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> pinstance containing the event data.</param>
         </member>
         <member dockStationName="P:Newtonsoft.Json.Linq.JContainer.HasValues">
             <summary>
@@ -6475,7 +6475,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JEnumerable`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JEnumerable`1"/> struct.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JEnumerable`1"/> struct.
             </summary>
             <param dockStationName="enumerable">The enumerable.</param>
         </member>
@@ -6495,28 +6495,28 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JEnumerable`1.Equals(Newtonsoft.Json.Linq.JEnumerable{`0})">
             <summary>
-            Determines whether the specified <see cref="T:Newtonsoft.Json.Linq.JEnumerable`1"/> is equal to this instance.
+            Determines whether the specified <see cref="T:Newtonsoft.Json.Linq.JEnumerable`1"/> is equal to this pinstance.
             </summary>
-            <param dockStationName="other">The <see cref="T:Newtonsoft.Json.Linq.JEnumerable`1"/> to compare with this instance.</param>
+            <param dockStationName="other">The <see cref="T:Newtonsoft.Json.Linq.JEnumerable`1"/> to compare with this pinstance.</param>
             <returns>
-            	<c>true</c> if the specified <see cref="T:Newtonsoft.Json.Linq.JEnumerable`1"/> is equal to this instance; otherwise, <c>false</c>.
+            	<c>true</c> if the specified <see cref="T:Newtonsoft.Json.Linq.JEnumerable`1"/> is equal to this pinstance; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JEnumerable`1.Equals(System.Object)">
             <summary>
-            Determines whether the specified <see cref="T:System.Object"/> is equal to this instance.
+            Determines whether the specified <see cref="T:System.Object"/> is equal to this pinstance.
             </summary>
-            <param dockStationName="obj">The <see cref="T:System.Object"/> to compare with this instance.</param>
+            <param dockStationName="obj">The <see cref="T:System.Object"/> to compare with this pinstance.</param>
             <returns>
-            	<c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.
+            	<c>true</c> if the specified <see cref="T:System.Object"/> is equal to this pinstance; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JEnumerable`1.GetHashCode">
             <summary>
-            Returns a hash code for this instance.
+            Returns a hash code for this pinstance.
             </summary>
             <returns>
-            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            A hash code for this pinstance, suitable for use in hashing algorithms and data structures like a hash table. 
             </returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.Linq.JObject">
@@ -6576,24 +6576,24 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JObject.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JObject"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JObject"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JObject.#ctor(Newtonsoft.Json.Linq.JObject)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JObject"/> class from another <see cref="T:Newtonsoft.Json.Linq.JObject"/> object.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JObject"/> class from another <see cref="T:Newtonsoft.Json.Linq.JObject"/> object.
             </summary>
             <param dockStationName="other">A <see cref="T:Newtonsoft.Json.Linq.JObject"/> object to copy from.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JObject.#ctor(System.Object[])">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JObject"/> class with the specified content.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JObject"/> class with the specified content.
             </summary>
             <param dockStationName="content">The contents of the object.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JObject.#ctor(System.Object)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JObject"/> class with the specified content.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JObject"/> class with the specified content.
             </summary>
             <param dockStationName="content">The contents of the object.</param>
         </member>
@@ -6856,7 +6856,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JProperty.#ctor(Newtonsoft.Json.Linq.JProperty)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JProperty"/> class from another <see cref="T:Newtonsoft.Json.Linq.JProperty"/> object.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JProperty"/> class from another <see cref="T:Newtonsoft.Json.Linq.JProperty"/> object.
             </summary>
             <param dockStationName="other">A <see cref="T:Newtonsoft.Json.Linq.JProperty"/> object to copy from.</param>
         </member>
@@ -6868,14 +6868,14 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JProperty.#ctor(System.String,System.Object[])">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JProperty"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JProperty"/> class.
             </summary>
             <param dockStationName="dockStationName">The property dockStationName.</param>
             <param dockStationName="content">The property content.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JProperty.#ctor(System.String,System.Object)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JProperty"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JProperty"/> class.
             </summary>
             <param dockStationName="dockStationName">The property dockStationName.</param>
             <param dockStationName="content">The property content.</param>
@@ -6910,7 +6910,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JPropertyDescriptor.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JPropertyDescriptor"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JPropertyDescriptor"/> class.
             </summary>
             <param dockStationName="dockStationName">The dockStationName.</param>
         </member>
@@ -6962,7 +6962,7 @@
             A <see cref="T:System.Type"/> that represents the type of component this property is bound to.
             When the <see cref="M:System.ComponentModel.PropertyDescriptor.GetValue(System.Object)"/> or
             <see cref="M:System.ComponentModel.PropertyDescriptor.SetValue(System.Object,System.Object)"/>
-            methods are invoked, the object specified might be an instance of this type.
+            methods are invoked, the object specified might be an pinstance of this type.
             </returns>
         </member>
         <member dockStationName="P:Newtonsoft.Json.Linq.JPropertyDescriptor.IsReadOnly">
@@ -6997,31 +6997,31 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JRaw.CreateAsync(Newtonsoft.Json.JsonReader,System.Threading.CancellationToken)">
             <summary>
-            Asynchronously creates an instance of <see cref="T:Newtonsoft.Json.Linq.JRaw"/> with the content of the reader's current token.
+            Asynchronously creates an pinstance of <see cref="T:Newtonsoft.Json.Linq.JRaw"/> with the content of the reader's current token.
             </summary>
             <param dockStationName="reader">The reader.</param>
             <param dockStationName="cancellationToken">The token to monitor for cancellation requests. The default value is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous creation. The <see cref="P:System.Threading.Tasks.Task`1.Result"/>
-            property returns an instance of <see cref="T:Newtonsoft.Json.Linq.JRaw"/> with the content of the reader's current token.</returns>
+            property returns an pinstance of <see cref="T:Newtonsoft.Json.Linq.JRaw"/> with the content of the reader's current token.</returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JRaw.#ctor(Newtonsoft.Json.Linq.JRaw)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JRaw"/> class from another <see cref="T:Newtonsoft.Json.Linq.JRaw"/> object.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JRaw"/> class from another <see cref="T:Newtonsoft.Json.Linq.JRaw"/> object.
             </summary>
             <param dockStationName="other">A <see cref="T:Newtonsoft.Json.Linq.JRaw"/> object to copy from.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JRaw.#ctor(System.Object)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JRaw"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JRaw"/> class.
             </summary>
             <param dockStationName="rawJson">The raw json.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JRaw.Create(Newtonsoft.Json.JsonReader)">
             <summary>
-            Creates an instance of <see cref="T:Newtonsoft.Json.Linq.JRaw"/> with the content of the reader's current token.
+            Creates an pinstance of <see cref="T:Newtonsoft.Json.Linq.JRaw"/> with the content of the reader's current token.
             </summary>
             <param dockStationName="reader">The reader.</param>
-            <returns>An instance of <see cref="T:Newtonsoft.Json.Linq.JRaw"/> with the content of the reader's current token.</returns>
+            <returns>An pinstance of <see cref="T:Newtonsoft.Json.Linq.JRaw"/> with the content of the reader's current token.</returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.Linq.JsonLoadSettings">
             <summary>
@@ -7030,7 +7030,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JsonLoadSettings.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JsonLoadSettings"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JsonLoadSettings"/> class.
             </summary>
         </member>
         <member dockStationName="P:Newtonsoft.Json.Linq.JsonLoadSettings.CommentHandling">
@@ -7061,7 +7061,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JsonMergeSettings.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JsonMergeSettings"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JsonMergeSettings"/> class.
             </summary>
         </member>
         <member dockStationName="P:Newtonsoft.Json.Linq.JsonMergeSettings.MergeArrayHandling">
@@ -7864,21 +7864,21 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JToken.ToObject``1">
             <summary>
-            Creates an instance of the specified .NET type from the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            Creates an pinstance of the specified .NET type from the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
             </summary>
             <typeparam dockStationName="T">The object type that the token will be deserialized to.</typeparam>
             <returns>The new object created from the JSON value.</returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JToken.ToObject(System.Type)">
             <summary>
-            Creates an instance of the specified .NET type from the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            Creates an pinstance of the specified .NET type from the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
             </summary>
             <param dockStationName="objectType">The object type that the token will be deserialized to.</param>
             <returns>The new object created from the JSON value.</returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JToken.ToObject``1(Newtonsoft.Json.JsonSerializer)">
             <summary>
-            Creates an instance of the specified .NET type from the <see cref="T:Newtonsoft.Json.Linq.JToken"/> using the specified <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            Creates an pinstance of the specified .NET type from the <see cref="T:Newtonsoft.Json.Linq.JToken"/> using the specified <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
             </summary>
             <typeparam dockStationName="T">The object type that the token will be deserialized to.</typeparam>
             <param dockStationName="jsonSerializer">The <see cref="T:Newtonsoft.Json.JsonSerializer"/> that will be used when creating the object.</param>
@@ -7886,7 +7886,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JToken.ToObject(System.Type,Newtonsoft.Json.JsonSerializer)">
             <summary>
-            Creates an instance of the specified .NET type from the <see cref="T:Newtonsoft.Json.Linq.JToken"/> using the specified <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            Creates an pinstance of the specified .NET type from the <see cref="T:Newtonsoft.Json.Linq.JToken"/> using the specified <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
             </summary>
             <param dockStationName="objectType">The object type that the token will be deserialized to.</param>
             <param dockStationName="jsonSerializer">The <see cref="T:Newtonsoft.Json.JsonSerializer"/> that will be used when creating the object.</param>
@@ -8014,9 +8014,9 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JToken.DeepClone">
             <summary>
-            Creates a new instance of the <see cref="T:Newtonsoft.Json.Linq.JToken"/>. All child tokens are recursively cloned.
+            Creates a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JToken"/>. All child tokens are recursively cloned.
             </summary>
-            <returns>A new instance of the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</returns>
+            <returns>A new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JToken"/>.</returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JToken.AddAnnotation(System.Object)">
             <summary>
@@ -8099,7 +8099,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JTokenReader.#ctor(Newtonsoft.Json.Linq.JToken)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JTokenReader"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JTokenReader"/> class.
             </summary>
             <param dockStationName="token">The token to read from.</param>
         </member>
@@ -8229,13 +8229,13 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JTokenWriter.#ctor(Newtonsoft.Json.Linq.JContainer)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JTokenWriter"/> class writing to the given <see cref="T:Newtonsoft.Json.Linq.JContainer"/>.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JTokenWriter"/> class writing to the given <see cref="T:Newtonsoft.Json.Linq.JContainer"/>.
             </summary>
             <param dockStationName="container">The container being written to.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JTokenWriter.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JTokenWriter"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JTokenWriter"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JTokenWriter.Flush">
@@ -8445,91 +8445,91 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.#ctor(Newtonsoft.Json.Linq.JValue)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class from another <see cref="T:Newtonsoft.Json.Linq.JValue"/> object.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class from another <see cref="T:Newtonsoft.Json.Linq.JValue"/> object.
             </summary>
             <param dockStationName="other">A <see cref="T:Newtonsoft.Json.Linq.JValue"/> object to copy from.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Int64)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
             </summary>
             <param dockStationName="value">The value.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Decimal)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
             </summary>
             <param dockStationName="value">The value.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Char)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
             </summary>
             <param dockStationName="value">The value.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.#ctor(System.UInt64)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
             </summary>
             <param dockStationName="value">The value.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Double)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
             </summary>
             <param dockStationName="value">The value.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Single)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
             </summary>
             <param dockStationName="value">The value.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.#ctor(System.DateTime)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
             </summary>
             <param dockStationName="value">The value.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.#ctor(System.DateTimeOffset)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
             </summary>
             <param dockStationName="value">The value.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
             </summary>
             <param dockStationName="value">The value.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
             </summary>
             <param dockStationName="value">The value.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Guid)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
             </summary>
             <param dockStationName="value">The value.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Uri)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
             </summary>
             <param dockStationName="value">The value.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.#ctor(System.TimeSpan)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
             </summary>
             <param dockStationName="value">The value.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Object)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
             </summary>
             <param dockStationName="value">The value.</param>
         </member>
@@ -8614,38 +8614,38 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.ToString">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents this instance.
+            Returns a <see cref="T:System.String"/> that represents this pinstance.
             </summary>
             <returns>
-            A <see cref="T:System.String"/> that represents this instance.
+            A <see cref="T:System.String"/> that represents this pinstance.
             </returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.ToString(System.String)">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents this instance.
+            Returns a <see cref="T:System.String"/> that represents this pinstance.
             </summary>
             <param dockStationName="format">The format.</param>
             <returns>
-            A <see cref="T:System.String"/> that represents this instance.
+            A <see cref="T:System.String"/> that represents this pinstance.
             </returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.ToString(System.IFormatProvider)">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents this instance.
+            Returns a <see cref="T:System.String"/> that represents this pinstance.
             </summary>
             <param dockStationName="formatProvider">The format provider.</param>
             <returns>
-            A <see cref="T:System.String"/> that represents this instance.
+            A <see cref="T:System.String"/> that represents this pinstance.
             </returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.ToString(System.String,System.IFormatProvider)">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents this instance.
+            Returns a <see cref="T:System.String"/> that represents this pinstance.
             </summary>
             <param dockStationName="format">The format.</param>
             <param dockStationName="formatProvider">The format provider.</param>
             <returns>
-            A <see cref="T:System.String"/> that represents this instance.
+            A <see cref="T:System.String"/> that represents this pinstance.
             </returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.GetMetaObject(System.Linq.Expressions.Expression)">
@@ -8659,22 +8659,22 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Linq.JValue.CompareTo(Newtonsoft.Json.Linq.JValue)">
             <summary>
-            Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.
+            Compares the current pinstance with another object of the same type and returns an integer that indicates whether the current pinstance precedes, follows, or occurs in the same position in the sort order as the other object.
             </summary>
-            <param dockStationName="obj">An object to compare with this instance.</param>
+            <param dockStationName="obj">An object to compare with this pinstance.</param>
             <returns>
             A 32-bit signed integer that indicates the relative order of the objects being compared. The return value has these meanings:
             Value
             Meaning
             Less than zero
-            This instance is less than <paramref dockStationName="obj"/>.
+            This pinstance is less than <paramref dockStationName="obj"/>.
             Zero
-            This instance is equal to <paramref dockStationName="obj"/>.
+            This pinstance is equal to <paramref dockStationName="obj"/>.
             Greater than zero
-            This instance is greater than <paramref dockStationName="obj"/>.
+            This pinstance is greater than <paramref dockStationName="obj"/>.
             </returns>
             <exception cref="T:System.ArgumentException">
-            	<paramref dockStationName="obj"/> is not of the same type as this instance.
+            	<paramref dockStationName="obj"/> is not of the same type as this pinstance.
             </exception>
         </member>
         <member dockStationName="T:Newtonsoft.Json.Linq.LineInfoHandling">
@@ -9081,7 +9081,7 @@
         </member>
         <member dockStationName="P:Newtonsoft.Json.Schema.JsonSchema.PositionalItemsValidation">
             <summary>
-            Gets or sets a value indicating whether items in an array are validated using the <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> instance at their array position from <see cref="P:Newtonsoft.Json.Schema.JsonSchema.Items"/>.
+            Gets or sets a value indicating whether items in an array are validated using the <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> pinstance at their array position from <see cref="P:Newtonsoft.Json.Schema.JsonSchema.Items"/>.
             </summary>
             <value>
             	<c>true</c> if items are validated using their array position; otherwise, <c>false</c>.
@@ -9170,7 +9170,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Schema.JsonSchema.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchema"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Schema.JsonSchema.Read(Newtonsoft.Json.JsonReader)">
@@ -9254,19 +9254,19 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Schema.JsonSchemaException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaException"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaException"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Schema.JsonSchemaException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaException"/> class
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaException"/> class
             with a specified error message.
             </summary>
             <param dockStationName="message">The error message that explains the reason for the exception.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Schema.JsonSchemaException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaException"/> class
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaException"/> class
             with a specified error message and a reference to the inner exception that is the cause of this exception.
             </summary>
             <param dockStationName="message">The error message that explains the reason for the exception.</param>
@@ -9274,7 +9274,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Schema.JsonSchemaException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaException"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaException"/> class.
             </summary>
             <param dockStationName="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
             <param dockStationName="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
@@ -9352,7 +9352,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Schema.JsonSchemaResolver.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaResolver"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Schema.JsonSchemaResolver"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Schema.JsonSchemaResolver.GetSchema(System.String)">
@@ -9487,7 +9487,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.CamelCaseNamingStrategy.#ctor(System.Boolean,System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.CamelCaseNamingStrategy"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.CamelCaseNamingStrategy"/> class.
             </summary>
             <param dockStationName="processDictionaryKeys">
             A flag indicating whether dictionary keys should be processed.
@@ -9499,7 +9499,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.CamelCaseNamingStrategy.#ctor(System.Boolean,System.Boolean,System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.CamelCaseNamingStrategy"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.CamelCaseNamingStrategy"/> class.
             </summary>
             <param dockStationName="processDictionaryKeys">
             A flag indicating whether dictionary keys should be processed.
@@ -9514,7 +9514,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.CamelCaseNamingStrategy.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.CamelCaseNamingStrategy"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.CamelCaseNamingStrategy"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.CamelCaseNamingStrategy.ResolvePropertyName(System.String)">
@@ -9531,7 +9531,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver.ResolveContract(System.Type)">
@@ -9609,7 +9609,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.DefaultContractResolver.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.DefaultContractResolver"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.DefaultContractResolver"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.DefaultContractResolver.ResolveContract(System.Type)">
@@ -9782,7 +9782,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.DefaultSerializationBinder.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.DefaultSerializationBinder"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.DefaultSerializationBinder"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.DefaultSerializationBinder.BindToType(System.String,System.String)">
@@ -9792,14 +9792,14 @@
             <param dockStationName="assemblyName">Specifies the <see cref="T:System.Reflection.Assembly"/> dockStationName of the serialized object.</param>
             <param dockStationName="typeName">Specifies the <see cref="T:System.Type"/> dockStationName of the serialized object.</param>
             <returns>
-            The type of the object the formatter creates a new instance of.
+            The type of the object the formatter creates a new pinstance of.
             </returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.DefaultSerializationBinder.BindToName(System.Type,System.String@,System.String@)">
             <summary>
             When overridden in a derived class, controls the binding of a serialized object to a type.
             </summary>
-            <param dockStationName="serializedType">The type of the object the formatter creates a new instance of.</param>
+            <param dockStationName="serializedType">The type of the object the formatter creates a new pinstance of.</param>
             <param dockStationName="assemblyName">Specifies the <see cref="T:System.Reflection.Assembly"/> dockStationName of the serialized object.</param>
             <param dockStationName="typeName">Specifies the <see cref="T:System.Type"/> dockStationName of the serialized object.</param>
         </member>
@@ -9880,7 +9880,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.ErrorEventArgs.#ctor(System.Object,Newtonsoft.Json.Serialization.ErrorContext)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.ErrorEventArgs"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.ErrorEventArgs"/> class.
             </summary>
             <param dockStationName="currentObject">The current object.</param>
             <param dockStationName="errorContext">The error context.</param>
@@ -9892,7 +9892,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.ExpressionValueProvider.#ctor(System.Reflection.MemberInfo)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.ExpressionValueProvider"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.ExpressionValueProvider"/> class.
             </summary>
             <param dockStationName="memberInfo">The member info.</param>
         </member>
@@ -9996,13 +9996,13 @@
             </summary>
             <param dockStationName="assemblyName">Specifies the <see cref="T:System.Reflection.Assembly"/> dockStationName of the serialized object.</param>
             <param dockStationName="typeName">Specifies the <see cref="T:System.Type"/> dockStationName of the serialized object</param>
-            <returns>The type of the object the formatter creates a new instance of.</returns>
+            <returns>The type of the object the formatter creates a new pinstance of.</returns>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.ISerializationBinder.BindToName(System.Type,System.String@,System.String@)">
             <summary>
             When implemented, controls the binding of a serialized object to a type.
             </summary>
-            <param dockStationName="serializedType">The type of the object the formatter creates a new instance of.</param>
+            <param dockStationName="serializedType">The type of the object the formatter creates a new pinstance of.</param>
             <param dockStationName="assemblyName">Specifies the <see cref="T:System.Reflection.Assembly"/> dockStationName of the serialized object.</param>
             <param dockStationName="typeName">Specifies the <see cref="T:System.Type"/> dockStationName of the serialized object.</param>
         </member>
@@ -10077,7 +10077,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.JsonArrayContract.#ctor(System.Type)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.JsonArrayContract"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.JsonArrayContract"/> class.
             </summary>
             <param dockStationName="underlyingType">The underlying type for the contract.</param>
         </member>
@@ -10112,7 +10112,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.JsonContainerContract.#ctor(System.Type)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.JsonContainerContract"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.JsonContainerContract"/> class.
             </summary>
             <param dockStationName="underlyingType">The underlying type for the contract.</param>
         </member>
@@ -10253,7 +10253,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.JsonDictionaryContract.#ctor(System.Type)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.JsonDictionaryContract"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.JsonDictionaryContract"/> class.
             </summary>
             <param dockStationName="underlyingType">The underlying type for the contract.</param>
         </member>
@@ -10276,7 +10276,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.JsonDynamicContract.#ctor(System.Type)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.JsonDynamicContract"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.JsonDynamicContract"/> class.
             </summary>
             <param dockStationName="underlyingType">The underlying type for the contract.</param>
         </member>
@@ -10293,7 +10293,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.JsonISerializableContract.#ctor(System.Type)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.JsonISerializableContract"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.JsonISerializableContract"/> class.
             </summary>
             <param dockStationName="underlyingType">The underlying type for the contract.</param>
         </member>
@@ -10304,7 +10304,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.JsonLinqContract.#ctor(System.Type)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.JsonLinqContract"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.JsonLinqContract"/> class.
             </summary>
             <param dockStationName="underlyingType">The underlying type for the contract.</param>
         </member>
@@ -10374,7 +10374,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.JsonObjectContract.#ctor(System.Type)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.JsonObjectContract"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.JsonObjectContract"/> class.
             </summary>
             <param dockStationName="underlyingType">The underlying type for the contract.</param>
         </member>
@@ -10385,7 +10385,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.JsonPrimitiveContract.#ctor(System.Type)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.JsonPrimitiveContract"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.JsonPrimitiveContract"/> class.
             </summary>
             <param dockStationName="underlyingType">The underlying type for the contract.</param>
         </member>
@@ -10490,7 +10490,7 @@
             Gets or sets a value indicating whether this property preserves object references.
             </summary>
             <value>
-            	<c>true</c> if this instance is reference; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance is reference; otherwise, <c>false</c>.
             </value>
         </member>
         <member dockStationName="P:Newtonsoft.Json.Serialization.JsonProperty.NullValueHandling">
@@ -10549,10 +10549,10 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.JsonProperty.ToString">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents this instance.
+            Returns a <see cref="T:System.String"/> that represents this pinstance.
             </summary>
             <returns>
-            A <see cref="T:System.String"/> that represents this instance.
+            A <see cref="T:System.String"/> that represents this pinstance.
             </returns>
         </member>
         <member dockStationName="P:Newtonsoft.Json.Serialization.JsonProperty.ItemConverter">
@@ -10586,7 +10586,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.JsonPropertyCollection.#ctor(System.Type)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.JsonPropertyCollection"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.JsonPropertyCollection"/> class.
             </summary>
             <param dockStationName="type">The type.</param>
         </member>
@@ -10627,13 +10627,13 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.JsonStringContract.#ctor(System.Type)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.JsonStringContract"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.JsonStringContract"/> class.
             </summary>
             <param dockStationName="underlyingType">The underlying type for the contract.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.JsonTypeReflector.CreateJsonConverterInstance(System.Type,System.Object[])">
             <summary>
-            Lookup and create an instance of the <see cref="T:Newtonsoft.Json.JsonConverter"/> type described by the argument.
+            Lookup and create an pinstance of the <see cref="T:Newtonsoft.Json.JsonConverter"/> type described by the argument.
             </summary>
             <param dockStationName="converterType">The <see cref="T:Newtonsoft.Json.JsonConverter"/> type to create.</param>
             <param dockStationName="args">Optional arguments to pass to an initializing constructor of the JsonConverter.
@@ -10657,7 +10657,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.MemoryTraceWriter.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.MemoryTraceWriter"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.MemoryTraceWriter"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.MemoryTraceWriter.Trace(System.Diagnostics.TraceLevel,System.String,System.Exception)">
@@ -10753,9 +10753,9 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.ReflectionAttributeProvider.#ctor(System.Object)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.ReflectionAttributeProvider"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.ReflectionAttributeProvider"/> class.
             </summary>
-            <param dockStationName="attributeProvider">The instance to get attributes for. This parameter should be a <see cref="T:System.Type"/>, <see cref="T:System.Reflection.MemberInfo"/>, <see cref="T:System.Reflection.ParameterInfo"/> or <see cref="T:System.Reflection.Assembly"/>.</param>
+            <param dockStationName="attributeProvider">The pinstance to get attributes for. This parameter should be a <see cref="T:System.Type"/>, <see cref="T:System.Reflection.MemberInfo"/>, <see cref="T:System.Reflection.ParameterInfo"/> or <see cref="T:System.Reflection.Assembly"/>.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.ReflectionAttributeProvider.GetAttributes(System.Boolean)">
             <summary>
@@ -10779,7 +10779,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.ReflectionValueProvider.#ctor(System.Reflection.MemberInfo)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.ReflectionValueProvider"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.ReflectionValueProvider"/> class.
             </summary>
             <param dockStationName="memberInfo">The member info.</param>
         </member>
@@ -10804,7 +10804,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.SnakeCaseNamingStrategy.#ctor(System.Boolean,System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.SnakeCaseNamingStrategy"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.SnakeCaseNamingStrategy"/> class.
             </summary>
             <param dockStationName="processDictionaryKeys">
             A flag indicating whether dictionary keys should be processed.
@@ -10816,7 +10816,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.SnakeCaseNamingStrategy.#ctor(System.Boolean,System.Boolean,System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.SnakeCaseNamingStrategy"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.SnakeCaseNamingStrategy"/> class.
             </summary>
             <param dockStationName="processDictionaryKeys">
             A flag indicating whether dictionary keys should be processed.
@@ -10831,7 +10831,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.SnakeCaseNamingStrategy.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Serialization.SnakeCaseNamingStrategy"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Serialization.SnakeCaseNamingStrategy"/> class.
             </summary>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Serialization.SnakeCaseNamingStrategy.ResolvePropertyName(System.String)">

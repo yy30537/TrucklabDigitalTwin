@@ -7,7 +7,7 @@ namespace Core
     {
         public SpaceConfig spaceConfig;
         public Dictionary<int, VehicleProduct> vehiclesInside;
-        public SpaceDashboard dashboard;
+        public SpaceDashboardObserver dashboardObserver;
         public MeshRenderer meshRenderer;
         public VehicleFactory vehicleFactory;
         
@@ -16,17 +16,16 @@ namespace Core
             vehiclesInside = new Dictionary<int, VehicleProduct>();
         }
         
-        public void Init(SpaceConfig config, GameObject instance, Camera cam)
+        public void Init(SpaceConfig config, GameObject instance, Camera cam, SystemLog systemLog, GetClickedObject getClickedObject, VehicleFactory vehicleFactory)
         {
-            base.Init(config.spaceID, config.spaceName, instance, cam);
+            base.Init(config.spaceID, config.spaceName, instance, cam, systemLog, getClickedObject);
+            this.vehicleFactory = vehicleFactory;
             spaceConfig = config;
             InitComponents();
         }
 
         public override void InitComponents()
         {
-            vehicleFactory = FindObjectsOfType<VehicleFactory>()[0];
-            
             // Calculate the center point and set the product instance's position
             Vector3 centerPoint = CalculateCenterPoint(spaceConfig.spacePoints);
             productInstance.transform.position = centerPoint;
@@ -91,17 +90,17 @@ namespace Core
 
         private void NotifyUIObservers()
         {
-            dashboard.UpdateDashboard();
+            dashboardObserver.UpdateDashboard();
         }
 
-        public void RegisterObserver(SpaceDashboard observer)
+        public void RegisterObserver(SpaceDashboardObserver observer)
         {
-            dashboard = observer;
+            dashboardObserver = observer;
         }
 
-        public void RemoveObserver(SpaceDashboard observer)
+        public void RemoveObserver(SpaceDashboardObserver observer)
         {
-            dashboard = null;
+            dashboardObserver = null;
         }
 
         private Mesh CreateMesh(Vector3[] vertices)

@@ -14,7 +14,7 @@ namespace Core
         public VehicleAnimation vehicleAnimation;
         public VehicleKinematics vehicleKinematics;
         public CollisionController collisionController;
-        public VehicleDashboard dashboard;
+        public VehicleDashboardObserver dashboardObserver;
         
         [Header("Mocap")]
         public OptitrackRigidBody tractorRigidBody;
@@ -28,22 +28,20 @@ namespace Core
         public TwistSubscriber twistSubscriber;
         public TwistPublisher twistPublisher;
         
-        // TODO: add more topics or services connection
-        public SetSimulationServiceProvider setSimulationServiceProvider;
-        
         [Header("Dashboard Parent Transform")]
         public Transform vehicleDashboardParent;
-
         
-        public void Init(VehicleConfig config, GameObject instance, Camera cam, 
-                         Transform dashboardParent)
+        private SetSimulationServiceProvider setSimulationServiceProvider;
+
+        public void Init(VehicleConfig config, GameObject instance, Camera cam, Transform dashboardParent, SystemLog systemLog, GetClickedObject getClickedObject, SetSimulationServiceProvider simulationServiceProvider)
         {
-            base.Init(config.vehicleID, config.vehicleName, instance, cam);
+            base.Init(config.vehicleID, config.vehicleName, instance, cam, systemLog, getClickedObject);
             vehicleConfig = config;
             vehicleDashboardParent = dashboardParent;
-            setSimulationServiceProvider = FindObjectOfType<SetSimulationServiceProvider>();
+            this.setSimulationServiceProvider = simulationServiceProvider;
             InitComponents();
         }
+
         public override void InitComponents()
         {
             vehicleData = new VehicleData(vehicleConfig.vehicleID, vehicleConfig.vehicleName, vehicleConfig, productInstance);
@@ -57,16 +55,15 @@ namespace Core
             collisionController = productInstance.AddComponent<CollisionController>();
             collisionController.Initialize(this, vehicleData);
             
-            dashboard = productInstance.AddComponent<VehicleDashboard>();
-            dashboard.Initialize(this, vehicleData);
-            dashboard.InitVehicleDashboard(vehicleDashboardParent);
-            
+            dashboardObserver = productInstance.AddComponent<VehicleDashboardObserver>();
+            dashboardObserver.Initialize(this, vehicleData);
+            dashboardObserver.InitVehicleDashboard(vehicleDashboardParent);
             
             vehicleAnimation.isActive = true;
             vehicleKinematics.isActive = true;
             collisionController.isActive = true;
             
-            dashboard.isToggleActive = true;
+            dashboardObserver.isToggleActive = true;
             
             if (vehicleConfig.isMocapAvaialbe)
             {
@@ -76,7 +73,8 @@ namespace Core
             
             rosConnector = InitRosConnector();
         }
-        public OptitrackRigidBody InitOptitrackTractor()
+
+        private OptitrackRigidBody InitOptitrackTractor()
         {
             tractorOptitrackComponent = new GameObject("TractorMoCap");
             tractorOptitrackComponent.transform.SetParent(vehicleAnimation.vehicleTransform);
@@ -99,7 +97,8 @@ namespace Core
 
             return tractorRigidBody;
         }
-        public OptitrackRigidBody InitOptitrackTrailer()
+
+        private OptitrackRigidBody InitOptitrackTrailer()
         {
             trailerOptitackComponent = new GameObject("TrailerMoCap");
             trailerOptitackComponent.transform.SetParent(vehicleAnimation.vehicleTransform);
@@ -120,7 +119,8 @@ namespace Core
 
             return trailerRigidBody;
         }
-        public RosConnector InitRosConnector()
+
+        private RosConnector InitRosConnector()
         {
             rosComponent = new GameObject("ROSComponent");
             rosComponent.transform.SetParent(vehicleAnimation.vehicleTransform);
@@ -131,23 +131,28 @@ namespace Core
             rosConnector.Serializer = RosSocket.SerializerEnum.Microsoft;
             rosConnector.protocol = Protocol.WebSocketSharp;
 
-            
-            twistSubscriber = rosComponent.AddComponent<TwistSubscriber>();
-            //twistSubscriberController = rosComponent.AddComponent<TwistSubscriber>();
-
-            twistSubscriber.Topic = vehicleConfig.twistSubscriberTopicController;
-            //twistSubscriberController.Topic = vehicleConfig.twistSubscriberTopicController;
-            
-            twistPublisher = rosComponent.AddComponent<TwistPublisher>();
-            twistPublisher.Topic = vehicleConfig.twistPublisherTopicController;
+            InitRosComponents();
 
             return rosConnector;
         }
+
+        private void InitRosComponents()
+        {
+            twistSubscriber = rosComponent.AddComponent<TwistSubscriber>();
+            twistSubscriber.Topic = vehicleConfig.twistSubscriberTopicController;
+
+            twistPublisher = rosComponent.AddComponent<TwistPublisher>();
+            twistPublisher.Topic = vehicleConfig.twistPublisherTopicController;
+            
+            // TODO: ...
+        }
+
         public void SetSimulationDetail(int vehicleID, int pathID)
         {
             setSimulationServiceProvider.SetSimulationDetail(vehicleID, pathID);
         }
-        void OnDestroy()
+
+        private void OnDestroy()
         {
             if (vehicleConfig.isMocapAvaialbe)
             {
@@ -157,7 +162,7 @@ namespace Core
             Destroy(rosComponent);
             Destroy(vehicleAnimation);
             Destroy(vehicleKinematics);
-            Destroy(dashboard);
+            Destroy(dashboardObserver);
         }
     }
 }

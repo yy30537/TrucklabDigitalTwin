@@ -22,7 +22,7 @@ namespace Core
         {
             if (menuName == menuNameToNavigateTo)
             {
-                menuObject.SetActive(true);
+                menuObject.SetActive(!menuObject.activeSelf);
             }
             else
             {

@@ -61,6 +61,7 @@ namespace Core
             kinematicsSource = vehicleProduct.vehicleConfig.kinematicsSource;
             actuationInputSource = vehicleProduct.vehicleConfig.actuationInputSource;
         }
+        
         private void UpdateActuationInputs()
         {
             if (VehicleData.VehicleConfig.isRosAvaialbe)
@@ -146,13 +147,15 @@ namespace Core
         
         private void ControllerInput()
         {
-            // TODO: change ros topic
+            // TODO: update ros topic
+            vehicleProduct.twistSubscriber.Topic = vehicleProduct.vehicleConfig.twistSubscriberTopicController;
             //inputVelocity = vehicleProduct.twistSubscriber.linearVelocity.y;
             //inputSteerAngle = vehicleProduct.twistSubscriber.angularVelocity.x;
         }
         private void ThrustmasterInput()
         {
-            // TODO: change ros topic
+            // TODO: update ros topic
+            vehicleProduct.twistSubscriber.Topic = vehicleProduct.vehicleConfig.twistSubscriberTopicThrustmaster;
             //inputVelocity = vehicleProduct.twistSubscriber.linearVelocity.y;
             //inputSteerAngle = vehicleProduct.twistSubscriber.angularVelocity.x;
         }
@@ -230,10 +233,7 @@ namespace Core
             VehicleData.v2 = v2;
             VehicleData.psi2Prev = psi2Prev;
         }
-
-        /*
-         * Path Simulation
-         */
+        
         public void InitPathSimulation(Path path)
         {
             Vector2 frontAxlePosition = path.frontaxle[0];
@@ -291,27 +291,6 @@ namespace Core
                 psi2 = orientation.y;
                 
                 Intermedstates();
-                //Actuation();
-                UpdateVehicleData();
-
-                // Wait for the next frame
-                float waitTime = path.time[i] - (i > 0 ? path.time[i - 1] : 0);
-                yield return new WaitForSeconds(waitTime);
-            }
-        }
-        private IEnumerator SimulatePathCoroutine(Path path)
-        {
-            for (int i = 0; i < path.time.Count; i++)
-            {
-                inputVelocity = path.velocities[i];
-                inputSteerAngle = path.steeringAngles[i];
-        
-                //vehicleProduct.twistPublisher.velocity = inputVelocity;
-                //vehicleProduct.twistPublisher.steering = inputSteerAngle;
-                //vehicleProduct.twistPublisher.time = path.time[i] * 1000;
-                
-                Intermedstates();
-                Actuation();
                 UpdateVehicleData();
 
                 // Wait for the next frame
@@ -323,9 +302,6 @@ namespace Core
         {
             StartCoroutine(VisualizePathCoroutine(path));
         }
-        public void SimulatePath(Path path)
-        {
-            StartCoroutine(SimulatePathCoroutine(path));
-        }
+
     }       
 }

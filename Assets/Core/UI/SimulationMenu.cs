@@ -26,13 +26,11 @@ namespace Core
         public VehicleProduct selectedVehicle;
 
         public SetSimulationServiceProvider simulationServiceProvider;
-        private PathManager pathManager;
+        public PathManager pathManager;
 
         void Start()
         {
             base.Init();
-            simulationServiceProvider = FindObjectOfType<SetSimulationServiceProvider>();
-            pathManager = FindObjectOfType<PathManager>();
         }
 
         public void PopulateCreatedVehicleDropdown()
@@ -96,14 +94,7 @@ namespace Core
             StartCoroutine(UpdateSimulationUI());
         }
 
-        public void OnStartPathSimulation()
-        {
-            selectedVehicle.vehicleKinematics.SimulatePath(selectedPath);
-            // TODO
 
-            // Update UI with simulation status
-            // StartCoroutine(UpdateSimulationUI());
-        }
 
         public void SetSelectedVehicleFromDropdown()
         {

@@ -5,11 +5,12 @@ namespace Core
 {
     public class DockFactory : Factory<DockProduct, DockConfig>
     {
+        private GetClickedObject getClickedObject;
 
-        private void Awake()
+        public void Initialize(SystemLog systemLog, GetClickedObject getClickedObject)
         {
-            productUIObserverParent = new GameObject("DockUIObservers");
-            productUIObserverParent.transform.SetParent(instanceParent);
+            this.getClickedObject = getClickedObject;
+            base.Initialize(systemLog);
         }
 
         protected override GameObject CreateProductInstance(DockConfig config)
@@ -22,17 +23,16 @@ namespace Core
         protected override DockProduct InitializeProductComponent(GameObject instance, DockConfig config)
         {
             var product = instance.AddComponent<DockProduct>();
-            product.Init(config, instance, mainCamera);
-            InitializeDockUIObserver(product);
+            product.Init(config, instance, mainCamera, systemLog, getClickedObject);
+            InitializeDockUIObserver(product, config);
             return product;
         }
 
-        private void InitializeDockUIObserver(DockProduct product)
+        private void InitializeDockUIObserver(DockProduct product, DockConfig config)
         {
-            var uiObserverInstance = new GameObject("DockDashboard");
-            uiObserverInstance.transform.SetParent(uiObserverParent.transform);
-            var uiObserver = uiObserverInstance.AddComponent<DockDashboard>();
-            uiObserver.Initialize(product, dashboardParentTransform);
+            var dashboardInstance = Instantiate(config.dockBuildingDashboard, dashboardParentTransform);
+            var observer = dashboardInstance.AddComponent<DockDashboardObserver>();
+            observer.Initialize(product, dashboardParentTransform);
         }
 
         protected override void RegisterProduct(DockConfig config, DockProduct product)

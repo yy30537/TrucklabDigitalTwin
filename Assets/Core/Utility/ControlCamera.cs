@@ -21,12 +21,9 @@ namespace Core
         private void Awake()
         {
             fov = mainCamera.fieldOfView;
-            isActive = true;
+            isActive = false;
         }
-        void OnDestroy()
-        {
-        }
-
+        
         // Specific Methods
         private void Update()
         {
@@ -74,8 +71,6 @@ namespace Core
                 mainCamera.fieldOfView -= scroll * zoomSensitivity;
             }
         }
-        
-        
         public void ToggleControl()
         {
             isActive = !isActive;

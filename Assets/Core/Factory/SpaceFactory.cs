@@ -5,10 +5,14 @@ namespace Core
 {
     public class SpaceFactory : Factory<SpaceProduct, SpaceConfig>
     {
-        private void Awake()
+        private VehicleFactory vehicleFactory;
+        private GetClickedObject getClickedObject;
+
+        public void Initialize(SystemLog systemLog, VehicleFactory vehicleFactory, GetClickedObject getClickedObject)
         {
-            productUIObserverParent = new GameObject("SpaceUIObservers");
-            productUIObserverParent.transform.SetParent(uiObserverParent);
+            this.vehicleFactory = vehicleFactory;
+            this.getClickedObject = getClickedObject;
+            base.Initialize(systemLog);
         }
 
         protected override GameObject CreateProductInstance(SpaceConfig config)
@@ -22,17 +26,17 @@ namespace Core
         protected override SpaceProduct InitializeProductComponent(GameObject instance, SpaceConfig config)
         {
             var product = instance.AddComponent<SpaceProduct>();
-            product.Init(config, instance, mainCamera);
-            InitializeSpaceUIObserver(product);
+            product.Init(config, instance, mainCamera, systemLog, getClickedObject, vehicleFactory);
+
+            InitializeSpaceUI(product, config);
             return product;
         }
 
-        private void InitializeSpaceUIObserver(SpaceProduct product)
+        private void InitializeSpaceUI(SpaceProduct product, SpaceConfig config)
         {
-            var uiObserverInstance = new GameObject("SpaceDashboard");
-            uiObserverInstance.transform.SetParent(productUIObserverParent.transform);
-            var uiObserver = uiObserverInstance.AddComponent<SpaceDashboard>();
-            uiObserver.Initialize(product, dashboardParentTransform);
+            var dashboardInstance = Instantiate(config.spaceDashboard, dashboardParentTransform);
+            var observer = dashboardInstance.AddComponent<SpaceDashboardObserver>();
+            observer.Initialize(product, dashboardParentTransform);
         }
 
         protected override void RegisterProduct(SpaceConfig config, SpaceProduct product)

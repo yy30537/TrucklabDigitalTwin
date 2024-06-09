@@ -1,20 +1,16 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine;
-using UnityEngine.EventSystems;
-
 
 namespace Core
 {
-    public class DockDashboard : MonoBehaviour
+    public class DockDashboardObserver : MonoBehaviour
     {
         public DockProduct dockProduct;
         public GameObject dashboardInstance;
-        public TextMeshProUGUI textContent;
+        public TextMeshProUGUI title;
+        public TextMeshProUGUI content;
         public GetClickedObject getClickedObject;
         public bool isToggleAllowed = false;
         public bool isUpdating = false;
@@ -25,6 +21,7 @@ namespace Core
         private int offsetX = 200;
         private Button closeButton;
         
+
         public void Initialize(DockProduct product, Transform canvasParent)
         {
             dockProduct = product;
@@ -34,59 +31,52 @@ namespace Core
             InitDockDashboard();
             dockProduct.RegisterObserver(this);
         }
+
         private void OnDestroy()
         {
             if (dockProduct != null)
             {
                 dockProduct.RemoveObserver(this);
             }
-            if (ecToggleIsActive != null)
-            {
-                ecToggleIsActive.onEventRaised -= OnToggleUI;
-            }
         }
+
         private void Update()
         {
-            
-            if (isToggleAllowed)
-            {
-                DetectDockClick();
-            }
+            DetectDockClick();
 
             if (isUpdating)
             {
                 UpdateDashboard();
             }
         }
+
         public void InitDockDashboard()
         {
-            dashboardInstance = Instantiate(dockProduct.dockConfig.dockBuildingDashboard, mainCanvasParent);
-            textContent = dashboardInstance.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
-            dashboardInstance.SetActive(false);
+            dashboardInstance = this.gameObject;
+            title = dashboardInstance.transform.Find("Title").GetComponent<TextMeshProUGUI>();
+            content = dashboardInstance.transform.Find("Content").GetComponent<TextMeshProUGUI>();
+            dashboardInstance.SetActive(true);
             
-            closeButton = dashboardInstance.transform.Find("Close Button").GetComponent<Button>();
-            closeButton.onClick.AddListener(CloseDashboard);
-
-            ecToggleIsActive = dockProduct.dockConfig.ecToggleDashboard;
-            ecToggleIsActive.onEventRaised += OnToggleUI;
-            isToggleAllowed = true;
+            SetDashboardVisibility(false);  // Initially set dashboard to invisible
         }
+
         private void UpdateDashboard()
         {
-            Vector3 screenPos = dockProduct.mainCamera.WorldToScreenPoint(dockProduct.transform.position);
-            screenPos.y += offsetY;
-            //screenPos.x -= offsetX;
-            dashboardInstance.transform.position = screenPos;
-            
+            // Vector3 screenPos = dockProduct.mainCamera.WorldToScreenPoint(dockProduct.transform.position);
+            // screenPos.y += offsetY;
+            // dashboardInstance.transform.position = screenPos;
+
             if (dashboardInstance.activeSelf)
             {
-                textContent.text = $"Distribution Center\n ";
+                title.text = $"Distribution Center Schedule\n ";
+                content.text = "";
                 foreach (var vehicleProduct in vehicleFactory.productLookupTable)
                 {
-                    textContent.text += $"[{vehicleProduct.Value.productName}]\n";
+                    content.text += $"[{vehicleProduct.Value.productName}]\n";
                 }
             }
         }
+
         private void DetectDockClick()
         {
             if (Input.GetMouseButtonDown(0))
@@ -98,24 +88,23 @@ namespace Core
                     if (clickedDock.productID == dockProduct.productID)
                     {
                         isUpdating = !isUpdating;
-                        dashboardInstance.SetActive(isUpdating);
+                        SetDashboardVisibility(isUpdating);
                     }
                 }
             }
         }
-        private void OnToggleUI()
-        {
-            isToggleAllowed = !isToggleAllowed;
-        }
+
         public void UpdateUI()
         {
             UpdateDashboard();
         }
-        private void CloseDashboard()
-        {
-            isUpdating = false;
-            dashboardInstance.SetActive(isUpdating);
-        }
         
+        private void SetDashboardVisibility(bool isVisible)
+        {
+            foreach (Transform child in dashboardInstance.transform)
+            {
+                child.gameObject.SetActive(isVisible);
+            }
+        }
     }
 }

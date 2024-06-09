@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Core
@@ -6,11 +5,11 @@ namespace Core
     public class DockProduct : Product
     {
         public DockConfig dockConfig;
-        private DockDashboard dashboard;
+        private DockDashboardObserver dashboardObserver;
 
-        public void Init(DockConfig config, GameObject instance, Camera cam)
+        public void Init(DockConfig config, GameObject instance, Camera cam, SystemLog systemLog, GetClickedObject getClickedObject)
         {
-            base.Init(config.dockStationID, config.dockStationName, instance, cam);
+            base.Init(config.dockStationID, config.dockStationName, instance, cam, systemLog, getClickedObject);
             dockConfig = config;
             InitComponents();
         }
@@ -21,20 +20,19 @@ namespace Core
             productInstance.transform.rotation = Quaternion.Euler(0, dockConfig.dockBuildingRotation, 0);
         }
 
-        public void RegisterObserver(DockDashboard observer)
+        public void RegisterObserver(DockDashboardObserver observer)
         {
-            dashboard = observer;
+            dashboardObserver = observer;
         }
 
-        public void RemoveObserver(DockDashboard observer)
+        public void RemoveObserver(DockDashboardObserver observer)
         {
-            dashboard = null;
+            dashboardObserver = null;
         }
 
         private void NotifyUIObservers()
         {
-            dashboard.UpdateUI();
+            dashboardObserver.UpdateUI();
         }
-        
     }
 }

@@ -52,7 +52,8 @@ namespace Core
         public string twistPublisherTopicThrustmaster;
         public string twistPublisherTopicController;
         
-        // TODO: add more fields for ros to pre configure stuff
+        // TODO: can add more ros topics to subscribe or publish on
+        
         
         [Header("Vehicle Control")]
         public KinematicsSource kinematicsSource;

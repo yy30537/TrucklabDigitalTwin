@@ -17,7 +17,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonDataObjectId.#ctor(System.Byte[])">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonDataObjectId"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Bson.BsonDataObjectId"/> class.
             </summary>
             <param dockStationName="value">The Oid value.</param>
         </member>
@@ -35,7 +35,7 @@
             property returns <c>true</c> if the next token was read successfully; <c>false</c> if there are no more tokens to read.</returns>
             <remarks>Derived classes must override this method to get asynchronous behaviour. Otherwise it will
             execute synchronously, returning an already-completed task. Asynchronous behaviour is also not available when the
-            constructor was passed an instance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
+            constructor was passed an pinstance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonDataReader.ReadAsBooleanAsync(System.Threading.CancellationToken)">
             <summary>
@@ -46,7 +46,7 @@
             property returns the <see cref="T:System.Nullable`1" /> of <see cref="T:System.Boolean" />. This result will be <c>null</c> at the end of an array.</returns>
             <remarks>Derived classes must override this method to get asynchronous behaviour. Otherwise it will
             execute synchronously, returning an already-completed task. Asynchronous behaviour is also not available when the
-            constructor was passed an instance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
+            constructor was passed an pinstance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonDataReader.ReadAsBytesAsync(System.Threading.CancellationToken)">
             <summary>
@@ -57,7 +57,7 @@
             property returns the <see cref="T:System.Byte" />[]. This result will be <c>null</c> at the end of an array.</returns>
             <remarks>Derived classes must override this method to get asynchronous behaviour. Otherwise it will
             execute synchronously, returning an already-completed task. Asynchronous behaviour is also not available when the
-            constructor was passed an instance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
+            constructor was passed an pinstance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonDataReader.ReadAsDateTimeAsync(System.Threading.CancellationToken)">
             <summary>
@@ -68,7 +68,7 @@
             property returns the <see cref="T:System.Nullable`1" /> of <see cref="T:System.DateTime" />. This result will be <c>null</c> at the end of an array.</returns>
             <remarks>Derived classes must override this method to get asynchronous behaviour. Otherwise it will
             execute synchronously, returning an already-completed task. Asynchronous behaviour is also not available when the
-            constructor was passed an instance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
+            constructor was passed an pinstance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonDataReader.ReadAsDateTimeOffsetAsync(System.Threading.CancellationToken)">
             <summary>
@@ -79,7 +79,7 @@
             property returns the <see cref="T:System.Nullable`1" /> of <see cref="T:System.DateTimeOffset" />. This result will be <c>null</c> at the end of an array.</returns>
             <remarks>Derived classes must override this method to get asynchronous behaviour. Otherwise it will
             execute synchronously, returning an already-completed task. Asynchronous behaviour is also not available when the
-            constructor was passed an instance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
+            constructor was passed an pinstance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonDataReader.ReadAsDecimalAsync(System.Threading.CancellationToken)">
             <summary>
@@ -90,7 +90,7 @@
             property returns the <see cref="T:System.Nullable`1" /> of <see cref="T:System.Decimal" />. This result will be <c>null</c> at the end of an array.</returns>
             <remarks>Derived classes must override this method to get asynchronous behaviour. Otherwise it will
             execute synchronously, returning an already-completed task. Asynchronous behaviour is also not available when the
-            constructor was passed an instance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
+            constructor was passed an pinstance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonDataReader.ReadAsDoubleAsync(System.Threading.CancellationToken)">
             <summary>
@@ -101,7 +101,7 @@
             property returns the <see cref="T:System.Nullable`1" /> of <see cref="T:System.Double" />. This result will be <c>null</c> at the end of an array.</returns>
             <remarks>Derived classes must override this method to get asynchronous behaviour. Otherwise it will
             execute synchronously, returning an already-completed task. Asynchronous behaviour is also not available when the
-            constructor was passed an instance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
+            constructor was passed an pinstance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonDataReader.ReadAsInt32Async(System.Threading.CancellationToken)">
             <summary>
@@ -112,7 +112,7 @@
             property returns the <see cref="T:System.Nullable`1" /> of <see cref="T:System.Int32" />. This result will be <c>null</c> at the end of an array.</returns>
             <remarks>Derived classes must override this method to get asynchronous behaviour. Otherwise it will
             execute synchronously, returning an already-completed task. Asynchronous behaviour is also not available when the
-            constructor was passed an instance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
+            constructor was passed an pinstance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonDataReader.ReadAsStringAsync(System.Threading.CancellationToken)">
             <summary>
@@ -123,7 +123,7 @@
             property returns the <see cref="T:System.String" />. This result will be <c>null</c> at the end of an array.</returns>
             <remarks>Derived classes must override this method to get asynchronous behaviour. Otherwise it will
             execute synchronously, returning an already-completed task. Asynchronous behaviour is also not available when the
-            constructor was passed an instance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
+            constructor was passed an pinstance of type derived from <see cref="T:System.IO.BinaryReader"/>.</remarks>
         </member>
         <member dockStationName="P:Newtonsoft.Json.Bson.BsonDataReader.JsonNet35BinaryCompatibility">
             <summary>
@@ -149,19 +149,19 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonDataReader.#ctor(System.IO.Stream)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonDataReader"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Bson.BsonDataReader"/> class.
             </summary>
             <param dockStationName="stream">The <see cref="T:System.IO.Stream"/> containing the BSON data to read.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonDataReader.#ctor(System.IO.BinaryReader)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonDataReader"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Bson.BsonDataReader"/> class.
             </summary>
             <param dockStationName="reader">The <see cref="T:System.IO.BinaryReader"/> containing the BSON data to read.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonDataReader.#ctor(System.IO.Stream,System.Boolean,System.DateTimeKind)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonDataReader"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Bson.BsonDataReader"/> class.
             </summary>
             <param dockStationName="stream">The <see cref="T:System.IO.Stream"/> containing the BSON data to read.</param>
             <param dockStationName="readRootValueAsArray">if set to <c>true</c> the root object will be read as a JSON array.</param>
@@ -169,7 +169,7 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonDataReader.#ctor(System.IO.BinaryReader,System.Boolean,System.DateTimeKind)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonDataReader"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Bson.BsonDataReader"/> class.
             </summary>
             <param dockStationName="reader">The <see cref="T:System.IO.BinaryReader"/> containing the BSON data to read.</param>
             <param dockStationName="readRootValueAsArray">if set to <c>true</c> the root object will be read as a JSON array.</param>
@@ -259,13 +259,13 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonDataWriter.#ctor(System.IO.Stream)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonDataWriter"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Bson.BsonDataWriter"/> class.
             </summary>
             <param dockStationName="stream">The <see cref="T:System.IO.Stream"/> to write to.</param>
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.BsonDataWriter.#ctor(System.IO.BinaryWriter)">
             <summary>
-            Initializes a new instance of the <see cref="T:Newtonsoft.Json.Bson.BsonDataWriter"/> class.
+            Initializes a new pinstance of the <see cref="T:Newtonsoft.Json.Bson.BsonDataWriter"/> class.
             </summary>
             <param dockStationName="writer">The <see cref="T:System.IO.BinaryWriter"/> to write to.</param>
         </member>
@@ -502,11 +502,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.Converters.BsonDataObjectIdConverter.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified object type.
+            Determines whether this pinstance can convert the specified object type.
             </summary>
             <param dockStationName="objectType">Type of the object.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified object type; otherwise, <c>false</c>.
             </returns>
         </member>
         <member dockStationName="T:Newtonsoft.Json.Bson.Converters.BsonDataRegexConverter">
@@ -534,11 +534,11 @@
         </member>
         <member dockStationName="M:Newtonsoft.Json.Bson.Converters.BsonDataRegexConverter.CanConvert(System.Type)">
             <summary>
-            Determines whether this instance can convert the specified object type.
+            Determines whether this pinstance can convert the specified object type.
             </summary>
             <param dockStationName="objectType">Type of the object.</param>
             <returns>
-            	<c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            	<c>true</c> if this pinstance can convert the specified object type; otherwise, <c>false</c>.
             </returns>
         </member>
     </members>

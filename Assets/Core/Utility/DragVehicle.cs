@@ -6,8 +6,8 @@ namespace Core
     public class DragVehicle : MonoBehaviour
     {
         public GetClickedObject getClickedObject;
-        public bool isDraggingEnabled;
-        public bool isDragging;
+        public bool isDraggingEnabled = false;
+        public bool isDragging = false;
         
         [Header("Controlled Vehicles Reference")] 
         public GameObject clickedVehicle;
@@ -27,8 +27,7 @@ namespace Core
             clickedVehicle = null;
             clickedTrailerObject = null;
             clickedTractorObject = null;
-            isDraggingEnabled = true;
-            isDragging = false;
+            isDraggingEnabled = false;
         }
         void Update()
         {

@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Core
 {
-    public class VehicleDashboard : VehicleComponent
+    public class VehicleDashboardObserver : VehicleComponent
     {
         public GameObject dashboardInstance;
 
@@ -39,7 +40,7 @@ namespace Core
         public bool isUpdating = false;
         
         private VoidEventChannel ecToggleActive;
-        private int offset = 300;
+        private int offset = 280;
         
         
         void Update()
@@ -96,7 +97,6 @@ namespace Core
             
             ecToggleActive = vehicleProduct.vehicleConfig.ecToggleDashboard;
             ecToggleActive.onEventRaised += OnToggleActive;
-            isToggleActive = true;
         }
         private void UpdateDashboard()
         {
@@ -105,10 +105,14 @@ namespace Core
             dashboardInstance.transform.position = screenPos;
             
             topbarText.text = $"{vehicleProduct.productName} Dashboard\n";
-
-            page1Content.text = 
-                $"Name: {vehicleProduct.productName} \n" +
-                $"ID:{vehicleProduct.vehicleConfig.vehicleID}\n";
+            
+            if (vehicleProduct.vehicleConfig.isMocapAvaialbe)
+            {
+                page1Content.text += 
+                    $"Tractor Rigidbody ID:{vehicleProduct.vehicleConfig.tractorOptitrackID})\n" +
+                    $"Trailer Rigidbody ID:{vehicleProduct.vehicleConfig.trailorOptitrackID})\n";
+            }
+            
             
             page2Content.text = 
                 $"Scale: {vehicleProduct.vehicleConfig.scale}\n" +
@@ -127,13 +131,20 @@ namespace Core
                 $"psi1,psi2 = ({VehicleData.psi1:F2},{VehicleData.psi2:F2})rad\n";
             
             page4Content.text = $"Obstacle(s) Detected: \n";
-            
-            foreach (var obstacle in vehicleProduct.collisionController.detectedObstacles)
-            {
-                page4Content.text += $"{obstacle.Name} {obstacle.Distance:F2}m {obstacle.Angle:F2}\u00b0\n";
-            }
 
+            if (vehicleProduct.collisionController.detectedObstacles.Count == 0)
+            {
+                page4Content.text += "None \n";
+            }
+            else
+            {
+                foreach (var obstacle in vehicleProduct.collisionController.detectedObstacles)
+                {
+                    page4Content.text += $"{obstacle.Name} {obstacle.Distance:F2}m {obstacle.Angle:F2}\u00b0\n";
+                }
+            }
         }
+        
         public void DetectVehicleClick() 
         {
             if (Input.GetMouseButtonDown(0))
@@ -146,7 +157,7 @@ namespace Core
                         VehicleProduct clickedVehicle = hitObject.GetComponentInParent<VehicleProduct>();
                         if (clickedVehicle.productID == vehicleProduct.productID)
                         {
-                            Debug.Log($"VehicleDashboard: {clickedVehicle.name} clicked");
+                            Debug.Log($"VehicleDashboardObserver: {clickedVehicle.name} clicked");
                             isUpdating = true;
                             dashboardInstance.SetActive(isUpdating);
                         }
