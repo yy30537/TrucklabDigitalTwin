@@ -62,7 +62,7 @@ namespace Core
             {
                 Vector3[] tractorBoundingBox = vehicle.Value.vehicleData.GetTractorBoundingBox();
                 Vector3[] trailerBoundingBox = vehicle.Value.vehicleData.GetTrailerBoundingBox();
-                if (IsTruckBoundingBoxInSpace(tractorBoundingBox, trailerBoundingBox, spaceConfig.spacePoints))
+                if (IsBoundingBoxInSpace(tractorBoundingBox, spaceConfig.spacePoints) || IsBoundingBoxInSpace(trailerBoundingBox, spaceConfig.spacePoints))
                 {
                     if (!IsVehicleProductInSpace(vehicle.Value.productID))
                     {
@@ -135,52 +135,31 @@ namespace Core
             return center;
         }
 
-        public static bool IsPointInGoalArea(Vector3 point, Vector3[] polygon)
+        private bool IsBoundingBoxInSpace(Vector3[] boundingBox, Vector3[] polygon)
         {
-            float a1 = Vector3.Distance(polygon[0], polygon[1]);
-            float a2 = Vector3.Distance(polygon[1], polygon[2]);
-            float a3 = Vector3.Distance(polygon[2], polygon[3]);
-            float a4 = Vector3.Distance(polygon[3], polygon[0]);
-
-            float b1 = Vector3.Distance(polygon[0], point);
-            float b2 = Vector3.Distance(polygon[1], point);
-            float b3 = Vector3.Distance(polygon[2], point);
-            float b4 = Vector3.Distance(polygon[3], point);
-
-            float A = Mathf.Round(a1 * a2);
-            float u1 = (a1 + b1 + b2) / 2;
-            float u2 = (a2 + b2 + b3) / 2;
-            float u3 = (a3 + b3 + b4) / 2;
-            float u4 = (a4 + b4 + b1) / 2;
-
-            float A1 = Mathf.Sqrt(u1 * (u1 - a1) * (u1 - b1) * (u1 - b2));
-            float A2 = Mathf.Sqrt(u2 * (u2 - a2) * (u2 - b2) * (u2 - b3));
-            float A3 = Mathf.Sqrt(u3 * (u3 - a3) * (u3 - b3) * (u3 - b4));
-            float A4 = Mathf.Sqrt(u4 * (u4 - a4) * (u4 - b4) * (u4 - b1));
-
-            float area = Mathf.Round(A1 + A2 + A3 + A4);
-            return area == A;
+            foreach (var point in boundingBox)
+            {
+                if (IsPointInPolygon(point, polygon))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
-        private bool IsTruckBoundingBoxInSpace(Vector3[] tractorBoundingBox, Vector3[] trailerBoundingBox, Vector3[] polygon)
+        private bool IsPointInPolygon(Vector3 point, Vector3[] polygon)
         {
-            foreach (var point in tractorBoundingBox)
+            bool isInside = false;
+            int j = polygon.Length - 1;
+            for (int i = 0; i < polygon.Length; j = i++)
             {
-                if (IsPointInGoalArea(point, polygon))
+                if (((polygon[i].z > point.z) != (polygon[j].z > point.z)) &&
+                    (point.x < (polygon[j].x - polygon[i].x) * (point.z - polygon[i].z) / (polygon[j].z - polygon[i].z) + polygon[i].x))
                 {
-                    return true;
+                    isInside = !isInside;
                 }
             }
-            
-            foreach (var point in trailerBoundingBox)
-            {
-                if (IsPointInGoalArea(point, polygon))
-                {
-                    return true;
-                }
-            }
-            
-            return false;
+            return isInside;
         }
     }
 }

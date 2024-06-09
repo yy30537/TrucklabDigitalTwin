@@ -1086,18 +1086,6 @@ MonoBehaviour:
           m_StringArgument: Main Menu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: e1aa21181bb0d2a469323ff8ee4cc02d, type: 2}
-        m_TargetAssemblyTypeName: Core.GenericEventChannel`1[[System.String, mscorlib
-        m_MethodName: RaiseEvent
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: space menu
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &212624837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2668,7 +2656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   getClickedObject: {fileID: 1718120468}
-  isDraggingEnabled: 1
+  isDraggingEnabled: 0
   isDragging: 0
   clickedVehicle: {fileID: 0}
   clickedTrailerObject: {fileID: 0}
@@ -10242,18 +10230,6 @@ MonoBehaviour:
           m_StringArgument: SystemLog Menu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: e1aa21181bb0d2a469323ff8ee4cc02d, type: 2}
-        m_TargetAssemblyTypeName: Core.GenericEventChannel`1[[System.String, mscorlib
-        m_MethodName: RaiseEvent
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: sys log
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1413864922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12254,7 +12230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa3804dd38404709bdfd2a7097be5026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 0
+  isActive: 1
   mainCamera: {fileID: 1731021753}
   movementSpeed: 50
   cameraVerticalSpeed: 10

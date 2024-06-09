@@ -106,14 +106,6 @@ namespace Core
             
             topbarText.text = $"{vehicleProduct.productName} Dashboard\n";
             
-            if (vehicleProduct.vehicleConfig.isMocapAvaialbe)
-            {
-                page1Content.text += 
-                    $"Tractor Rigidbody ID:{vehicleProduct.vehicleConfig.tractorOptitrackID})\n" +
-                    $"Trailer Rigidbody ID:{vehicleProduct.vehicleConfig.trailorOptitrackID})\n";
-            }
-            
-            
             page2Content.text = 
                 $"Scale: {vehicleProduct.vehicleConfig.scale}\n" +
                 $"l1 = {VehicleData.l1}m\n" +
