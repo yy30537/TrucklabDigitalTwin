@@ -5,34 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3138a47a-9994-4eaa-914b-23c631bede80" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TrucklabDigitalTwin/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TrucklabDigitalTwin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TruckLabDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TruckLabDemo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Factory/VehicleProduct.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Factory/VehicleProduct.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TrucklabDigitalTwin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TrucklabDigitalTwin/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Dock/DockBuilding.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Dock/DockBuilding.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock438.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock438.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock439.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock439.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock440.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock440.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock441.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock441.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock442.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock442.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock443.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock443.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock444.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock444.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock445.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock445.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock446.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock446.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock447.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock447.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Model 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Model 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Model 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Model 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Model 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Model 3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Twin 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Twin 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Twin 1.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Twin 1.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Twin 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Twin 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Twin 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Twin 3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Virtual Entity Config/VehicleConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Virtual Entity Config/VehicleConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Services/Path Simulation/PathManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Services/Path Simulation/PathManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Virtual Entity Components/Vehicle/VehicleDashboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Virtual Entity Components/Vehicle/VehicleDashboard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Core/Virtual Entity Components/Vehicle/VehicleKinematics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Virtual Entity Components/Vehicle/VehicleKinematics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prototypes/Vehicle/Vehicle Dashboard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prototypes/Vehicle/Vehicle Dashboard.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +95,7 @@
       <workItem from="1717758062744" duration="1172000" />
       <workItem from="1717843689692" duration="1072000" />
       <workItem from="1717844776394" duration="74000" />
+      <workItem from="1717933740963" duration="723000" />
     </task>
     <servers />
   </component>
