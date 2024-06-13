@@ -4,6 +4,15 @@ using UnityEngine;
 
 namespace Core
 {
+    [System.Serializable]
+    public class ObstacleInfo
+    {
+        public GameObject Object;
+        public float Distance;
+        public float Angle;
+        public string Name;
+    }
+    
     public class CollisionController : VehicleComponent
     {
         public bool isActive = false;
@@ -40,7 +49,6 @@ namespace Core
                 }
             }
         }
-
         void DetectObstacles(Ray ray, float localAngle)
         {
             if (Physics.Raycast(ray, out RaycastHit obstacleHit, range))
@@ -98,12 +106,5 @@ namespace Core
         }
     }
 
-    [System.Serializable]
-    public class ObstacleInfo
-    {
-        public GameObject Object;
-        public float Distance;
-        public float Angle;
-        public string Name;
-    }
+    
 }

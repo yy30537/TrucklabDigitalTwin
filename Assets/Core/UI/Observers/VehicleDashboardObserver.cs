@@ -94,9 +94,7 @@ namespace Core
             tractorTrailToggle.onValueChanged.AddListener(OnToggleTractorTrail);
             PopulateDropdowns();
             ShowPage1();
-            
-            ecToggleActive = vehicleProduct.vehicleConfig.ecToggleDashboard;
-            ecToggleActive.onEventRaised += OnToggleActive;
+
         }
         private void UpdateDashboard()
         {
@@ -132,7 +130,8 @@ namespace Core
             {
                 foreach (var obstacle in vehicleProduct.collisionController.detectedObstacles)
                 {
-                    page4Content.text += $"{obstacle.Name} {obstacle.Distance:F2}m {obstacle.Angle:F2}\u00b0\n";
+                    //page4Content.text += $"{obstacle.Name} {obstacle.Distance:F2}m {obstacle.Angle:F2}\u00b0\n";
+                    page4Content.text += $"{obstacle.Name} - {obstacle.Distance:F2}m \n";
                 }
             }
         }
@@ -157,10 +156,8 @@ namespace Core
                 }
             }
         }
-        private void OnToggleActive()
-        {
-            isToggleActive = !isToggleActive;
-        }
+        
+        
         private void ShowPage1()
         {
             page1.SetActive(true);
@@ -207,12 +204,10 @@ namespace Core
             trailRenderer.Clear();
             vehicleProduct.vehicleAnimation.trail.SetActive(status);
         }
-
         private void OnKinematicsSourceChanged(int index)
         {
             vehicleProduct.vehicleKinematics.kinematicsSource = (KinematicsSource)index;
         }
-
         private void OnActuationSourceChanged(int index)
         {
             vehicleProduct.vehicleKinematics.actuationInputSource = (ActuationInputSource)index;
@@ -224,7 +219,6 @@ namespace Core
         }
         void OnDestroy()
         {
-            ecToggleActive.onEventRaised -= OnToggleActive;
             Destroy(dashboardInstance);
         }
     }

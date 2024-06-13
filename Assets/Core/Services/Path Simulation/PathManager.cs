@@ -62,7 +62,9 @@ namespace Core
                     ReferenceLoopHandling = ReferenceLoopHandling.Ignore
                 };
                 string json = JsonConvert.SerializeObject(recordingPath, settings);
-                File.WriteAllText("D:/Yang/TruckLabDemo/Assets/Core/Virtual Entity Components/Vehicle/Reference Paths/RecordedPath_" + recordingPath.pathID + ".json", json);
+                // TODO: change to dynamically configure new recorded paths 
+                //File.WriteAllText("D:/Yang/TruckLabDemo/Assets/Core/Virtual Entity Components/Vehicle/Reference Paths/RecordedPath_" + recordingPath.pathID + ".json", json);
+                File.WriteAllText("C:/Users/yang3/Desktop/GitRepos/TrucklabDigitalTwin/Assets/Core/Virtual Entity Components/Vehicle/Reference Paths/RecordedPath_" + recordingPath.pathID + ".json", json);
                 paths.Add(recordingPath);
                 Debug.Log("Path recorded and saved.");
                 recordingVehicle = null;

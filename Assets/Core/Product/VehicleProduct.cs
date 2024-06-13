@@ -4,6 +4,9 @@ using RosSharp.RosBridgeClient.Protocols;
 
 namespace Core
 {
+    /// <summary>
+    /// Represents a vehicle product in the simulation.
+    /// </summary>
     public class VehicleProduct : Product
     {
         [Header("Vehicle Identity")]
@@ -20,7 +23,7 @@ namespace Core
         public OptitrackRigidBody tractorRigidBody;
         public OptitrackRigidBody trailerRigidBody;
         public GameObject tractorOptitrackComponent;
-        public GameObject trailerOptitackComponent;
+        public GameObject trailerOptitrackComponent;
         
         [Header("ROS")]
         public RosConnector rosConnector;
@@ -30,9 +33,19 @@ namespace Core
         
         [Header("Dashboard Parent Transform")]
         public Transform vehicleDashboardParent;
-        
+
         private SetSimulationServiceProvider setSimulationServiceProvider;
 
+        /// <summary>
+        /// Initializes the vehicle product with the provided configuration and dependencies.
+        /// </summary>
+        /// <param name="config">Vehicle configuration.</param>
+        /// <param name="instance">GameObject instance of the vehicle.</param>
+        /// <param name="cam">Main camera.</param>
+        /// <param name="dashboardParent">Parent transform for the vehicle dashboard.</param>
+        /// <param name="systemLog">System log for logging events.</param>
+        /// <param name="getClickedObject">Service for detecting clicked objects.</param>
+        /// <param name="simulationServiceProvider">Service provider for simulation details.</param>
         public void Init(VehicleConfig config, GameObject instance, Camera cam, Transform dashboardParent, SystemLog systemLog, GetClickedObject getClickedObject, SetSimulationServiceProvider simulationServiceProvider)
         {
             base.Init(config.vehicleID, config.vehicleName, instance, cam, systemLog, getClickedObject);
@@ -42,6 +55,9 @@ namespace Core
             InitComponents();
         }
 
+        /// <summary>
+        /// Initializes the components of the vehicle product.
+        /// </summary>
         public override void InitComponents()
         {
             vehicleData = new VehicleData(vehicleConfig.vehicleID, vehicleConfig.vehicleName, vehicleConfig, productInstance);
@@ -74,6 +90,10 @@ namespace Core
             rosConnector = InitRosConnector();
         }
 
+        /// <summary>
+        /// Initializes the OptiTrack component for the tractor.
+        /// </summary>
+        /// <returns>The initialized OptiTrack rigid body for the tractor.</returns>
         private OptitrackRigidBody InitOptitrackTractor()
         {
             tractorOptitrackComponent = new GameObject("TractorMoCap");
@@ -98,15 +118,18 @@ namespace Core
             return tractorRigidBody;
         }
 
+        /// <summary>
+        /// Initializes the OptiTrack component for the trailer.
+        /// </summary>
+        /// <returns>The initialized OptiTrack rigid body for the trailer.</returns>
         private OptitrackRigidBody InitOptitrackTrailer()
         {
-            trailerOptitackComponent = new GameObject("TrailerMoCap");
-            trailerOptitackComponent.transform.SetParent(vehicleAnimation.vehicleTransform);
-            trailerRigidBody = trailerOptitackComponent.AddComponent<OptitrackRigidBody>();
+            trailerOptitrackComponent = new GameObject("TrailerMoCap");
+            trailerOptitrackComponent.transform.SetParent(vehicleAnimation.vehicleTransform);
+            trailerRigidBody = trailerOptitrackComponent.AddComponent<OptitrackRigidBody>();
 
             OptitrackStreamingClient trailerOptitrackStreamingClient =
-                trailerOptitackComponent.AddComponent<OptitrackStreamingClient>();
-            trailerRigidBody.StreamingClient = trailerOptitrackStreamingClient;
+                trailerOptitrackComponent.AddComponent<OptitrackStreamingClient>();
             trailerRigidBody.StreamingClient = trailerOptitrackStreamingClient;
             trailerRigidBody.RigidBodyId = vehicleConfig.trailorOptitrackID;
             trailerRigidBody.NetworkCompensation = true;
@@ -120,6 +143,10 @@ namespace Core
             return trailerRigidBody;
         }
 
+        /// <summary>
+        /// Initializes the ROS connector component.
+        /// </summary>
+        /// <returns>The initialized ROS connector.</returns>
         private RosConnector InitRosConnector()
         {
             rosComponent = new GameObject("ROSComponent");
@@ -136,6 +163,9 @@ namespace Core
             return rosConnector;
         }
 
+        /// <summary>
+        /// Initializes the ROS components (subscribers and publishers).
+        /// </summary>
         private void InitRosComponents()
         {
             twistSubscriber = rosComponent.AddComponent<TwistSubscriber>();
@@ -144,20 +174,28 @@ namespace Core
             twistPublisher = rosComponent.AddComponent<TwistPublisher>();
             twistPublisher.Topic = vehicleConfig.twistPublisherTopicController;
             
-            // TODO: ...
+            // TODO: Add additional ROS components if needed
         }
 
+        /// <summary>
+        /// Sets the simulation detail for the vehicle.
+        /// </summary>
+        /// <param name="vehicleID">Vehicle ID.</param>
+        /// <param name="pathID">Path ID.</param>
         public void SetSimulationDetail(int vehicleID, int pathID)
         {
             setSimulationServiceProvider.SetSimulationDetail(vehicleID, pathID);
         }
 
+        /// <summary>
+        /// Cleanup and destroy components when the vehicle product is destroyed.
+        /// </summary>
         private void OnDestroy()
         {
             if (vehicleConfig.isMocapAvaialbe)
             {
                 Destroy(tractorOptitrackComponent);
-                Destroy(trailerOptitackComponent);
+                Destroy(trailerOptitrackComponent);
             }
             Destroy(rosComponent);
             Destroy(vehicleAnimation);

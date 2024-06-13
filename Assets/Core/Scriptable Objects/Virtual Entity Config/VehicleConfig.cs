@@ -27,7 +27,7 @@ namespace Core
         public GameObject vehiclePrototypePrefab;
         public GameObject vehicleDashboardPrefab;
         
-        [Header("Dimensions")]
+        [Header("Parameters")]
         public float scale = 13f;
         public float l1Scaled = 0.27f;
         public float l1CScaled = 0.055f;
@@ -54,7 +54,6 @@ namespace Core
         
         // TODO: can add more ros topics to subscribe or publish on
         
-        
         [Header("Vehicle Control")]
         public KinematicsSource kinematicsSource;
         public ActuationInputSource actuationInputSource;
@@ -68,8 +67,6 @@ namespace Core
         public float initialAcceleration;
         public float initialSteeringAngle;
 
-        [Header("Dashboard Toggle Event Channel")]
-        public VoidEventChannel ecToggleDashboard;
     }
 }
 

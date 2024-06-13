@@ -93,9 +93,7 @@ namespace Core
             // Update UI with simulation status
             StartCoroutine(UpdateSimulationUI());
         }
-
-
-
+        
         public void SetSelectedVehicleFromDropdown()
         {
             if (applicationManager.vehicleFactory.productLookupTable.Values.Count > 0)

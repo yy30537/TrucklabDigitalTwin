@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Digital Twin 2
   m_EditorClassIdentifier: 
   vehicleID: 2
-  vehicleName: Truck2 Digital Twin
+  vehicleName: Truck 2 Digital Twin
   vehiclePrototypePrefab: {fileID: 5575297634737090259, guid: d6064381c8aa8ac46997a85d357228cb, type: 3}
   vehicleDashboardPrefab: {fileID: 4125324875618756786, guid: 5fa7766b58e84da42961c8df32b92261, type: 3}
   scale: 13.3
@@ -42,4 +42,3 @@ MonoBehaviour:
   initialVelocity: 0
   initialAcceleration: 0
   initialSteeringAngle: 0
-  ecToggleDashboard: {fileID: 11400000, guid: 8a2e090ebd6364c49aa35612693ab376, type: 2}

@@ -50,9 +50,13 @@ namespace Core
         {
             title.text = $"{spaceProduct.productName}\n";
             content.text = "";
+            if (spaceProduct.vehiclesInside.Count > 0)
+            {
+                content.text += $"Detecting: \n";
+            }
             foreach (var vehicle in spaceProduct.vehiclesInside.Values)
             {
-                content.text += $"[{vehicle.productName}] \n";
+                content.text += $"{vehicle.productName}\n";
             }
         }
 

@@ -2656,7 +2656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   getClickedObject: {fileID: 1718120468}
-  isDraggingEnabled: 0
+  isDraggingEnabled: 1
   isDragging: 0
   clickedVehicle: {fileID: 0}
   clickedTrailerObject: {fileID: 0}
@@ -4441,7 +4441,7 @@ MonoBehaviour:
   m_Content: {fileID: 2092526550}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 2
+  m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -7314,14 +7314,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1ece731db51d30a4c8d504b67d22ea6c, type: 2}
   - {fileID: 11400000, guid: 15646f7dad3669d40939d2eb6c62dfab, type: 2}
   - {fileID: 11400000, guid: 384404acc15038046bc2f0d3ed9b7441, type: 2}
+  - {fileID: 11400000, guid: f32f70962546e5b48b184e4e72929a9f, type: 2}
   - {fileID: 11400000, guid: 316ea839943e9824cbc26682bb5fc2bc, type: 2}
   - {fileID: 11400000, guid: 3520218e3df107e4f8ffa4a4a16f6fd8, type: 2}
   - {fileID: 11400000, guid: 0d0d9e645b3ed7e4fabb24aa5d4df1af, type: 2}
   - {fileID: 11400000, guid: 9845c8b51b39723408bf433dff44aeac, type: 2}
   - {fileID: 11400000, guid: b8caa97d5a14cf541b43f93007847581, type: 2}
-  - {fileID: 11400000, guid: 4823026f07380a842b2aff66a7bd927e, type: 2}
-  - {fileID: 11400000, guid: feb768188a9c69445b0f78d39a8d93ed, type: 2}
-  - {fileID: 11400000, guid: 232d8855dbf67a24b86e65eee7651b8b, type: 2}
   - {fileID: 11400000, guid: 6697d20c194407c41afe839f3236ce79, type: 2}
   - {fileID: 11400000, guid: 9d2ae3621ce260145816dfffc70de046, type: 2}
   - {fileID: 11400000, guid: 478b54dc9056f9d42873bc95156170a8, type: 2}
@@ -7332,8 +7330,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5030f9f05a2b56e4dacc853020eefba6, type: 2}
   - {fileID: 11400000, guid: 2069c214dae4e224cbdf0a7fe2c95e9e, type: 2}
   - {fileID: 11400000, guid: 3469e76c84b3b1c4693780be16f35e31, type: 2}
-  - {fileID: 11400000, guid: f32f70962546e5b48b184e4e72929a9f, type: 2}
   - {fileID: 11400000, guid: c0a580cff568bd94b9cf005ad46277a6, type: 2}
+  - {fileID: 11400000, guid: 4823026f07380a842b2aff66a7bd927e, type: 2}
+  - {fileID: 11400000, guid: feb768188a9c69445b0f78d39a8d93ed, type: 2}
+  - {fileID: 11400000, guid: 232d8855dbf67a24b86e65eee7651b8b, type: 2}
   spaceFactory: {fileID: 32377068}
   docksConfig:
   - {fileID: 11400000, guid: 7a76b4feb6a94b44bbacf71d4b643cd6, type: 2}
@@ -7660,7 +7660,7 @@ GameObject:
   - component: {fileID: 1011906147}
   - component: {fileID: 1011906146}
   m_Layer: 0
-  m_Name: Open Path Simulation Menu
+  m_Name: Open Simulation Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8337,7 +8337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1116583014}
   m_Layer: 0
-  m_Name: Path Simulation
+  m_Name: Simulation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8356,10 +8356,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1289631077}
   - {fileID: 1787270680}
   - {fileID: 1078447907}
   - {fileID: 738292360}
+  - {fileID: 1289631077}
   m_Father: {fileID: 1362167049}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1117959193
@@ -8372,7 +8372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1117959194}
   m_Layer: 0
-  m_Name: '| ------ Virtual Entity -----------------'
+  m_Name: '| ------ Virtual Entity --------------'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9073,7 +9073,7 @@ GameObject:
   - component: {fileID: 1289631079}
   - component: {fileID: 1289631078}
   m_Layer: 0
-  m_Name: Path Simulation Service Provider
+  m_Name: Simulation Service Provider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12230,7 +12230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa3804dd38404709bdfd2a7097be5026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 1
+  isActive: 0
   mainCamera: {fileID: 1731021753}
   movementSpeed: 50
   cameraVerticalSpeed: 10
@@ -12462,7 +12462,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1772423886
 GameObject:
   m_ObjectHideFlags: 0
@@ -12912,7 +12912,6 @@ MonoBehaviour:
   - {fileID: 4900000, guid: bd12ea9d9b1104341b0d8f15ea2bcb38, type: 3}
   - {fileID: 4900000, guid: 2865d98bee457e747adc5b1cfa0bc20c, type: 3}
   - {fileID: 4900000, guid: 2958da6b0fb88d04b8794e58e9bf28da, type: 3}
-  - {fileID: 4900000, guid: 98270f2fe6e2426448da0fbd233bdda1, type: 3}
   paths: []
 --- !u!1 &1795418327
 GameObject:
@@ -13288,7 +13287,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Path Simulation
+  m_text: Simulation
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00a1b43765c72c64caf63d0fc53e616a, type: 2}
   m_sharedMaterial: {fileID: 3199807606004210416, guid: 00a1b43765c72c64caf63d0fc53e616a, type: 2}
@@ -14277,7 +14276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1962042195}
   m_Layer: 0
-  m_Name: '| ------ UI -------------------------'
+  m_Name: '| ------ UI ------------------------'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
