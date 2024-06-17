@@ -1,19 +1,20 @@
 using UnityEngine;
 using System;
+using UnityEngine.Serialization;
 
 namespace Core
 {
     public enum ActuationInputSource
     {
-        keyboard,
-        manual,
+        thrustmaster,
         controller,
+        keyboard,
     }
     
     public enum KinematicsSource
     {
-        actuation,
-        motioncapture
+        motioncapture,
+        actuation
     }
     
     [CreateAssetMenu(fileName = "VehicleConfig", menuName = "VehicleConfig")]
@@ -26,7 +27,7 @@ namespace Core
         public GameObject vehiclePrototypePrefab;
         public GameObject vehicleDashboardPrefab;
         
-        [Header("Dimensions")]
+        [Header("Parameters")]
         public float scale = 13f;
         public float l1Scaled = 0.27f;
         public float l1CScaled = 0.055f;
@@ -44,12 +45,14 @@ namespace Core
         [Header("ROS Configuration")]
         public bool isRosAvaialbe;
         public string rosBridgeServerAddress;
-        public string twistSubscriberTopicManual;
+        
+        public string twistSubscriberTopicThrustmaster;
         public string twistSubscriberTopicController;
         
-        public string twistPublisherTopicManual;
+        public string twistPublisherTopicThrustmaster;
+        public string twistPublisherTopicController;
         
-        // TODO: add more fields for ros to pre configure stuff
+        // TODO: can add more ros topics to subscribe or publish on
         
         [Header("Vehicle Control")]
         public KinematicsSource kinematicsSource;
@@ -64,8 +67,6 @@ namespace Core
         public float initialAcceleration;
         public float initialSteeringAngle;
 
-        [Header("Dashboard Toggle Event Channel")]
-        public VoidEventChannel ecToggleDashboard;
     }
 }
 

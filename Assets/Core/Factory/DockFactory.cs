@@ -1,44 +1,49 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Core
 {
+    /// <summary>
+    /// Factory class for creating and managing DockProduct instances.
+    /// </summary>
     public class DockFactory : Factory<DockProduct, DockConfig>
     {
-
-        private void Awake()
-        {
-            productUIObserverParent = new GameObject("DockUIObservers");
-            productUIObserverParent.transform.SetParent(instanceParent);
-        }
-
-        protected override GameObject CreateProductInstance(DockConfig config)
+        /// <summary>
+        /// Initializes the DockProduct component of the created instance.
+        /// </summary>
+        /// <param name="config">Configuration for the dock product.</param>
+        /// <returns>Initialized DockProduct component.</returns>
+        public override IProduct GetProduct(DockConfig config)
         {
             var instance = Instantiate(config.dockBuildingPrefab, instanceParent);
             instance.name = config.dockStationName;
-            return instance;
-        }
-
-        protected override DockProduct InitializeProductComponent(GameObject instance, DockConfig config)
-        {
             var product = instance.AddComponent<DockProduct>();
-            product.Init(config, instance, mainCamera);
-            InitializeDockUIObserver(product);
+
+            product.productID = config.dockStationID;
+            product.productName = config.dockStationName;
+            product.productInstance = instance;
+            product.mainCamera = mainCamera;
+            product.systemLog = FindObjectOfType<SystemLog>();
+            product.getClickedObject = FindObjectOfType<GetClickedObject>();
+            product.dockConfig = config;
+            
+            var dashboardInstance = Instantiate(config.dockBuildingDashboard, dashboardParentTransform);
+            var observer = dashboardInstance.AddComponent<DockDashboardObserver>();
+            observer.Initialize(product, dashboardParentTransform);
+
+            product.dashboardObserver = observer;
+            
+            product.Initialize();
             return product;
         }
-
-        private void InitializeDockUIObserver(DockProduct product)
-        {
-            var uiObserverInstance = new GameObject("DockDashboard");
-            uiObserverInstance.transform.SetParent(uiObserverParent.transform);
-            var uiObserver = uiObserverInstance.AddComponent<DockDashboard>();
-            uiObserver.Initialize(product, dashboardParentTransform);
-        }
-
+        
+        /// <summary>
+        /// Registers the dock product in the lookup table.
+        /// </summary>
+        /// <param name="config">Configuration for the dock product.</param>
+        /// <param name="product">Dock product instance.</param>
         protected override void RegisterProduct(DockConfig config, DockProduct product)
         {
             productLookupTable.Add(config.dockStationID, product);
         }
     }
 }
-

@@ -97,7 +97,5 @@ namespace Core
 
             return new Vector3[] { frontLeft, frontRight, rearRight, rearLeft };
         }
-
-
     }
 }

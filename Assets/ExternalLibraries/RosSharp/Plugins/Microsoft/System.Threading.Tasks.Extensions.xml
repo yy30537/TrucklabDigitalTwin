@@ -23,12 +23,12 @@
       <typeparam dockStationName="TResult">The result.</typeparam>
     </member>
     <member dockStationName="M:System.Threading.Tasks.ValueTask`1.#ctor(System.Threading.Tasks.Task{`0})">
-      <summary>Initializes a new instance of the <see cref="ValueTask{TResult}"></see> class using the supplied task that represents the operation.</summary>
+      <summary>Initializes a new pinstance of the <see cref="ValueTask{TResult}"></see> class using the supplied task that represents the operation.</summary>
       <param dockStationName="task">The task.</param>
       <exception cref="T:System.ArgumentNullException">The <paramref dockStationName="task">task</paramref> argument is null.</exception>
     </member>
     <member dockStationName="M:System.Threading.Tasks.ValueTask`1.#ctor(`0)">
-      <summary>Initializes a new instance of the <see cref="ValueTask{TResult}"></see> class using the supplied result of a successful operation.</summary>
+      <summary>Initializes a new pinstance of the <see cref="ValueTask{TResult}"></see> class using the supplied result of a successful operation.</summary>
       <param dockStationName="result">The result.</param>
     </member>
     <member dockStationName="M:System.Threading.Tasks.ValueTask`1.AsTask">
@@ -59,7 +59,7 @@
       <returns>The awaiter.</returns>
     </member>
     <member dockStationName="M:System.Threading.Tasks.ValueTask`1.GetHashCode">
-      <summary>Returns the hash code for this instance.</summary>
+      <summary>Returns the hash code for this pinstance.</summary>
       <returns>The hash code for the current object.</returns>
     </member>
     <member dockStationName="P:System.Threading.Tasks.ValueTask`1.IsCanceled">

@@ -43,7 +43,7 @@ namespace NWH.VehiclePhysics
             this.vc = vc;
             this.audioMixerGroup = amg;
 
-            // Init engine sound
+            // Initialize engine sound
             if (Clip != null)
             {
                 Source = vc.gameObject.AddComponent<AudioSource>();

@@ -4,11 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c38675-2ef1-4773-9f47-0806db99e780" name="Changes" comment="" />
+    <list default="true" id="a5c38675-2ef1-4773-9f47-0806db99e780" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TruckLabDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TruckLabDemo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Factory/VehicleProduct.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Factory/VehicleProduct.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Dock/DockBuilding.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Dock/DockBuilding.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock438.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock438.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock439.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock439.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock440.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock440.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock441.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock441.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock442.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock442.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock443.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock443.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock444.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock444.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock445.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock445.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock446.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock446.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock447.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Space/Dock447.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Model 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Model 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Model 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Model 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Model 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Model 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Twin 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Twin 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Twin 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Twin 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Twin 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Instances/Virtual Entity Config Instances/Vehicle/Digital Twin 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Virtual Entity Config/VehicleConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Scriptable Objects/Virtual Entity Config/VehicleConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Virtual Entity Components/Vehicle/VehicleDashboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Virtual Entity Components/Vehicle/VehicleDashboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Core/Virtual Entity Components/Vehicle/VehicleKinematics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Core/Virtual Entity Components/Vehicle/VehicleKinematics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prototypes/Vehicle/Vehicle Dashboard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prototypes/Vehicle/Vehicle Dashboard.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Core/Utility/DragVehicle.cs" root0="FORCE_HIGHLIGHTING" />
@@ -34,6 +62,11 @@
     "Notification.DoNotAsk-WindowsDefender": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< Updated upstream
+    "git-widget-placeholder": "refactor",
+=======
+    "git-widget-placeholder": "main",
+>>>>>>> Stashed changes
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -166,6 +199,12 @@
       <workItem from="1717416236111" duration="13094000" />
       <workItem from="1717509714790" duration="2511000" />
       <workItem from="1717609759829" duration="1870000" />
+<<<<<<< Updated upstream
+      <workItem from="1717613456905" duration="2047000" />
+=======
+      <workItem from="1717765256208" duration="5672000" />
+      <workItem from="1717779176626" duration="1819000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>

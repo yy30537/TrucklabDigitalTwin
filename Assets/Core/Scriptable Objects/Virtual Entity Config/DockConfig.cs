@@ -11,10 +11,7 @@ namespace Core
         public GameObject dockBuildingPrefab;
         public Vector3 dockBuildingPosition;
         public float dockBuildingRotation;
-        
         public GameObject dockBuildingDashboard;
-        
-        public VoidEventChannel ecToggleDashboard;
     }
 }
 
