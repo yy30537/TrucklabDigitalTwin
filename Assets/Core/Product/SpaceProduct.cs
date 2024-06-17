@@ -6,13 +6,21 @@ namespace Core
     /// <summary>
     /// Represents a space product in the simulation.
     /// </summary>
-    public class SpaceProduct : Product
+    public class SpaceProduct : MonoBehaviour, IProduct
     {
-        public SpaceConfig spaceConfig { get; private set; }
-        public Dictionary<int, VehicleProduct> vehiclesInside { get; private set; }
-        public SpaceDashboardObserver dashboardObserver { get; private set; }
-        public MeshRenderer meshRenderer { get; private set; }
-        public VehicleFactory vehicleFactory { get; private set; }
+        public int productID { get; set; }
+        public string productName { get; set; }
+        public GameObject productInstance { get; set; }
+        public Camera mainCamera { get; set; }
+        public SystemLog systemLog { get; set; }
+        public GetClickedObject getClickedObject { get; set; }
+        public SpaceConfig spaceConfig { get; set; }
+        public SpaceDashboardObserver dashboardObserver { get; set; }
+        public VehicleFactory vehicleFactory { get; set; }
+        
+        public Dictionary<int, VehicleProduct> vehiclesInside { get; set; }
+        public MeshRenderer meshRenderer { get; set; }
+        
 
         private void Awake()
         {
@@ -22,24 +30,7 @@ namespace Core
         /// <summary>
         /// Initializes the space product with the provided configuration and dependencies.
         /// </summary>
-        /// <param name="config">Space configuration.</param>
-        /// <param name="instance">GameObject instance of the space.</param>
-        /// <param name="cam">Main camera.</param>
-        /// <param name="systemLog">System log for logging events.</param>
-        /// <param name="getClickedObject">Service for detecting clicked objects.</param>
-        /// <param name="vehicleFactory">Vehicle factory instance.</param>
-        public void Init(SpaceConfig config, GameObject instance, Camera cam, SystemLog systemLog, GetClickedObject getClickedObject, VehicleFactory vehicleFactory)
-        {
-            base.Init(config.spaceID, config.spaceName, instance, cam, systemLog, getClickedObject);
-            this.vehicleFactory = vehicleFactory;
-            spaceConfig = config;
-            InitComponents();
-        }
-
-        /// <summary>
-        /// Initializes the components of the space product.
-        /// </summary>
-        public override void InitComponents()
+        public void Initialize()
         {
             Vector3 centerPoint = CalculateCenterPoint(spaceConfig.spacePoints);
             productInstance.transform.position = centerPoint;
@@ -66,7 +57,7 @@ namespace Core
             rb.isKinematic = true;
             rb.useGravity = false;
         }
-
+        
         private void Update()
         {
             foreach (var vehicle in vehicleFactory.productLookupTable)

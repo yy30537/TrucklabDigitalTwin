@@ -10,9 +10,7 @@ namespace Core
         public string spaceName;
         public GameObject spaceDashboard;
         public Vector3[] spacePoints;
-        public Material spaceMaterialActive;
         public Material spaceMaterial;
-        public VoidEventChannel ecToggleDashboard;
     }
 }
 

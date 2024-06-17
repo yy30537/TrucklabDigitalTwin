@@ -172,6 +172,8 @@ MonoBehaviour:
   instanceParent: {fileID: 2013913250}
   mainCamera: {fileID: 1731021753}
   dashboardParentTransform: {fileID: 1564064357}
+  vehicleFactory: {fileID: 32377071}
+  systemLog: {fileID: 537658747}
 --- !u!114 &32377069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +189,8 @@ MonoBehaviour:
   instanceParent: {fileID: 2013913250}
   mainCamera: {fileID: 1731021753}
   dashboardParentTransform: {fileID: 1633303926}
+  vehicleFactory: {fileID: 32377071}
+  systemLog: {fileID: 537658747}
 --- !u!114 &32377071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +206,8 @@ MonoBehaviour:
   instanceParent: {fileID: 1389255152}
   mainCamera: {fileID: 1731021753}
   dashboardParentTransform: {fileID: 811157144}
+  vehicleFactory: {fileID: 32377071}
+  systemLog: {fileID: 537658747}
 --- !u!1 &32917489
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +328,7 @@ GameObject:
   - component: {fileID: 102073187}
   - component: {fileID: 102073186}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1137,7 +1143,7 @@ GameObject:
   - component: {fileID: 228400023}
   - component: {fileID: 228400022}
   m_Layer: 0
-  m_Name: Open Main Menu
+  m_Name: Toggle Main Menu Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5580,7 +5586,7 @@ GameObject:
   - component: {fileID: 747132064}
   - component: {fileID: 747132066}
   m_Layer: 0
-  m_Name: Settings Menu
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7302,46 +7308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad392c384f54817a5a102bf71f6ce2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vehiclesConfig:
-  - {fileID: 11400000, guid: edf5b3b15e4de924bbbfa1d0e59049c4, type: 2}
-  - {fileID: 11400000, guid: a0aa8e59bd087674daea5c9e04ae284d, type: 2}
-  - {fileID: 11400000, guid: 1231d6a832ea0f541b8cd5130ddf4661, type: 2}
-  - {fileID: 11400000, guid: 983bfb21d65db0d438758ae32fd040d3, type: 2}
-  - {fileID: 11400000, guid: 88a9dddf5d0f3854a9e6c9333fb8c8bb, type: 2}
-  - {fileID: 11400000, guid: d0333d73740fce64195d6d02862b9f05, type: 2}
-  vehicleFactory: {fileID: 32377071}
-  spacesConfig:
-  - {fileID: 11400000, guid: 1ece731db51d30a4c8d504b67d22ea6c, type: 2}
-  - {fileID: 11400000, guid: 15646f7dad3669d40939d2eb6c62dfab, type: 2}
-  - {fileID: 11400000, guid: 384404acc15038046bc2f0d3ed9b7441, type: 2}
-  - {fileID: 11400000, guid: f32f70962546e5b48b184e4e72929a9f, type: 2}
-  - {fileID: 11400000, guid: 316ea839943e9824cbc26682bb5fc2bc, type: 2}
-  - {fileID: 11400000, guid: 3520218e3df107e4f8ffa4a4a16f6fd8, type: 2}
-  - {fileID: 11400000, guid: 0d0d9e645b3ed7e4fabb24aa5d4df1af, type: 2}
-  - {fileID: 11400000, guid: 9845c8b51b39723408bf433dff44aeac, type: 2}
-  - {fileID: 11400000, guid: b8caa97d5a14cf541b43f93007847581, type: 2}
-  - {fileID: 11400000, guid: 6697d20c194407c41afe839f3236ce79, type: 2}
-  - {fileID: 11400000, guid: 9d2ae3621ce260145816dfffc70de046, type: 2}
-  - {fileID: 11400000, guid: 478b54dc9056f9d42873bc95156170a8, type: 2}
-  - {fileID: 11400000, guid: df978e387e4185d48a1ae41e41efd459, type: 2}
-  - {fileID: 11400000, guid: 5ecacbc5a23b4154286a136805e76573, type: 2}
-  - {fileID: 11400000, guid: 936a8a820ca591548ba4be123e813536, type: 2}
-  - {fileID: 11400000, guid: b83037869a7b7f247a47199f585fcd28, type: 2}
-  - {fileID: 11400000, guid: 5030f9f05a2b56e4dacc853020eefba6, type: 2}
-  - {fileID: 11400000, guid: 2069c214dae4e224cbdf0a7fe2c95e9e, type: 2}
-  - {fileID: 11400000, guid: 3469e76c84b3b1c4693780be16f35e31, type: 2}
-  - {fileID: 11400000, guid: c0a580cff568bd94b9cf005ad46277a6, type: 2}
-  - {fileID: 11400000, guid: 4823026f07380a842b2aff66a7bd927e, type: 2}
-  - {fileID: 11400000, guid: feb768188a9c69445b0f78d39a8d93ed, type: 2}
-  - {fileID: 11400000, guid: 232d8855dbf67a24b86e65eee7651b8b, type: 2}
-  spaceFactory: {fileID: 32377068}
-  docksConfig:
-  - {fileID: 11400000, guid: 7a76b4feb6a94b44bbacf71d4b643cd6, type: 2}
-  dockFactory: {fileID: 32377069}
-  pathManager: {fileID: 1787270681}
-  setSimulationServiceProvider: {fileID: 1289631078}
-  systemLog: {fileID: 537658747}
-  getClickedObject: {fileID: 1718120468}
   mainUICanvas: {fileID: 474790222}
 --- !u!1 &953114203
 GameObject:
@@ -8676,7 +8642,7 @@ GameObject:
   - component: {fileID: 1185707282}
   - component: {fileID: 1185707283}
   m_Layer: 0
-  m_Name: Simulation Menu
+  m_Name: Simulation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8729,10 +8695,12 @@ MonoBehaviour:
   menuName: Simulation Menu
   ecToggle: {fileID: 11400000, guid: e1aa21181bb0d2a469323ff8ee4cc02d, type: 2}
   menuObject: {fileID: 1185707281}
-  applicationManager: {fileID: 931234445}
   createdVehicleDropdown: {fileID: 1968598407}
   pathDropdown: {fileID: 1802111434}
   pathDrawer: {fileID: 1078447908}
+  simulationServiceProvider: {fileID: 1289631078}
+  pathManager: {fileID: 1787270681}
+  vehicleFactory: {fileID: 32377071}
   statusText: {fileID: 1120581333}
   timeRemainingText: {fileID: 986953697}
   startPositionText: {fileID: 2037822320}
@@ -8756,8 +8724,6 @@ MonoBehaviour:
       Vx: 0
       tmax: 0
   selectedVehicle: {fileID: 0}
-  simulationServiceProvider: {fileID: 1289631078}
-  pathManager: {fileID: 1787270681}
 --- !u!1 &1202757702
 GameObject:
   m_ObjectHideFlags: 0
@@ -11662,7 +11628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e83eb66d0e2a9ff42951dc0f0ee52c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuObject: {fileID: 1639621305}
+  panel: {fileID: 1639621305}
 --- !u!222 &1639621309
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14765,7 +14731,7 @@ GameObject:
   - component: {fileID: 2017158745}
   - component: {fileID: 2017158746}
   m_Layer: 0
-  m_Name: Factory Menu
+  m_Name: Factory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14814,7 +14780,42 @@ MonoBehaviour:
   vehicleInfoText: {fileID: 370181390}
   confirmVehicleCreation: {fileID: 11400000, guid: 79c25a24dae82be44a2b21b8fb2c6121, type: 2}
   deleteVehicleEvent: {fileID: 11400000, guid: c009389cc7e7ca445a0b864cd790d773, type: 2}
-  applicationManager: {fileID: 931234445}
+  vehiclesConfig:
+  - {fileID: 11400000, guid: edf5b3b15e4de924bbbfa1d0e59049c4, type: 2}
+  - {fileID: 11400000, guid: a0aa8e59bd087674daea5c9e04ae284d, type: 2}
+  - {fileID: 11400000, guid: 1231d6a832ea0f541b8cd5130ddf4661, type: 2}
+  - {fileID: 11400000, guid: 983bfb21d65db0d438758ae32fd040d3, type: 2}
+  - {fileID: 11400000, guid: 88a9dddf5d0f3854a9e6c9333fb8c8bb, type: 2}
+  - {fileID: 11400000, guid: d0333d73740fce64195d6d02862b9f05, type: 2}
+  spacesConfig:
+  - {fileID: 11400000, guid: 1ece731db51d30a4c8d504b67d22ea6c, type: 2}
+  - {fileID: 11400000, guid: 15646f7dad3669d40939d2eb6c62dfab, type: 2}
+  - {fileID: 11400000, guid: 384404acc15038046bc2f0d3ed9b7441, type: 2}
+  - {fileID: 11400000, guid: f32f70962546e5b48b184e4e72929a9f, type: 2}
+  - {fileID: 11400000, guid: 316ea839943e9824cbc26682bb5fc2bc, type: 2}
+  - {fileID: 11400000, guid: 3520218e3df107e4f8ffa4a4a16f6fd8, type: 2}
+  - {fileID: 11400000, guid: 0d0d9e645b3ed7e4fabb24aa5d4df1af, type: 2}
+  - {fileID: 11400000, guid: 9845c8b51b39723408bf433dff44aeac, type: 2}
+  - {fileID: 11400000, guid: b8caa97d5a14cf541b43f93007847581, type: 2}
+  - {fileID: 11400000, guid: 6697d20c194407c41afe839f3236ce79, type: 2}
+  - {fileID: 11400000, guid: 9d2ae3621ce260145816dfffc70de046, type: 2}
+  - {fileID: 11400000, guid: 478b54dc9056f9d42873bc95156170a8, type: 2}
+  - {fileID: 11400000, guid: df978e387e4185d48a1ae41e41efd459, type: 2}
+  - {fileID: 11400000, guid: 5ecacbc5a23b4154286a136805e76573, type: 2}
+  - {fileID: 11400000, guid: 936a8a820ca591548ba4be123e813536, type: 2}
+  - {fileID: 11400000, guid: b83037869a7b7f247a47199f585fcd28, type: 2}
+  - {fileID: 11400000, guid: 5030f9f05a2b56e4dacc853020eefba6, type: 2}
+  - {fileID: 11400000, guid: 2069c214dae4e224cbdf0a7fe2c95e9e, type: 2}
+  - {fileID: 11400000, guid: 3469e76c84b3b1c4693780be16f35e31, type: 2}
+  - {fileID: 11400000, guid: c0a580cff568bd94b9cf005ad46277a6, type: 2}
+  - {fileID: 11400000, guid: 4823026f07380a842b2aff66a7bd927e, type: 2}
+  - {fileID: 11400000, guid: feb768188a9c69445b0f78d39a8d93ed, type: 2}
+  - {fileID: 11400000, guid: 232d8855dbf67a24b86e65eee7651b8b, type: 2}
+  docksConfig:
+  - {fileID: 11400000, guid: 7a76b4feb6a94b44bbacf71d4b643cd6, type: 2}
+  vehicleFactory: {fileID: 32377071}
+  spaceFactory: {fileID: 32377068}
+  dockFactory: {fileID: 32377069}
 --- !u!1 &2024874566
 GameObject:
   m_ObjectHideFlags: 0

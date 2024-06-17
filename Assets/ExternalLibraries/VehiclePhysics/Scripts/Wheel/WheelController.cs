@@ -230,7 +230,7 @@ namespace NWH.WheelController3D
                 wheel.nonRotatingPostionOffset = trans.InverseTransformDirection(wheel.nonRotating.transform.position - visualTrans.position);
             }
 
-            // Init the wheel params
+            // Initialize the wheel params
             wheel.Initialize(this);
 
             InitializeScanParams();
@@ -238,7 +238,7 @@ namespace NWH.WheelController3D
             // Find parent
             parentRigidbody = parent.GetComponent<Rigidbody>();
 
-            // Init spring length to starting value.
+            // Initialize spring length to starting value.
             spring.length = spring.maxLength * 0.5f;
         }
 
@@ -257,7 +257,7 @@ namespace NWH.WheelController3D
             stepX = sideToSideScanResolution == 1 ? 1 : (wheel.width) / (sideToSideScanResolution - 1);
             stepY = forwardScanResolution == 1 ? 1 : (wheel.tireRadius * 2f) / (forwardScanResolution - 1);
 
-            // Init wheel rays
+            // Initialize wheel rays
             int n = forwardScanResolution * sideToSideScanResolution;
             wheelHits = new WheelHit[n];
 

@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Core
@@ -8,61 +7,37 @@ namespace Core
     /// </summary>
     public class SpaceFactory : Factory<SpaceProduct, SpaceConfig>
     {
-        private VehicleFactory vehicleFactory;
-        private GetClickedObject getClickedObject;
-
         /// <summary>
-        /// Initializes the SpaceFactory with required dependencies.
-        /// </summary>
-        /// <param name="systemLog">System log for logging events.</param>
-        /// <param name="vehicleFactory">Factory for creating and managing vehicle products.</param>
-        /// <param name="getClickedObject">Service for detecting clicked objects.</param>
-        public void Initialize(SystemLog systemLog, VehicleFactory vehicleFactory, GetClickedObject getClickedObject)
-        {
-            this.vehicleFactory = vehicleFactory;
-            this.getClickedObject = getClickedObject;
-            base.Initialize(systemLog);
-        }
-
-        /// <summary>
-        /// Creates a new instance of the space product.
+        /// Initializes the SpaceProduct component of the created instance.
         /// </summary>
         /// <param name="config">Configuration for the space product.</param>
-        /// <returns>Newly created GameObject instance.</returns>
-        protected override GameObject CreateProductInstance(SpaceConfig config)
+        /// <returns>Initialized SpaceProduct component.</returns>
+        public override IProduct GetProduct(SpaceConfig config)
         {
             var instance = new GameObject(config.spaceName);
             instance.transform.SetParent(instanceParent);
             instance.tag = "SpaceProduct";
-            return instance;
-        }
-
-        /// <summary>
-        /// Initializes the SpaceProduct component of the created instance.
-        /// </summary>
-        /// <param name="instance">GameObject instance of the space product.</param>
-        /// <param name="config">Configuration for the space product.</param>
-        /// <returns>Initialized SpaceProduct component.</returns>
-        protected override SpaceProduct InitializeProductComponent(GameObject instance, SpaceConfig config)
-        {
             var product = instance.AddComponent<SpaceProduct>();
-            product.Init(config, instance, mainCamera, systemLog, getClickedObject, vehicleFactory);
-            InitializeSpaceUI(product, config);
-            return product;
-        }
-
-        /// <summary>
-        /// Initializes the UI observer for the space product.
-        /// </summary>
-        /// <param name="product">Space product instance.</param>
-        /// <param name="config">Configuration for the space product.</param>
-        private void InitializeSpaceUI(SpaceProduct product, SpaceConfig config)
-        {
+            
+            product.productID = config.spaceID;
+            product.productName = config.spaceName;
+            product.productInstance = instance;
+            product.mainCamera = mainCamera;
+            product.systemLog = FindObjectOfType<SystemLog>();
+            product.getClickedObject = FindObjectOfType<GetClickedObject>();
+            product.spaceConfig = config;
+            
             var dashboardInstance = Instantiate(config.spaceDashboard, dashboardParentTransform);
             var observer = dashboardInstance.AddComponent<SpaceDashboardObserver>();
             observer.Initialize(product, dashboardParentTransform);
-        }
 
+            product.dashboardObserver = observer;
+            product.vehicleFactory = vehicleFactory;
+            
+            product.Initialize();
+            return product;
+        }
+        
         /// <summary>
         /// Registers the space product in the lookup table.
         /// </summary>

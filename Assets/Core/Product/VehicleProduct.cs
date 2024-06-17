@@ -7,7 +7,7 @@ namespace Core
     /// <summary>
     /// Represents a vehicle product in the simulation.
     /// </summary>
-    public class VehicleProduct : Product
+    public class VehicleProduct : MonoBehaviour, IProduct
     {
         [Header("Vehicle Identity")]
         public VehicleData vehicleData;
@@ -33,32 +33,19 @@ namespace Core
         
         [Header("Dashboard Parent Transform")]
         public Transform vehicleDashboardParent;
-
-        private SetSimulationServiceProvider setSimulationServiceProvider;
+        //private SetSimulationServiceProvider setSimulationServiceProvider;
+        
+        public int productID { get; set; }
+        public string productName { get; set; }
+        public GameObject productInstance { get; set; }
+        public Camera mainCamera { get; set; }
+        public SystemLog systemLog { get; set; }
+        public GetClickedObject getClickedObject { get; set; }
 
         /// <summary>
         /// Initializes the vehicle product with the provided configuration and dependencies.
         /// </summary>
-        /// <param name="config">Vehicle configuration.</param>
-        /// <param name="instance">GameObject instance of the vehicle.</param>
-        /// <param name="cam">Main camera.</param>
-        /// <param name="dashboardParent">Parent transform for the vehicle dashboard.</param>
-        /// <param name="systemLog">System log for logging events.</param>
-        /// <param name="getClickedObject">Service for detecting clicked objects.</param>
-        /// <param name="simulationServiceProvider">Service provider for simulation details.</param>
-        public void Init(VehicleConfig config, GameObject instance, Camera cam, Transform dashboardParent, SystemLog systemLog, GetClickedObject getClickedObject, SetSimulationServiceProvider simulationServiceProvider)
-        {
-            base.Init(config.vehicleID, config.vehicleName, instance, cam, systemLog, getClickedObject);
-            vehicleConfig = config;
-            vehicleDashboardParent = dashboardParent;
-            this.setSimulationServiceProvider = simulationServiceProvider;
-            InitComponents();
-        }
-
-        /// <summary>
-        /// Initializes the components of the vehicle product.
-        /// </summary>
-        public override void InitComponents()
+        public void Initialize()
         {
             vehicleData = new VehicleData(vehicleConfig.vehicleID, vehicleConfig.vehicleName, vehicleConfig, productInstance);
             
@@ -184,7 +171,7 @@ namespace Core
         /// <param name="pathID">Path ID.</param>
         public void SetSimulationDetail(int vehicleID, int pathID)
         {
-            setSimulationServiceProvider.SetSimulationDetail(vehicleID, pathID);
+            //setSimulationServiceProvider.SetSimulationDetail(vehicleID, pathID);
         }
 
         /// <summary>

@@ -5,30 +5,19 @@ namespace Core
     /// <summary>
     /// Represents a dock product in the simulation.
     /// </summary>
-    public class DockProduct : Product
+    public class DockProduct : MonoBehaviour, IProduct
     {
-        public DockConfig dockConfig { get; private set; }
-        private DockDashboardObserver dashboardObserver;
-
-        /// <summary>
-        /// Initializes the dock product with the provided configuration and dependencies.
-        /// </summary>
-        /// <param name="config">Dock configuration.</param>
-        /// <param name="instance">GameObject instance of the dock.</param>
-        /// <param name="cam">Main camera.</param>
-        /// <param name="systemLog">System log for logging events.</param>
-        /// <param name="getClickedObject">Service for detecting clicked objects.</param>
-        public void Init(DockConfig config, GameObject instance, Camera cam, SystemLog systemLog, GetClickedObject getClickedObject)
-        {
-            base.Init(config.dockStationID, config.dockStationName, instance, cam, systemLog, getClickedObject);
-            dockConfig = config;
-            InitComponents();
-        }
-
-        /// <summary>
-        /// Initializes the components of the dock product.
-        /// </summary>
-        public override void InitComponents()
+        public int productID { get; set; }
+        public string productName { get; set; }
+        public GameObject productInstance { get; set; }
+        public Camera mainCamera { get; set; }
+        public SystemLog systemLog { get; set; }
+        public GetClickedObject getClickedObject { get; set; }
+        public DockConfig dockConfig { get; set; }
+        
+        public DockDashboardObserver dashboardObserver { get; set; }
+        
+        public void Initialize()
         {
             productInstance.transform.position = dockConfig.dockBuildingPosition;
             productInstance.transform.rotation = Quaternion.Euler(0, dockConfig.dockBuildingRotation, 0);

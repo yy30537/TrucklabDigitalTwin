@@ -9,11 +9,13 @@ namespace Core
 {
     public class SimulationMenu : Menu
     {
-        public ApplicationManager applicationManager;
         public TMP_Dropdown createdVehicleDropdown;
         public TMP_Dropdown pathDropdown;
         public PathDrawer pathDrawer;
-
+        public SetSimulationServiceProvider simulationServiceProvider;
+        public PathManager pathManager;
+        public VehicleFactory vehicleFactory;
+        
         // UI elements
         public TextMeshProUGUI statusText;
         public TextMeshProUGUI timeRemainingText;
@@ -25,8 +27,7 @@ namespace Core
         public Path selectedPath;
         public VehicleProduct selectedVehicle;
 
-        public SetSimulationServiceProvider simulationServiceProvider;
-        public PathManager pathManager;
+        
 
         void Start()
         {
@@ -38,9 +39,9 @@ namespace Core
             pathDrawer.Toggle(false);
             createdVehicleDropdown.ClearOptions();
             List<string> createdVehicleNames = new List<string>();
-            if (applicationManager.vehicleFactory.productLookupTable.Values.Count > 0)
+            if (vehicleFactory.productLookupTable.Values.Count > 0)
             {
-                foreach (var vehicle in applicationManager.vehicleFactory.productLookupTable.Values)
+                foreach (var vehicle in vehicleFactory.productLookupTable.Values)
                 {
                     createdVehicleNames.Add(vehicle.productName);
                 }
@@ -54,9 +55,9 @@ namespace Core
             pathDropdown.ClearOptions();
             List<string> pathNames = new List<string>();
 
-            if (applicationManager.vehicleFactory.productLookupTable.Values.Count > 0)
+            if (vehicleFactory.productLookupTable.Values.Count > 0)
             {
-                foreach (var path in applicationManager.pathManager.paths)
+                foreach (var path in pathManager.paths)
                 {
                     pathNames.Add(path.pathName);
                 }
@@ -69,7 +70,7 @@ namespace Core
             pathDrawer.Toggle(true);
             SetSelectedVehicleFromDropdown();
             var selectedPathIndex = pathDropdown.value;
-            selectedPath = applicationManager.pathManager.paths[selectedPathIndex];
+            selectedPath = pathManager.paths[selectedPathIndex];
             selectedVehicle.vehicleKinematics.InitPathSimulation(selectedPath);
 
             // Set simulation details via ROS service
@@ -82,7 +83,7 @@ namespace Core
         public void OnPathSelectedFromDropdown()
         {
             var selectedIndex = pathDropdown.value;
-            selectedPath = applicationManager.pathManager.paths[selectedIndex];
+            selectedPath = pathManager.paths[selectedIndex];
             // Visualize the selected path
             pathDrawer.DrawPath(selectedPath);
         }
@@ -96,9 +97,9 @@ namespace Core
         
         public void SetSelectedVehicleFromDropdown()
         {
-            if (applicationManager.vehicleFactory.productLookupTable.Values.Count > 0)
+            if (vehicleFactory.productLookupTable.Values.Count > 0)
             {
-                foreach (var vehicle in applicationManager.vehicleFactory.productLookupTable.Values)
+                foreach (var vehicle in vehicleFactory.productLookupTable.Values)
                 {
                     if (createdVehicleDropdown.options[createdVehicleDropdown.value].text == vehicle.productName)
                     {

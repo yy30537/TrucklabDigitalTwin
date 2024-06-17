@@ -9,27 +9,27 @@ using UnityEngine.EventSystems;
 
 namespace Core
 {
-    public class MainMenu : MonoBehaviour, IDragHandler
+    public class MenuPanel : MonoBehaviour, IDragHandler
     {
-        public GameObject mainMenuObject;
-        private bool isActive = false;
+        public GameObject panel;
+        private bool isActive = true;
         
         private void Start()
         {
-            mainMenuObject.SetActive(false);
+            panel.SetActive(true);
         }
 
         public void Toggle()
         {
             isActive = !isActive;
-            mainMenuObject.SetActive(isActive);
+            panel.SetActive(isActive);
         }
         
         public void OnDrag(PointerEventData data)
         {
             float x = data.position.x;
             float y = data.position.y;
-            mainMenuObject.transform.position = new Vector3(x, y, 0f);
+            panel.transform.position = new Vector3(x, y, 0f);
         }
 
     }

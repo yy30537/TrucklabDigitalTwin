@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using RosSharp.RosBridgeClient;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,7 @@ namespace Core
 {
     public class FactoryMenu : Menu
     {
+        private VehicleConfig selectedVehicleConfig;
         
         [Header("UI Components")]
         public TMP_Dropdown vehicleDropdown;
@@ -17,9 +19,14 @@ namespace Core
         public VoidEventChannel confirmVehicleCreation;
         public VoidEventChannel deleteVehicleEvent;
         
-        [Header("Dependencies")]
-        public ApplicationManager applicationManager;
-        private VehicleConfig selectedVehicleConfig;
+        [Header("Factories")]
+        public List<VehicleConfig> vehiclesConfig;
+        public List<SpaceConfig> spacesConfig;
+        public List<DockConfig> docksConfig;
+        
+        public Factory<VehicleProduct, VehicleConfig> vehicleFactory;
+        public Factory<SpaceProduct, SpaceConfig> spaceFactory;
+        public Factory<DockProduct, DockConfig> dockFactory;
         
         void Start()
         {
@@ -28,8 +35,16 @@ namespace Core
             ecToggle.onEventRaised += PopulateVehicleDropdown;
             confirmVehicleCreation.onEventRaised += OnCreateVehicle;
             deleteVehicleEvent.onEventRaised += OnDeleteVehicle;
+            
+            foreach (var spaceConfig in spacesConfig)
+            {
+                spaceFactory.GetProduct(spaceConfig);
+            }
+            foreach (var dockConfig in docksConfig)
+            {
+                dockFactory.GetProduct(dockConfig);
+            }
         }
-        
         private void OnDestroy()
         {
             ecToggle.onEventRaised -= PopulateVehicleDropdown;
@@ -41,9 +56,9 @@ namespace Core
             List<string> vehicleNames = new List<string>();
             vehicleDropdown.ClearOptions();
 
-            if (applicationManager.vehiclesConfig.Count > 0)
+            if (vehiclesConfig.Count > 0)
             {
-                foreach (var config in applicationManager.vehiclesConfig)
+                foreach (var config in vehiclesConfig)
                 {
                     vehicleNames.Add(config.vehicleName);
                 }
@@ -54,9 +69,9 @@ namespace Core
         public void OnCreateVehicle()
         {
             var selectedIndex = vehicleDropdown.value;
-            selectedVehicleConfig = applicationManager.vehiclesConfig[selectedIndex];
+            selectedVehicleConfig = vehiclesConfig[selectedIndex];
             Debug.Log("Create Vehicle: " + selectedVehicleConfig.vehicleName);
-            applicationManager.vehicleFactory.ManufactureProduct(selectedVehicleConfig);
+            vehicleFactory.GetProduct(selectedVehicleConfig);
         }
         public void OnDeleteVehicle()
         {
@@ -64,11 +79,11 @@ namespace Core
             var selectedVehicleName = vehicleDropdown.options[selectedIndex].text;
             Debug.Log("Delete Vehicle: " + selectedVehicleName);
 
-            foreach (var vehicle in applicationManager.vehicleFactory.productLookupTable.Values)
+            foreach (var vehicle in vehicleFactory.productLookupTable.Values)
             {
                 if (vehicle.productName == selectedVehicleName)
                 {
-                    applicationManager.vehicleFactory.DeleteProduct(vehicle.productID);
+                    vehicleFactory.DeleteProduct(vehicle.productID);
                     break;
                 }
             }
@@ -76,7 +91,7 @@ namespace Core
         public void OnVehicleSelectedFromDropdown()
         {
             var selectedIndex = vehicleDropdown.value;
-            selectedVehicleConfig = applicationManager.vehiclesConfig[selectedIndex];
+            selectedVehicleConfig = vehiclesConfig[selectedIndex];
             vehicleInfoText.text =
                 $"Vehicle Name: {selectedVehicleConfig.vehicleName} \n" +
                 $"Vehicle ID: {selectedVehicleConfig.vehicleID} \n" +
@@ -88,31 +103,7 @@ namespace Core
                     $"Tractor Optitrack ID: {selectedVehicleConfig.tractorOptitrackID} \n" +
                     $"Trailer Optitrack ID: {selectedVehicleConfig.trailorOptitrackID} \n";
             }
-            
-            // if (selectedVehicleConfig.isRosAvaialbe)
-            // {
-            //     vehicleInfoText.text += $"ROS Topics:\n";
-            //
-            //     if (selectedVehicleConfig.twistSubscriberTopicController != null)
-            //     {
-            //         vehicleInfoText.text += $"Twist Subscriber Controller: {selectedVehicleConfig.twistSubscriberTopicController} \n";
-            //     }
-            //     
-            //     if (selectedVehicleConfig.twistSubscriberTopicThrustmaster != null)
-            //     {
-            //         vehicleInfoText.text += $"Twist Subscriber Controller: {selectedVehicleConfig.twistSubscriberTopicThrustmaster} \n";
-            //     }
-            //     
-            //     if (selectedVehicleConfig.twistPublisherTopicController != null)
-            //     {
-            //         vehicleInfoText.text += $"Twist Subscriber Controller: {selectedVehicleConfig.twistPublisherTopicController} \n";
-            //     }
-            //     
-            //     if (selectedVehicleConfig.twistPublisherTopicThrustmaster != null)
-            //     {
-            //         vehicleInfoText.text += $"Twist Subscriber Controller: {selectedVehicleConfig.twistPublisherTopicThrustmaster} \n";
-            //     }
-            // }
+
         }
     }
 }

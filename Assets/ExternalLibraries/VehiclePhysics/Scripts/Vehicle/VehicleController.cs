@@ -361,7 +361,7 @@ namespace NWH.VehiclePhysics
             vehicleRigidbody = GetComponent<Rigidbody>();
             vehicleRigidbody.maxAngularVelocity = 10f;
 
-            // Init components
+            // Initialize components
             if (groundDetection == null)
             {
                 groundDetection = FindGroundDetectionComponent();
