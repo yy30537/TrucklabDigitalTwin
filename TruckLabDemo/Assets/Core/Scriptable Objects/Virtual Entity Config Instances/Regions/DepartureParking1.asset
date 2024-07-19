@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb517a910ea5fe4a9efafde5b551c61, type: 3}
+  m_Name: DepartureParking1
+  m_EditorClassIdentifier: 
+  EntityId: 9
+  EntityName: Departure Parking 1
+  UiPrefab: {fileID: 4125324875618756786, guid: 530fcee3534e74f4299860614c38cd3d, type: 3}
+  InitialDashboardPosition: {x: 0, y: 0}
+  IsUiVisible: 1
+  RegionPoints:
+  - {x: 34.97, y: 0, z: 68.09258}
+  - {x: 22.23, y: 0, z: 54.34}
+  - {x: 22.23, y: 0, z: 60.47414}
+  - {x: 34.97, y: 0, z: 74.17371}
+  RegionMaterial: {fileID: 2100000, guid: 23ff9a668d0e51b469f0ec795bd29229, type: 2}
+  x: 30.35945
+  y: 66.21637
+  psi1Rad: -5.5
+  psi2Rad: -5.5

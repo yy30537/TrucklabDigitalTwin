@@ -1,0 +1,183 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|c:\\users\\yang3\\desktop\\gitrepos\\trucklabdigitaltwin\\assets\\core\\interface\\menu\\systemlogwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\interface\\menu\\systemlogwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|c:\\users\\yang3\\desktop\\gitrepos\\trucklabdigitaltwin\\assets\\core\\product\\vehicleproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\product\\vehicleproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|c:\\users\\yang3\\desktop\\gitrepos\\trucklabdigitaltwin\\assets\\core\\applicationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\applicationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\assets\\core\\interface\\virtual entity ui\\dockui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\interface\\virtual entity ui\\dockui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|c:\\users\\yang3\\desktop\\gitrepos\\trucklabdigitaltwin\\assets\\core\\interface\\menu\\servicemenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\interface\\menu\\servicemenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\assets\\core\\interface\\menu\\simulationmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\interface\\menu\\simulationmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\assets\\core\\interface\\menu\\factorymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\interface\\menu\\factorymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\assets\\core\\interface\\menu\\basemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\interface\\menu\\basemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\assets\\core\\interface\\virtual entity ui\\regionui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DC78DDF-68F0-D8E5-F90A-27A93963CDEE}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\interface\\virtual entity ui\\regionui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 339,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SystemLogWindow.cs",
+              "DocumentMoniker": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Interface\\Menu\\SystemLogWindow.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\Interface\\Menu\\SystemLogWindow.cs",
+              "ToolTip": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Interface\\Menu\\SystemLogWindow.cs",
+              "RelativeToolTip": "Assets\\Core\\Interface\\Menu\\SystemLogWindow.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAUwFAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T17:16:10.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VehicleProduct.cs",
+              "DocumentMoniker": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Product\\VehicleProduct.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\Product\\VehicleProduct.cs",
+              "ToolTip": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Product\\VehicleProduct.cs",
+              "RelativeToolTip": "Assets\\Core\\Product\\VehicleProduct.cs",
+              "ViewState": "AQIAANMAAAAAAAAAAAAmwPoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T17:16:01.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationManager.cs",
+              "DocumentMoniker": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\ApplicationManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\ApplicationManager.cs",
+              "ToolTip": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\ApplicationManager.cs",
+              "RelativeToolTip": "Assets\\Core\\ApplicationManager.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAmwIIAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T17:05:40.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FactoryMenu.cs",
+              "DocumentMoniker": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Interface\\Menu\\FactoryMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\Interface\\Menu\\FactoryMenu.cs",
+              "ToolTip": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Interface\\Menu\\FactoryMenu.cs",
+              "RelativeToolTip": "Assets\\Core\\Interface\\Menu\\FactoryMenu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T16:58:43.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SimulationMenu.cs",
+              "DocumentMoniker": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Interface\\Menu\\SimulationMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\Interface\\Menu\\SimulationMenu.cs",
+              "ToolTip": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Interface\\Menu\\SimulationMenu.cs",
+              "RelativeToolTip": "Assets\\Core\\Interface\\Menu\\SimulationMenu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAMQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T16:58:14.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BaseMenu.cs",
+              "DocumentMoniker": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Interface\\Menu\\BaseMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\Interface\\Menu\\BaseMenu.cs",
+              "ToolTip": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Interface\\Menu\\BaseMenu.cs",
+              "RelativeToolTip": "Assets\\Core\\Interface\\Menu\\BaseMenu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T16:58:39.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServiceMenuController.cs",
+              "DocumentMoniker": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Interface\\Menu\\ServiceMenuController.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\Interface\\Menu\\ServiceMenuController.cs",
+              "ToolTip": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Interface\\Menu\\ServiceMenuController.cs",
+              "RelativeToolTip": "Assets\\Core\\Interface\\Menu\\ServiceMenuController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T16:58:29.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegionUI.cs",
+              "DocumentMoniker": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Interface\\Virtual Entity UI\\RegionUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\Interface\\Virtual Entity UI\\RegionUI.cs",
+              "ToolTip": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Interface\\Virtual Entity UI\\RegionUI.cs",
+              "RelativeToolTip": "Assets\\Core\\Interface\\Virtual Entity UI\\RegionUI.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T16:41:17.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DockUI.cs",
+              "DocumentMoniker": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Interface\\Virtual Entity UI\\DockUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\Interface\\Virtual Entity UI\\DockUI.cs",
+              "ToolTip": "C:\\Users\\yang3\\Desktop\\GitRepos\\TrucklabDigitalTwin\\Assets\\Core\\Interface\\Virtual Entity UI\\DockUI.cs",
+              "RelativeToolTip": "Assets\\Core\\Interface\\Virtual Entity UI\\DockUI.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwC4AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T16:14:13.657Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 260,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
