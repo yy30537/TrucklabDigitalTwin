@@ -18,7 +18,7 @@ namespace Core
         public float inputVelocity;
         public float inputSteerAngle;
 
-        private float keyboardInputVelocity = 2f;
+        private float keyboardInputVelocity = 5f;
         private float steerRate = 30f * Mathf.Deg2Rad;
 
         [Header("Variables")]
@@ -35,23 +35,22 @@ namespace Core
         {
             if (isActive)
             {
-                if (isBraking)
+                //if (isBraking)
+                //{
+                //    Brake();
+                //}
+                
+                UpdateActuationInputs();
+                if (VehicleData.VehicleConfig.IsMoCapAvailable && kinematicsSource == KinematicsSource.MotionCapture)
                 {
-                    Brake();
+                    MotionCapture();
                 }
-                else
+                else if (kinematicsSource == KinematicsSource.Actuation)
                 {
-                    UpdateActuationInputs();
-                    if (VehicleData.VehicleConfig.IsMoCapAvailable && kinematicsSource == KinematicsSource.MotionCapture)
-                    {
-                        MotionCapture();
-                    }
-                    else if (kinematicsSource == KinematicsSource.Actuation)
-                    {
-                        Actuation();
-                        Intermedstates();
-                    }
+                    Actuation();
+                    Intermedstates();
                 }
+                
 
                 UpdateVehicleData();
             }
@@ -82,6 +81,7 @@ namespace Core
 
                 UpdateVehicleData();
             }
+
         }
 
         /// <summary>
@@ -229,7 +229,7 @@ namespace Core
         private void Brake()
         {
             // TODO more advanced braking logic
-            inputVelocity = 0;
+            // inputVelocity = 0;
         }
 
         /// <summary>

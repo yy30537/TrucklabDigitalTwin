@@ -1,4 +1,4 @@
-### README.md
+
 
 # TruckLab Digital Twin Unity Virtual Application Space
 
@@ -23,52 +23,54 @@
    - [Adding Paths](#adding-paths)
    - [JSON Path File Format](#json-path-file-format)
    - [Recording New Paths](#recording-new-paths)
-5. [Common Issues](#common-issues)
-6. [Project Structure](#project-structure)
-7. [License](#license)
+5. [Project Structure](#project-structure)
+6. [License](#license)
 
 ## Getting Started
 
 ### Prerequisites
 
 - Unity 2022.3.16f1
+- MATLAB 2020a
 - RosSharp
 - OptiTrack Motive
 - Turtlebot
-- MATLAB 2020a
+
 
 Simulation of the Digital Twins is enabled only within the TruckLab Proving Ground where the IoT Network is available. Standalone simulation of Digital Models can still be performed within the Unity Application Space.
 
 ### Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/trucklab-digital-twin.git
-   cd trucklab-digital-twin
-   ```
+## Running the Project
+
+1. Clone the repository.
 
 2. Open the project in Unity:
    - Launch Unity Hub
    - Click on "Add" and select the `Unity Application Space\TruckLabDemo` folder
+3. Load the `MainScene` from the `Scenes` folder.
+4. Press the Play button in Unity to start the application.
 
-## Running the Project
-
-1. Open the project in Unity.
-2. Load the `MainScene` from the `Scenes` folder.
-3. Press the Play button in Unity to start the application.
+![Demo](TruckLabDemo/Images/GIF/1 run.gif)
 
 ## Using the Application
 
 ### Main Menu
 
 The main menu is located at the bottom of the screen and includes the following:
-- **System Log**: Toggle the system log.
-- **Service Menu**: Toggle the service menu.
-- **DC Schedule**: Toggle the distribution center schedule board.
+- **System Log**: Toggle the system log. ![Demo](TruckLabDemo/Images/GIF/2 log and service menu.gif)
+- **Service Menu**: Toggle the service menu. 
+- **DC Schedule**: Toggle the distribution center schedule board. ![Demo](TruckLabDemo/Images/GIF/4 DC Schedule and Region states.gif)
 - **Region States**: Toggle the status interface of environment regions of interest.
-- **Camera Dropdown**: Switch between available camera views (Main, Overhead, Side, and Dock views).
+- **Camera Dropdown**: Switch between available camera views (Main, Overhead, Side, and Dock views). ![Demo](TruckLabDemo/Images/GIF/3 Camera Dropdown and freelook.gif)
 - **Free Look**: Toggle free look control for the main camera.
 - **Drag & Drop Vehicles**: Toggle the ability to drag and drop vehicle models if available.
+
+
+
+
+
+
 
 ### Service Menu
 
@@ -77,6 +79,8 @@ The service menu currently has Vehicle Factory and Path Simulation pages. Planne
 #### Vehicle Factory
 
 The Vehicle Factory in the TruckLab Digital Twin application allows users to create and manage vehicle products within the simulation. To define a new vehicle, users need to create a new `VehicleConfig` scriptable object and update the list of configs in the factory menu.
+
+
 
 ##### Creating a New VehicleConfig
 
@@ -123,19 +127,27 @@ The Vehicle Factory in the TruckLab Digital Twin application allows users to cre
 
 ##### Using the Factory Menu
 
+
 1. **Create a Vehicle**:
    - Open the application and navigate to the `Service Menu`.
    - Click on the `Factory Menu`.
    - Select a vehicle from the dropdown.
    - Click "Create Vehicle" to instantiate the vehicle in the simulation.
 
+  ![Demo](TruckLabDemo/Images/GIF/5 Create vehicles.gif) 
+
+
 2. **Delete a Vehicle**:
    - Select the vehicle from the dropdown in the `Factory Menu`.
    - Click "Delete Vehicle" to remove the vehicle from the simulation.
 
+  ![Demo](TruckLabDemo/Images/GIF/6 Delete vehicles.gif)
+
 By following these steps, users can create new vehicle configurations, update the factory menu, and manage vehicles within the application.
 
 #### Path Simulation
+
+  ![Demo](TruckLabDemo/Images/GIF/7 Visualize Path.gif)
 
 If vehicles are created, they will appear in the vehicle dropdown in the simulation menu.
 
@@ -198,6 +210,11 @@ Each JSON file represents a path with information about the vehicle's movement, 
 3. **View Recorded Path**:
    - The newly recorded path will be saved in `Assets/Core/Vehicle Components/Reference Paths` and can be added to the simulation by dragging the JSON file into the Path Manager again.
 
+  ![Demo](TruckLabDemo/Images/GIF/8 record and replay 1.gif)
+
+  ![Demo](TruckLabDemo/Images/GIF/8 record and replay 2.gif)
+
+
 ### Vehicle UI
 
 When vehicles are created, a UI appears floating above each vehicle. It includes the following pages:
@@ -223,9 +240,18 @@ Shows vehicle information including velocity, steering change, and position and 
 
 Shows detected objects and their position information.
 
+  ![Demo](TruckLabDemo/Images/GIF/11 Vehicle UI 1.gif)
+
+  ![Demo](TruckLabDemo/Images/GIF/11 Vehicle UI 2.gif)
+
+
 ### Regions UI
 
 Located above the system explorer at the bottom of the screen, this UI shows the vehicles that regions are detecting.
+
+  ![Demo](TruckLabDemo/Images/GIF/10 Region UI 1.gif)
+
+  ![Demo](TruckLabDemo/Images/GIF/10 Region UI 2.gif)
 
 ### System Log
 
@@ -236,6 +262,8 @@ Located in the lower-left corner, this log displays real-time system events.
 Located at the top of the screen, this schedule is yet to be implemented and currently serves as a template. Once the backend scheduler microservice is implemented, the DC dock schedule UI should be updated.  
 
 ### Using the Camera
+
+  ![Demo](TruckLabDemo/Images/GIF/9 Camera.gif)
 
 The camera system in the TruckLab Digital Twin application allows you to switch between camera views and cameras associated with vehicles.
 

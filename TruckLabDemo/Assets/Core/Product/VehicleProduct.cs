@@ -237,15 +237,15 @@ namespace Core
             Destroy(Kinematics);
             Destroy(Collision);
 
-            //if (Observer != null)
-            //{
-            //    Observer.StopObserving();
-            //    Destroy(Observer);
-            //}
-            //if (Ui != null)
-            //{
-            //    Destroy(Ui.gameObject);
-            //}
+            if (Observer != null)
+            {
+                Observer.StopObserving();
+                Destroy(Observer);
+            }
+            if (Ui != null)
+            {
+                Destroy(Ui.gameObject);
+            }
 
 
             SystemLogWindow.LogEvent($"Destroyed Vehicle: {ProductName}");
