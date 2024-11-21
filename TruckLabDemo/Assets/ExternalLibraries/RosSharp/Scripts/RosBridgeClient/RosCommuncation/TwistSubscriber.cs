@@ -4,7 +4,7 @@ Author: Dr. Jeremy Fix (jeremy.fix@centralesupelec.fr)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 <http://www.apache.org/licenses/LICENSE-2.0>.
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -55,8 +55,8 @@ namespace RosSharp.RosBridgeClient
             float deltaTime = Time.realtimeSinceStartup - previousRealTime;
 
             SubscribedTransform.Translate(linearVelocity * deltaTime);
-            SubscribedTransform.Rotate(Vector3.forward, angularVelocity.x * deltaTime);
-            SubscribedTransform.Rotate(Vector3.up, angularVelocity.y * deltaTime);
+            SubscribedTransform.Rotate(Vector3.forward, angularVelocity.X1 * deltaTime);
+            SubscribedTransform.Rotate(Vector3.up, angularVelocity.Y1 * deltaTime);
             SubscribedTransform.Rotate(Vector3.left, angularVelocity.z * deltaTime);
 
             isMessageReceived = false;

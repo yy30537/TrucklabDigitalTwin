@@ -6,29 +6,23 @@ TagManager:
   tags:
   - Tractor
   - Trailer
-  - ServiceStatusText
-  - ServiceInfoText
-  - DashboardTitle
-  - DashboardStatus
-  - DashboardInfo
   - Vehicle
-  - Wheel
-  - SemiAttachmentPoint
-  - EnterExitPoint
   - Obstacle
-  - SpaceProduct
-  - DC
-  - RegionProduct
-  - VehicleProduct
+  - Space
+  - Building
+  - EnterExitPoint
+  - SemiAttachmentPoint
+  - Wheel
+  - Vehicle Obstacle Sensor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - VehicleParts
+  - Vehicle
   - Water
   - UI
-  - 
-  - 
+  - PrefabDisplay
+  - Vehicle Obstacle Sensor
   - 
   - 
   - 

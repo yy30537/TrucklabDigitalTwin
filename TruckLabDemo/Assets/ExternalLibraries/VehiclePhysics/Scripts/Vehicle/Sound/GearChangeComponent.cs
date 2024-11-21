@@ -21,7 +21,7 @@ namespace NWH.VehiclePhysics
 
             if (Clips.Count != 0)
             {
-                // Initialize gear shift sound
+                // Setup_VE_Dependency gear shift sound
                 Source = vc.gameObject.AddComponent<AudioSource>();
                 vc.sound.SetAudioSourceDefaults(Source, false, false, volume, RandomClip);
                 RegisterSources();

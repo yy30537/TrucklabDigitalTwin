@@ -38,9 +38,9 @@ namespace NWH.VehiclePhysics
         public VehicleChanger vehicleChanger;
 
         /// <summary>
-        /// If you want to use this script with a single vehicleTransform or want to set your own vehicleTransform Controller from script set vehicleTransform changer field to null / none.
+        /// If you want to use this script with A single vehicleTransform or want to set your own vehicleTransform Controller from script set vehicleTransform changer field to null / none.
         /// </summary>
-        [Tooltip("If you want to use this script with a single vehicleTransform or want to set your own vehicleTransform Controller from script set vehicleTransform changer field to null / none.")]
+        [Tooltip("If you want to use this script with A single vehicleTransform or want to set your own vehicleTransform Controller from script set vehicleTransform changer field to null / none.")]
         public VehicleController vehicleController;
 
         /// <summary>

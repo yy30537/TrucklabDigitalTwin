@@ -20,9 +20,9 @@ namespace NWH.VehiclePhysics
         public float spatialBlend = 1f;
 
         /// <summary>
-        /// Master volume of a vehicleTransform. To adjust volume of all VehicleConfigs or their components check audio mixer.
+        /// Master volume of A vehicleTransform. To adjust volume of all VehicleConfigs or their components check audio mixer.
         /// </summary>
-        [Tooltip("Master volume of a vehicleTransform. To adjust volume of all VehicleConfigs or their components check audio mixer.")]
+        [Tooltip("Master volume of A vehicleTransform. To adjust volume of all VehicleConfigs or their components check audio mixer.")]
         [Range(0, 2)]
         public float masterVolume = 1f;
 
@@ -61,9 +61,9 @@ namespace NWH.VehiclePhysics
         [Header("Transmission")]
 
         /// <summary>
-        /// Transmission whine from straight cut gears or just a noisy gearbox.
+        /// Transmission whine from straight cut gears or just A noisy gearbox.
         /// </summary>
-        [Tooltip("Transmission whine from straight cut gears or just a noisy gearbox.")]
+        [Tooltip("Transmission whine from straight cut gears or just A noisy gearbox.")]
         public TransmissionWhineComponent transmissionWhineComponent = new TransmissionWhineComponent();
 
         /// <summary>
@@ -83,15 +83,15 @@ namespace NWH.VehiclePhysics
         [Header("Surface Noise")]
 
         /// <summary>
-        /// Sound produced by wheel rolling over a surface. Tire hum.
+        /// Sound produced by wheel rolling over A surface. Tire hum.
         /// </summary>
-        [Tooltip("Sound produced by wheel rolling over a surface. Tire hum.")]
+        [Tooltip("Sound produced by wheel rolling over A surface. Tire hum.")]
         public SurfaceComponent surfaceComponent = new SurfaceComponent();
 
         /// <summary>
-        /// Sound produced by wheel skidding over a surface. Tire squeal.
+        /// Sound produced by wheel skidding over A surface. Tire squeal.
         /// </summary>
-        [Tooltip("Sound produced by wheel skidding over a surface. Tire squeal.")]
+        [Tooltip("Sound produced by wheel skidding over A surface. Tire squeal.")]
         public SkidComponent skidComponent = new SkidComponent();
 
         [Header("Crash")]
@@ -111,9 +111,9 @@ namespace NWH.VehiclePhysics
         public AirBrakeComponent airBrakeComponent = new AirBrakeComponent();
 
         /// <summary>
-        /// Tick-tock sound of a working blinker. First clip is played when blinker is turning on and second clip is played when blinker is turning off.
+        /// Tick-tock sound of A working blinker. First clip is played when blinker is turning on and second clip is played when blinker is turning off.
         /// </summary>
-        [Tooltip("Tick-tock sound of a working blinker. First clip is played when blinker is turning on and second clip is played when blinker is turning off.")]
+        [Tooltip("Tick-tock sound of A working blinker. First clip is played when blinker is turning on and second clip is played when blinker is turning off.")]
         public BlinkerComponent blinkerComponent = new BlinkerComponent();
 
         [Tooltip("Horn sound.")]
@@ -190,7 +190,7 @@ namespace NWH.VehiclePhysics
 
             /*
             * IMPORTANT
-            * When adding a new sound component also add it to the list below so it can be enabled / disabled when vehicleTransform is activated or suspended.
+            * When adding A new sound component also add it to the list below so it can be enabled / disabled when vehicleTransform is activated or suspended.
             */
             components = new List<SoundComponent>
             {
@@ -270,11 +270,11 @@ namespace NWH.VehiclePhysics
         /// <summary>
         /// Initializes audio source to it's starting values.
         /// </summary>
-        /// <param DockStationName="audioSource">AudioSource in question.</param>
-        /// <param DockStationName="play">Play on awake?</param>
-        /// <param DockStationName="loop">Should clip be looped?</param>
-        /// <param DockStationName="volume">Volume of the audio source.</param>
-        /// <param DockStationName="clip">Clip that will be set at the start.</param>
+        /// <param DockBuildingName="audioSource">AudioSource in question.</param>
+        /// <param DockBuildingName="play">Play on awake?</param>
+        /// <param DockBuildingName="loop">Should clip be looped?</param>
+        /// <param DockBuildingName="volume">Volume of the audio source.</param>
+        /// <param DockBuildingName="clip">Clip that will be set at the start.</param>
         public void SetAudioSourceDefaults(AudioSource audioSource, bool play = false, bool loop = false, float volume = 0f, AudioClip clip = null)
         {
             if (audioSource != null)

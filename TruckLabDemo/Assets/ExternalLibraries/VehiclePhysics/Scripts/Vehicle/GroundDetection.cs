@@ -9,27 +9,27 @@ namespace NWH.VehiclePhysics
     public class GroundDetection : MonoBehaviour
     {
         /// <summary>
-        /// DockBuildingPrefab of the particle system for generating smoke as a result of spinning or slipping tires.
+        /// BuildingPrefab of the particle system for generating smoke as A result of spinning or slipping tires.
         /// </summary>
-        [Tooltip("DockBuildingPrefab of the particle system for generating smoke as a result of spinning or slipping tires.")]
+        [Tooltip("BuildingPrefab of the particle system for generating smoke as A result of spinning or slipping tires.")]
         public GameObject smokePrefab;
 
         /// <summary>
-        /// DockBuildingPrefab of the particle system for generating dust as a result of traveling over sand, gravel, etc.
+        /// BuildingPrefab of the particle system for generating dust as A result of traveling over sand, gravel, etc.
         /// </summary>
-        [Tooltip("DockBuildingPrefab of the particle system for generating dust as a result of traveling over sand, gravel, etc.")]
+        [Tooltip("BuildingPrefab of the particle system for generating dust as A result of traveling over sand, gravel, etc.")]
         public GameObject dustPrefab;
 
         /// <summary>
-        /// A class representing a single ground surface type.
+        /// A class representing A single ground surface type.
         /// </summary>
         [System.Serializable]
         public class GroundEntity
         {
             /// <summary>
-            /// DockStationName of the ground entity.
+            /// DockBuildingName of the ground entity.
             /// </summary>
-            [Tooltip("DockStationName of the ground entity.")]
+            [Tooltip("DockBuildingName of the ground entity.")]
             public string name;
 
             /// <summary>
@@ -116,9 +116,9 @@ namespace NWH.VehiclePhysics
         }
 
         /// <summary>
-        /// Ground entities - each represents a single ground surface.
+        /// Ground entities - each represents A single ground surface.
         /// </summary>
-        [Tooltip("Ground entities - each represents a single ground surface.")]
+        [Tooltip("Ground entities - each represents A single ground surface.")]
         [SerializeField]
         public List<GroundEntity> groundEntities = new List<GroundEntity>();
 
@@ -226,9 +226,9 @@ namespace NWH.VehiclePhysics
                 // Calculate which splat map cell the worldPos falls within (ignoring currentTractorPosY)
                 int mapX = (int)(((worldPos.x - terrainPos.x) / terrainData.size.x) * terrainData.alphamapWidth);
                 int mapZ = (int)(((worldPos.z - terrainPos.z) / terrainData.size.z) * terrainData.alphamapHeight);
-                // Get the splat data for this cell as a 1x1xN 3d array (where N = number of textures)
+                // Get the splat data for this cell as A 1x1xN 3d array (where N = number of textures)
                 splatmapData = terrainData.GetAlphamaps(mapX, mapZ, 1, 1);
-                // Extract the 3D array data to a 1D array:
+                // Extract the 3D array data to A 1D array:
                 cellMix = new float[splatmapData.GetUpperBound(2) + 1];
                 for (int n = 0; n < cellMix.Length; ++n)
                 {
@@ -243,7 +243,7 @@ namespace NWH.VehiclePhysics
         }
 
         /// <summary>
-        /// Returns most prominent texture at the point in a terrain.
+        /// Returns most prominent texture at the point in A terrain.
         /// </summary>
         private int GetDominantTerrainTexture(Vector3 worldPos)
         {

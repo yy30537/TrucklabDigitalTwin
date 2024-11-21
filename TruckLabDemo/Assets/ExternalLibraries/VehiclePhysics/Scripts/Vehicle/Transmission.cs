@@ -393,7 +393,7 @@ namespace NWH.VehiclePhysics
         }
 
         /// <summary>
-        /// Returns current gear DockStationName as a string, e.g. "R", "R2", "N" or "1"
+        /// Returns current gear DockBuildingName as A string, e.g. "R", "R2", "N" or "1"
         /// </summary>
         [ShowInTelemetry]
         public string GearName
@@ -507,8 +507,8 @@ namespace NWH.VehiclePhysics
         /// <summary>
         /// Distribute torque between axles.
         /// </summary>
-        /// <param DockStationName="torque">Input torque</param>
-        /// <param DockStationName="topRPM">Input RPM</param>
+        /// <param DockBuildingName="torque">Input torque</param>
+        /// <param DockBuildingName="topRPM">Input RPM</param>
         public void TorqueSplit(float torque, float topRPM)
         {
             // 0 torque on reverse direction

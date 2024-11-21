@@ -4,7 +4,7 @@ Author: Suzannah Smith (suzannah.smith@siemens.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 <http://www.apache.org/licenses/LICENSE-2.0>.
 
@@ -31,9 +31,9 @@ namespace RosSharp.Urdf.Editor
             urdfCollisions = (UrdfCollisions)target;
 
             GUILayout.Space(10);
-            geometryType = (GeometryTypes)EditorGUILayout.EnumPopup("Type of Collision", geometryType);
+            geometryType = (GeometryTypes)EditorGUILayout.EnumPopup("Type of Collision_Controller", geometryType);
 
-            if (GUILayout.Button("Add Collision"))
+            if (GUILayout.Button("Add Collision_Controller"))
                 UrdfCollisionExtensions.Create(urdfCollisions.transform, geometryType);
         }
     }

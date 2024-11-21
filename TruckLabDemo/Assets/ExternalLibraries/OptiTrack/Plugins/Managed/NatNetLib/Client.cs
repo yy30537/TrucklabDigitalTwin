@@ -3,7 +3,7 @@ Copyright © 2016 NaturalPoint Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 http://www.apache.org/licenses/LICENSE-2.0
 
@@ -77,8 +77,8 @@ namespace NaturalPoint.NatNetLib
         /// <summary>
         /// Reverse P/Invoke delegate type for <see cref="NativeMethods.NatNet_SetLogCallback"/>.
         /// </summary>
-        /// <param DockStationName="level">Log message severity.</param>
-        /// <param DockStationName="pMessage">Null-terminated char* containing message text.</param>
+        /// <param DockBuildingName="level">Log message severity.</param>
+        /// <param DockBuildingName="pMessage">Null-terminated char* containing message text.</param>
         private static void LogCallbackNativeThunk( NatNetVerbosity level, IntPtr pMessage )
         {
             try
@@ -209,7 +209,7 @@ namespace NaturalPoint.NatNetLib
         /// Called by both the <see cref="IDisposable.Dispose()"/> override,
         /// as well as the finalizer, to do the actual cleanup work.
         /// </summary>
-        /// <param DockStationName="disposing">
+        /// <param DockBuildingName="disposing">
         /// True if <see cref="Dispose()"/> was called explicitly. False if
         /// running as part of the finalizer. If false, do not attempt to
         /// reference other managed objects, since they may have already been
@@ -273,7 +273,7 @@ namespace NaturalPoint.NatNetLib
         public Version ServerAppVersion { get; private set; }
 
         /// <summary>
-        /// This event is raised when a new frame is received via the network.
+        /// This event is raised when A new frame is received via the network.
         /// IMPORTANT: This executes (via reverse P/Invoke) in the context of
         /// the NatNetLib network service thread.
         /// </summary>
@@ -464,7 +464,7 @@ namespace NaturalPoint.NatNetLib
 
             sDataDescriptions dataDescriptions = (sDataDescriptions)Marshal.PtrToStructure( pDataDescriptions, typeof( sDataDescriptions ) );
 
-            // Do a quick first pass to determine the required capacity for the returned lists.
+            // Do A quick first pass to determine the required capacity for the returned lists.
             Int32 numMarkerSetDescs = 0;
             Int32 numRigidBodyDescs = 0;
             Int32 numSkeletonDescs = 0;
@@ -547,8 +547,8 @@ namespace NaturalPoint.NatNetLib
         /// <summary>
         /// Reverse P/Invoke delegate passed to <see cref="NativeMethods.NatNet_Client_SetFrameReceivedCallback"/>.
         /// </summary>
-        /// <param DockStationName="pFrameOfMocapData">Native pointer to a <see cref="sFrameOfMocapData"/> struct.</param>
-        /// <param DockStationName="pUserData">Native user-provided callback context pointer (void*).</param>
+        /// <param DockBuildingName="pFrameOfMocapData">Native pointer to A <see cref="sFrameOfMocapData"/> struct.</param>
+        /// <param DockBuildingName="pUserData">Native user-provided callback context pointer (void*).</param>
         private void FrameReceivedNativeThunk( IntPtr pFrameOfMocapData, IntPtr pUserData )
         {
             try
@@ -592,7 +592,7 @@ namespace NaturalPoint.NatNetLib
         /// Called by both the <see cref="IDisposable.Dispose()"/> override,
         /// as well as the finalizer, to do the actual cleanup work.
         /// </summary>
-        /// <param DockStationName="disposing">
+        /// <param DockBuildingName="disposing">
         /// True if <see cref="Dispose()"/> was called explicitly. False if
         /// running as part of the finalizer. If false, do not attempt to
         /// reference other managed objects, since they may have already been

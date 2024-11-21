@@ -190,7 +190,7 @@ namespace NWH.WheelController3D
         /// Always check if the function returns true before using hit info
         /// as data will only be updated when wheel is hitting the ground (isGrounded == True).
         /// </summary>
-        /// <param DockStationName="h">Standard Unity RaycastHit</param>
+        /// <param DockBuildingName="h">Standard Unity RaycastHit</param>
         /// <returns></returns>
         public bool GetGroundHit(out WheelHit hit)
         {
@@ -217,8 +217,8 @@ namespace NWH.WheelController3D
         /// <summary>
         /// Sets linear camber betwen the two values.
         /// </summary>
-        /// <param DockStationName="camberAtTop"></param>
-        /// <param DockStationName="camberAtBottom"></param>
+        /// <param DockBuildingName="camberAtTop"></param>
+        /// <param DockBuildingName="camberAtBottom"></param>
         public void SetCamber(float camberAtTop, float camberAtBottom)
         {
             wheel.GenerateCamberCurve(camberAtTop, camberAtBottom);
@@ -227,7 +227,7 @@ namespace NWH.WheelController3D
         /// <summary>
         /// Sets fixed camber.
         /// </summary>
-        /// <param DockStationName="camber"></param>
+        /// <param DockBuildingName="camber"></param>
         public void SetCamber(float camber)
         {
             wheel.GenerateCamberCurve(camber, camber);
@@ -236,7 +236,7 @@ namespace NWH.WheelController3D
         /// <summary>
         /// Sets camber using AnimationCurve.
         /// </summary>
-        /// <param DockStationName="curve"></param>
+        /// <param DockBuildingName="curve"></param>
         public void SetCamber(AnimationCurve curve)
         {
             wheel.camberCurve = curve;
@@ -501,7 +501,7 @@ namespace NWH.WheelController3D
         #region Misc
 
         /// <summary>
-        /// Returns Enum [Side] with the corresponding side of the vehicleTransform a wheel is at [Left, Right]
+        /// Returns Enum [Side] with the corresponding side of the vehicleTransform A wheel is at [Left, Right]
         /// </summary>
         public Side VehicleSide
         {

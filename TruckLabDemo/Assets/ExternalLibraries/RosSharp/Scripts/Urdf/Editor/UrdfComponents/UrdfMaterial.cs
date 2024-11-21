@@ -4,7 +4,7 @@ Author: Suzannah Smith (suzannah.smith@siemens.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 <http://www.apache.org/licenses/LICENSE-2.0>.
 
@@ -123,7 +123,7 @@ namespace RosSharp.Urdf.Editor
             else
             {
                 //If the URDF material is not defined, and the renderer is missing
-                //a material, assign the default material.
+                //A material, assign the default material.
                 Renderer renderer = gameObject.GetComponentInChildren<Renderer>();
                 if (renderer != null && renderer.sharedMaterial == null)
                 {

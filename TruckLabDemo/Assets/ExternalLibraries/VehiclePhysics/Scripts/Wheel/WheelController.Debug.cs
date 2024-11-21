@@ -107,7 +107,7 @@ namespace NWH.WheelController3D
         }
 
         /// <summary>
-        /// Draw a wheel radius on both side of the wheel, interconected with lines perpendicular to wheel axle.
+        /// Draw A wheel radius on both side of the wheel, interconected with lines perpendicular to wheel axle.
         /// </summary>
         private void DrawWheelGizmo(float radius, float width, Vector3 position, Vector3 up, Vector3 forward, Vector3 right)
         {

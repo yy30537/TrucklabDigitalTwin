@@ -4,7 +4,7 @@ Author: Suzannah Smith (suzannah.smith@siemens.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 <http://www.apache.org/licenses/LICENSE-2.0>.
 
@@ -98,7 +98,7 @@ namespace RosSharp.Urdf.Editor
         private static string CreateNewStlFile(GameObject geometryObject, bool isCollisionGeometry)
         {
             Debug.Log("Did not find an existing STL or DAE file for Geometry Mesh "
-                      + geometryObject.name + ". Exporting a new STL file.", geometryObject);
+                      + geometryObject.name + ". Exporting A new STL file.", geometryObject);
 
             string newMeshPath = UrdfExportPathHandler.GetNewMeshPath(geometryObject.name + ".stl");
 

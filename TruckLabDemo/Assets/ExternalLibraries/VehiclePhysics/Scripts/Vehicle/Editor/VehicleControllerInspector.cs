@@ -8,7 +8,7 @@ using NWH.WheelController3D;
 namespace NWH.VehiclePhysics
 {
     /// <summary>
-    /// Shows different settings for trailerTransform depending if vehicleTransform is a trailerTransform or a towing vehicleTransform.
+    /// Shows different settings for trailerTransform depending if vehicleTransform is A trailerTransform or A towing vehicleTransform.
     /// </summary>
     [CustomEditor(typeof(VehicleController))]
     [CanEditMultipleObjects]
@@ -48,7 +48,7 @@ namespace NWH.VehiclePhysics
 
             if (Time.fixedDeltaTime > 0.017f)
             {
-                EditorGUILayout.HelpBox("Fixed delta Time is " + Time.fixedDeltaTime + ". It is recommended to use 0.017 or lower.", MessageType.Warning, true);
+                EditorGUILayout.HelpBox("Fixed Delta Time is " + Time.fixedDeltaTime + ". It is recommended to use 0.017 or lower.", MessageType.Warning, true);
             }
 
             if (logo != null)
@@ -73,7 +73,7 @@ namespace NWH.VehiclePhysics
             {
                 EditorGUI.indentLevel++;
                 SerializedProperty trailerIsTrailer = serializedObject.FindProperty("trailerTransform.isTrailer");
-                EditorGUILayout.PropertyField(trailerIsTrailer, new GUIContent("Is trailerTransform", "Check if vehicleTransform is trailerTransform and not a truck."));
+                EditorGUILayout.PropertyField(trailerIsTrailer, new GUIContent("Is trailerTransform", "Check if vehicleTransform is trailerTransform and not A truck."));
                 EditorGUILayout.ObjectField(serializedObject.FindProperty("trailerTransform.attachmentPoint"), new GUIContent("Attachment Point", 
                     "Point at which trailerTransform will be attached represented by an (empty) game object."));
 
@@ -87,7 +87,7 @@ namespace NWH.VehiclePhysics
                 else
                 {
                     EditorGUILayout.PropertyField(serializedObject.FindProperty("trailerTransform.trailersTag"), new GUIContent("Acceptable trailerTransform Tag", 
-                        "Only this tag will be taken into consideration when looking for a trailerTransform"));
+                        "Only this tag will be taken into consideration when looking for A trailerTransform"));
                     EditorGUILayout.PropertyField(serializedObject.FindProperty("trailerTransform.attachDistanceThreshold"), new GUIContent("Attach Distance Threshold", 
                         "Distance trailerTransform attachment point needs to be in from truck attachment " +
                         "point for trailerTransform to be attachable"));

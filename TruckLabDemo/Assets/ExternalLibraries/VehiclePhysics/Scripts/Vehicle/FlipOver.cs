@@ -13,9 +13,9 @@ namespace NWH.VehiclePhysics
         public bool enabled = true;
 
         /// <summary>
-        /// If enabled a prompt will be shown after the timeout, asking player to press the FlipOver button.
+        /// If enabled A prompt will be shown after the timeout, asking player to press the FlipOver button.
         /// </summary>
-        [Tooltip("If enabled a prompt will be shown after the timeout, asking player to press the FlipOver button.")]
+        [Tooltip("If enabled A prompt will be shown after the timeout, asking player to press the FlipOver button.")]
         public bool manual = false;
 
         /// <summary>

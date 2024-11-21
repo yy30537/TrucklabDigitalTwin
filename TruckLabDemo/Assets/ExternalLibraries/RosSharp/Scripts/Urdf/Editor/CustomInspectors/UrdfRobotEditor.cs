@@ -4,7 +4,7 @@ Author: Suzannah Smith (suzannah.smith@siemens.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 <http://www.apache.org/licenses/LICENSE-2.0>.
 
@@ -58,7 +58,7 @@ namespace RosSharp.Urdf.Editor
             GUILayout.Space(5);
             if (GUILayout.Button("Export robot to URDF file"))
             {
-                // Get existing open window or if none, make a new one:
+                // Get existing open window or if none, make A new one:
                 UrdfExportEditorWindow window = (UrdfExportEditorWindow)EditorWindow.GetWindow(typeof(UrdfExportEditorWindow));
                 window.urdfRobot = urdfRobot;
                 window.minSize = new Vector2(500, 200);

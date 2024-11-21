@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb517a910ea5fe4a9efafde5b551c61, type: 3}
+  m_Name: Incoming Road
+  m_EditorClassIdentifier: 
+  Id: 21
+  Name: IncomingRoad
+  UiTemplate: {fileID: 4125324875618756786, guid: 530fcee3534e74f4299860614c38cd3d, type: 3}
+  UiNavigationEventChannel: {fileID: 11400000, guid: e1aa21181bb0d2a469323ff8ee4cc02d, type: 2}
+  SpaceMarkings:
+  - {x: 81.64, y: 0, z: 23.01}
+  - {x: 71.5, y: 0, z: 23.01}
+  - {x: 71.5, y: 0, z: 76.83}
+  - {x: 81.64, y: 0, z: 76.83}
+  GroundMaterial: {fileID: 2100000, guid: 23ff9a668d0e51b469f0ec795bd29229, type: 2}
+  GroundMaterialActive: {fileID: 2100000, guid: f7f2bafd97e72694ba1b1220fd02e97a, type: 2}
+  X1: 76.44551
+  Y1: 47.71333
+  Psi1Rad: -1.6
+  Psi2Rad: -1.6
+  LabelX: 76.44551
+  LabelY: 48.71333
+  LabelPsi: 180

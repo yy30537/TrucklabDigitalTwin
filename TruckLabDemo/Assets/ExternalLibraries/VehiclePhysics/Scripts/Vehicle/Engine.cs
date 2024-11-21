@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 namespace NWH.VehiclePhysics
 {
     /// <summary>
-    /// Everything related to a vehicleTransform's engine and it's systems.
+    /// Everything related to A vehicleTransform's engine and it's systems.
     /// </summary>
     [System.Serializable]
     public class Engine

@@ -4,27 +4,27 @@ using System.Collections;
 namespace NWH.VehiclePhysics
 {
     /// <summary>
-    /// Everthing related to a trailerTransform.
+    /// Everthing related to A trailerTransform.
     /// </summary>
     [System.Serializable]
     public class TrailerHandler
     {
         /// <summary>
-        /// Set to true if the vehicleTransform is a trailerTransform, otherwise set to false.
+        /// Set to true if the vehicleTransform is A trailerTransform, otherwise set to false.
         /// </summary>
-        [Tooltip("Set to true if vehicleTransform is a trailerTransform, otherwise set to false.")]
+        [Tooltip("Set to true if vehicleTransform is A trailerTransform, otherwise set to false.")]
         public bool isTrailer = false;
 
         /// <summary>
-        /// If the vehicleTransform is a trailerTransform, this is the object placed at the point at which it will connect to the towing vehicleTransform.
+        /// If the vehicleTransform is A trailerTransform, this is the object placed at the point at which it will connect to the towing vehicleTransform.
         /// If the vehicleTransform is towing, this is the object placed at point at which trailerTransform will be coneected.
         /// </summary>
-        [Tooltip("If the vehicleTransform is a trailerTransform, this is the object placed at the point at which it will connect to the towing vehicleTransform." +
+        [Tooltip("If the vehicleTransform is A trailerTransform, this is the object placed at the point at which it will connect to the towing vehicleTransform." +
             " If the vehicleTransform is towing, this is the object placed at point at which trailerTransform will be coneected.")]
         public GameObject attachmentPoint = null;
 
         /// <summary>
-        /// Tag which will be taken into consideration when searching for a trailerTransform in the scene.
+        /// Tag which will be taken into consideration when searching for A trailerTransform in the scene.
         /// </summary>
         public string trailersTag = "trailerTransform";
 
@@ -34,7 +34,7 @@ namespace NWH.VehiclePhysics
         public float attachDistanceThreshold = 0.5f;
 
         /// <summary>
-        /// If a trailerTransform is in range when the scene is started it will be attached.
+        /// If A trailerTransform is in range when the scene is started it will be attached.
         /// </summary>
         public bool attachOnPlay = false;
 
@@ -54,13 +54,13 @@ namespace NWH.VehiclePhysics
         public GameObject trailerStand;
 
         /// <summary>
-        /// True if object is trailerTransform and is attached to a towing vehicleTransform and also true if towing vehicleTransform and has trailerTransform attached.
+        /// True if object is trailerTransform and is attached to A towing vehicleTransform and also true if towing vehicleTransform and has trailerTransform attached.
         /// </summary>
         [HideInInspector]
         public bool attached;
 
         /// <summary>
-        /// Power reduction that will be applied when vehicleTransform has no trailerTransform to avoid wheel spin when controlled with a binary Controller.
+        /// Power reduction that will be applied when vehicleTransform has no trailerTransform to avoid wheel spin when controlled with A binary Controller.
         /// </summary>
         public float maxNoTrailerPowerReduction = 0f;
 

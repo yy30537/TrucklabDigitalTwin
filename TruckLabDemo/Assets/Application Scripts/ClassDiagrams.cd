@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Core.VE">
+    <Position X="8.25" Y="10.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAACAAAAAEACAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\VE.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VE_Config">
+    <Position X="17" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAAACAAAAIAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\VE_Config.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VE_Creator&lt;VE_Type, VE_Config_Type&gt;">
+    <Position X="7.75" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAJAAAAAIEAAAAAQAQAEAAoABAAEA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\VE_Creator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VE_Creator_Building">
+    <Position X="7.75" Y="7.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Building\VE_Creator_Building.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VE_Creator_Space">
+    <Position X="5" Y="7.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAACQAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Space\VE_Creator_Space.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VE_Creator_Vehicle">
+    <Position X="10.75" Y="7.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAIAAAAAAAABAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Vehicle\VE_Creator_Vehicle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VE_Config_Building">
+    <Position X="17.25" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAACBAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Building\VE_Config_Building.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VE_Config_Space">
+    <Position X="15" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAEAAAAAAIAABAAQAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Space\VE_Config_Space.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VE_Config_Vehicle">
+    <Position X="19.25" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAAEBEAhACACEAAAKgAJEAABCAAEAAgIAJAAAATAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Vehicle\VE_Config_Vehicle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VE_Building" Collapsed="true">
+    <Position X="8" Y="14" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAgAAABAIAAAAAAAAAAAABACQAFgCIAAAAEA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Building\VE_Building.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VE_Space" Collapsed="true">
+    <Position X="1.75" Y="14" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ABQAgAgQAgIAABAIAAIAAAABAgAABAAUAFhiIAEAAEA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Space\VE_Space.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VE_Vehicle" Collapsed="true">
+    <Position X="15.5" Y="14" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ASAZAAAIAgAAAQIIAgQAgAAAAAAAEhgSAFgCIERAAEw=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Vehicle\VE_Vehicle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VehicleAnimationController" Collapsed="true">
+    <Position X="23" Y="22.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAhCBhAAAKAVAwABUFQEAwAABAAEAAACBAACRME=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Vehicle\Vehicle Controllers\VehicleAnimationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VehicleCollisionController" Collapsed="true">
+    <Position X="25.5" Y="22.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAKAgAAABAAABAAABAAIAAgAAAAAAACAgACAAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Vehicle\Vehicle Controllers\VehicleCollisionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VehicleData" Collapsed="true">
+    <Position X="15.5" Y="22.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEEKAAAEAiBASAEQAAAAAAQAC0RwgACwASIKAEAABAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Vehicle\VehicleData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VehicleKinematicsController" Collapsed="true">
+    <Position X="20.5" Y="22.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAhAgACAgFCCAAAAJAQBBAAACAAAAiiAAAGAAAKAAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Vehicle\Vehicle Controllers\VehicleKinematicsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VehicleDashboardController" Collapsed="true">
+    <Position X="17.75" Y="22.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>gARTACACACAAAgBoDOBAAMCACKEAEABAQAoCEQQIAAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Vehicle\Vehicle Controllers\VehicleDashboardController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.KinematicsStrategy">
+    <Position X="22" Y="14.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Vehicle\Vehicle Controllers\Kinematics\KinematicsStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.ActuationKinematicsModel">
+    <Position X="20.5" Y="17.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Vehicle\Vehicle Controllers\Kinematics\ActuationKinematicModel .cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.MotionCaptureKinematicModel">
+    <Position X="23.25" Y="17.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Vehicle\Vehicle Controllers\Kinematics\MotionCaptureKinematicModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.ControllerInputStrategy">
+    <Position X="28.75" Y="17.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAQAAAAgAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Vehicle\Vehicle Controllers\Actuation Input\ControllerInputStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.ManualInputStrategy">
+    <Position X="26.5" Y="17.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAgAAQAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Vehicle\Vehicle Controllers\Actuation Input\KeyboardInputStrategy .cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.VehicleInputStrategyAsset">
+    <Position X="27.5" Y="14.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Vehicle\Vehicle Controllers\Actuation Input\VehicleInputStrategyAsset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Base_UI_Controller" Collapsed="true">
+    <Position X="8.75" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAABAAAAABgACAAAEAAIAAAIAAAAAAAQAAACAgAQAAA=</HashCode>
+      <FileName>Assets\Core\Application UI Controllers\Base_UI_Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.UI_Controller_MainMenu" Collapsed="true">
+    <Position X="10.5" Y="34.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>UEBoAAAQQiAAAIQAAAMAIBACCIMAQAgGAAgCAAACMBE=</HashCode>
+      <FileName>Assets\Core\Application UI Controllers\Application View\UI_Controller_MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.UI_Controller_ServiceMenu" Collapsed="true">
+    <Position X="13" Y="34.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Application UI Controllers\Application View\UI_Controller_ServiceMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.BuildingDashboardController" Collapsed="true">
+    <Position X="1.75" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQQAAAAAABAAAAIAAAAAEAAAAAAAAAAAAgCAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Building\BuildingDashboardController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.SpaceDashboardController" Collapsed="true">
+    <Position X="8.75" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQSAAAAQAAAAAAIAAAAAAAAAAAgAAAAIAgCAAAQEAA=</HashCode>
+      <FileName>Assets\Core\Virtual Entity\Space\SpaceDashboardController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.UI_Controller_SystemLog" Collapsed="true">
+    <Position X="10.25" Y="36.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAAABAAiAAABAABAAAABAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Application UI Controllers\Application View\UI_Controller_SystemLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.UI_Controller_VE_Creator" Collapsed="true">
+    <Position X="12.5" Y="36.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BkABGABBADAADCAiIBAgIEJAURYAAoFgAJBAZAJEgAk=</HashCode>
+      <FileName>Assets\Core\Application UI Controllers\Application View\UI_Controller_VE_Creator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.UI_Controller_PathSimulation" Collapsed="true">
+    <Position X="15" Y="36.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAIAGEABAAIAAAAggIAAAAAASEQQQABiCEAAAQ=</HashCode>
+      <FileName>Assets\Core\Application UI Controllers\Application View\UI_Controller_PathSimulation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.UI_Controller_BuildingDashboards" Collapsed="true">
+    <Position X="1" Y="34.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Core\Application UI Controllers\VE View\UI_Controller_BuildingDashboards.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.UI_Controller_SpaceDashboards" Collapsed="true">
+    <Position X="3.75" Y="34.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Application UI Controllers\VE View\UI_Controller_SpaceDashboards.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.UI_Controller_VehicleDashboards" Collapsed="true">
+    <Position X="6.5" Y="34.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAASAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAEA=</HashCode>
+      <FileName>Assets\Core\Application UI Controllers\VE View\UI_Controller_VehicleDashboards.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Draggable_UI" Collapsed="true">
+    <Position X="6.75" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAABAAAAAAAAAACAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Application UI Controllers\Draggable_UI.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

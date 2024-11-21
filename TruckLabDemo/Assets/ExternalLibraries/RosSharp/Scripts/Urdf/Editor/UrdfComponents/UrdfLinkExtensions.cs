@@ -4,7 +4,7 @@ Author: Suzannah Smith (suzannah.smith@siemens.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 <http://www.apache.org/licenses/LICENSE-2.0>.
 
@@ -60,7 +60,7 @@ namespace RosSharp.Urdf.Editor
             }
             else if (joint != null)
                 Debug.LogWarning("No Joint Component will be created in GameObject \"" + urdfLink.gameObject.name + "\" as it has no Rigidbody Component.\n"
-                                 + "Please define an Inertial for Link \"" + link.name + "\" in the URDF file to create a Rigidbody Component.\n", urdfLink.gameObject);
+                                 + "Please define an Inertial for Link \"" + link.name + "\" in the URDF file to create A Rigidbody Component.\n", urdfLink.gameObject);
 
             foreach (Joint childJoint in link.joints)
             {

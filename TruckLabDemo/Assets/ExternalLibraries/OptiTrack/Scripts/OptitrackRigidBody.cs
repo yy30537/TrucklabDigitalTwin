@@ -3,7 +3,7 @@ Copyright © 2016 NaturalPoint Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 http://www.apache.org/licenses/LICENSE-2.0
 
@@ -16,7 +16,6 @@ limitations under the License.
 
 using System;
 using UnityEngine;
-using Core;
 
 /// <summary>
 /// Implements live tracking of streamed OptiTrack rigid body data onto an object.
@@ -26,7 +25,7 @@ public class OptitrackRigidBody : MonoBehaviour
     [Tooltip("The object containing the OptiTrackStreamingClient script.")]
     public OptitrackStreamingClient StreamingClient;
 
-    [Tooltip("The Streaming ID of the rigid body in Motive")]
+    [Tooltip("The Streaming Id of the rigid body in Motive")]
     public Int32 RigidBodyId;
     public Vector3 position;
     public Quaternion rotation;
@@ -36,7 +35,7 @@ public class OptitrackRigidBody : MonoBehaviour
 
     void Start()
     {
-        // If the user didn't explicitly associate a client, find a suitable default.
+        // If the user didn't explicitly associate A client, find A suitable default.
         if ( this.StreamingClient == null )
         {
             this.StreamingClient = OptitrackStreamingClient.FindDefaultClient();

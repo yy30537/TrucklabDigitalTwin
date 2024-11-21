@@ -125,7 +125,7 @@ namespace NWH.VehiclePhysics
 
 
         /// <summary>
-        /// Gets a random clip from clips list.
+        /// Gets A random clip from clips list.
         /// </summary>
         public AudioClip RandomClip
         {
@@ -137,7 +137,7 @@ namespace NWH.VehiclePhysics
 
 
         /// <summary>
-        /// Sets volume for the [DockStationId]th source in sources list. Use instead of directly changing source volume as this takes master volume into account.
+        /// Sets volume for the [DockBuildingId]th source in sources list. Use instead of directly changing source volume as this takes master volume into account.
         /// </summary>
         public void SetVolume(float volume, int id)
         {
@@ -156,7 +156,7 @@ namespace NWH.VehiclePhysics
 
 
         /// <summary>
-        /// Sets pitch for the [DockStationId]th source in sources list. 
+        /// Sets pitch for the [DockBuildingId]th source in sources list. 
         /// </summary>
         public void SetPitch(float pitch, int id)
         {

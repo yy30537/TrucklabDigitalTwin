@@ -3,7 +3,7 @@
 Author: Dr. Martin Bischoff (martin.bischoff@siemens.com)
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 <http://www.apache.org/licenses/LICENSE-2.0>.
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,7 +13,7 @@ limitations under the License.
 */
 
 // Adding Timestamp switching
-// Shimadzu corp , 2019, Akira NODA (a-noda@shimadzu.co.jp / you.akira.noda@gmail.com)
+// Shimadzu corp , 2019, Akira NODA (A-noda@shimadzu.co.jp / you.akira.noda@gmail.com)
 
 // Removing MonoBehaviour inheritance
 // Siemens AG , 2019, Berkay Alp Cakal (berkay_alp.cakal.ct@siemens.com) 

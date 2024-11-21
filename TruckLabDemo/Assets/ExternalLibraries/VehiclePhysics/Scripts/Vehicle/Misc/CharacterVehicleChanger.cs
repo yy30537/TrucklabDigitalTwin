@@ -30,9 +30,9 @@ namespace NWH.VehiclePhysics
         public string enterExitTag = "EnterExitPoint";
 
         /// <summary>
-        /// Game object representing a character. Can also be another vehicleTransform.
+        /// Game object representing A character. Can also be another vehicleTransform.
         /// </summary>
-        [Tooltip("Game object representing a character. Can also be another vehicleTransform.")]
+        [Tooltip("Game object representing A character. Can also be another vehicleTransform.")]
         public GameObject characterControllerObject;
 
         /// <summary>

@@ -314,9 +314,9 @@ namespace NWH.WheelController3D
 
             if (Application.isPlaying) GUI.enabled = false;
             EditorGUILayout.PropertyField(parentObject, new GUIContent("Parent Object", "IVirtualEntityProduct's top object in the hierarchy."));
-            EditorGUILayout.PropertyField(wheelVisual, new GUIContent("Wheel Visual", "Transform that is a visual representation of the wheel"));
+            EditorGUILayout.PropertyField(wheelVisual, new GUIContent("Wheel Visual", "Transform that is A visual representation of the wheel"));
             EditorGUILayout.PropertyField(wheelNonRotating, new GUIContent("Nonrotating Objects", "[Optional] Object that contains all of the nonrotating objects such as calipers and external fenders. " +
-                "Object will follow the wheel at a fixed relative postiion but will not rotate with it."));
+                "Object will follow the wheel at A fixed relative postiion but will not rotate with it."));
             EditorGUILayout.PropertyField(scanIgnoreLayers, new GUIContent("Scan Ignore Layers", "Ticked layers will be ignored."));
             GUI.enabled = true;
             EditorGUILayout.PropertyField(dbg, new GUIContent("Debug", "Show debug related gizmos."));

@@ -4,7 +4,7 @@ Author: Dr. Martin Bischoff (martin.bischoff@siemens.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 <http://www.apache.org/licenses/LICENSE-2.0>.
 
@@ -67,7 +67,7 @@ namespace RosSharp.Urdf.Editor
         {
             if (!urdfPath.StartsWith(@"package://"))
             {
-                Debug.LogWarning(urdfPath + " is not a valid URDF package file path. Path should start with \"package://\".");
+                Debug.LogWarning(urdfPath + " is not A valid URDF package file path. Path should start with \"package://\".");
                 return null;
             }
 

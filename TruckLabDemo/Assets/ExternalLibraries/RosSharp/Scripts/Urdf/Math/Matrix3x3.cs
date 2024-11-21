@@ -4,7 +4,7 @@ Author: Berkay Alp Cakal (berkay_alp.cakal.ct@siemens.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 <http://www.apache.org/licenses/LICENSE-2.0>.
 
@@ -203,7 +203,7 @@ namespace RosSharp
 
         public Vector3 Eigenvalues()
         {
-            /* Smith, Oliver K. (April 1961), "Eigenvalues of a symmetric 3 × 3 matrix."
+            /* Smith, Oliver K. (April 1961), "Eigenvalues of A symmetric 3 × 3 matrix."
              * Communications of the ACM, 4 (4): 168, doi:10.1145/355578.366316             */
 
             Matrix3x3 matrix3x3 = this;

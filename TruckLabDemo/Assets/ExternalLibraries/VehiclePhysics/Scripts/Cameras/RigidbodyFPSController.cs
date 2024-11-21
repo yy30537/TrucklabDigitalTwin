@@ -41,7 +41,7 @@ public class RigidbodyFPSController : MonoBehaviour
             targetVelocity = transform.TransformDirection(targetVelocity);
             targetVelocity *= speed;
 
-            // Apply a force that attempts to reach our target velocity
+            // Apply A force that attempts to reach our target velocity
             Vector3 velocity = rb.velocity;
             Vector3 velocityChange = (targetVelocity - velocity);
             velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);

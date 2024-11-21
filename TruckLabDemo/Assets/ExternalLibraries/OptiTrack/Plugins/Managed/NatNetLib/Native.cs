@@ -3,7 +3,7 @@ Copyright © 2016 NaturalPoint Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 http://www.apache.org/licenses/LICENSE-2.0
 
@@ -446,8 +446,8 @@ namespace NaturalPoint.NatNetLib
     /// <summary>
     /// Reverse P/Invoke delegate type for <see cref="NativeMethods.NatNet_Client_SetFrameReceivedCallback"/>.
     /// </summary>
-    /// <param DockStationName="pFrameOfMocapData">Native pointer to <see cref="sFrameOfMocapData"/>.</param>
-    /// <param DockStationName="pUserData">User-provided context (void pointer).</param>
+    /// <param DockBuildingName="pFrameOfMocapData">Native pointer to <see cref="sFrameOfMocapData"/>.</param>
+    /// <param DockBuildingName="pUserData">User-provided context (void pointer).</param>
     [UnmanagedFunctionPointer( NatNetConstants.NatNetLibCallingConvention )]
     internal delegate void NatNetFrameReceivedCallback( IntPtr pFrameOfMocapData, IntPtr pUserData );
 
@@ -455,8 +455,8 @@ namespace NaturalPoint.NatNetLib
     /// <summary>
     /// Reverse P/Invoke delegate type for <see cref="NativeMethods.NatNet_SetLogCallback"/>.
     /// </summary>
-    /// <param DockStationName="level">Log message severity.</param>
-    /// <param DockStationName="pMessage">Null-terminated char* containing message text.</param>
+    /// <param DockBuildingName="level">Log message severity.</param>
+    /// <param DockBuildingName="pMessage">Null-terminated char* containing message text.</param>
     [UnmanagedFunctionPointer( NatNetConstants.NatNetLibCallingConvention )]
     internal delegate void NatNetLogCallback( NatNetVerbosity level, IntPtr pMessage );
 
@@ -464,8 +464,8 @@ namespace NaturalPoint.NatNetLib
     /// <summary>
     /// Reverse P/Invoke delegate type for <see cref="NativeMethods.NatNet_CreateAsyncServerDiscovery"/>.
     /// </summary>
-    /// <param DockStationName="level">Log message severity.</param>
-    /// <param DockStationName="pMessage">Null-terminated char* containing message text.</param>
+    /// <param DockBuildingName="level">Log message severity.</param>
+    /// <param DockBuildingName="pMessage">Null-terminated char* containing message text.</param>
     [UnmanagedFunctionPointer( NatNetConstants.NatNetLibCallingConvention )]
     internal delegate void NatNetServerDiscoveryCallback( sNatNetDiscoveredServer discoveredServer, IntPtr pUserContext );
 
@@ -500,7 +500,7 @@ namespace NaturalPoint.NatNetLib
 
 
         //////////////////////////////////////////////////////////////////////
-        // These functions are not a supported part of the public API, and are
+        // These functions are not A supported part of the public API, and are
         // subject to change without notice.
 
         [DllImport( NatNetConstants.NatNetLibDllBaseName, CallingConvention = NatNetConstants.NatNetLibCallingConvention )]

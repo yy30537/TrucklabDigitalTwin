@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84411bde6581a6b439ab2f30865adc31, type: 3}
+  m_Name: Digital Shadow 3
+  m_EditorClassIdentifier: 
+  Id: 6
+  Name: Truck 3 DS
+  UiTemplate: {fileID: 4125324875618756786, guid: 5fa7766b58e84da42961c8df32b92261, type: 3}
+  UiNavigationEventChannel: {fileID: 11400000, guid: e1aa21181bb0d2a469323ff8ee4cc02d, type: 2}
+  VehiclePrototypePrefab: {fileID: 5575297634737090259, guid: d6064381c8aa8ac46997a85d357228cb, type: 3}
+  KinematicStrategy: {fileID: 11400000, guid: 6cbede637a0abae468c24e596f00bf8a, type: 2}
+  InputStrategies:
+  - {fileID: 11400000, guid: 9a0a53e145ba6bc4ba23b200dd530ab4, type: 2}
+  - {fileID: 11400000, guid: 05decc972e845a04cb0be380841789e8, type: 2}
+  Scale: 13
+  L1Scaled: 0.27
+  L1CScaled: 0.055
+  R2Scaled: 0.567
+  TractorWidthScaled: 0.165
+  TrailerWidthScaled: 0.169
+  IsMoCapAvailable: 1
+  OptitrackServerAddress: 131.155.144.102
+  OptitrackLocalAddress: 131.155.144.93
+  TractorOptitrackId: 40
+  TrailerOptitrackId: 44
+  IsRosAvailable: 0
+  RosBridgeServerAddress: ws://131.155.144.97:9090
+  TwistSubscriberTopic: /tractor3/...
+  TwistPublisherTopic: /tractor3/...
+  InitialTractorPosX: 0
+  InitialTractorPosY: 90
+  InitialTractorAngle: 0
+  InitialTrailerAngle: 0
+  InitialVelocity: 0
+  InitialAcceleration: 0
+  InitialSteeringAngle: 0

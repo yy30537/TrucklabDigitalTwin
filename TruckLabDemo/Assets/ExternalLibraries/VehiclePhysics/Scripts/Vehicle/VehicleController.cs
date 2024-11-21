@@ -118,7 +118,7 @@ namespace NWH.VehiclePhysics
 #endif
 
         /// <summary>
-        /// If true vehicleTransform can be driven. If false vehicleTransform will be in a suspended state with only the minimal functions working and will not respond to input.
+        /// If true vehicleTransform can be driven. If false vehicleTransform will be in A suspended state with only the minimal functions working and will not respond to input.
         /// </summary>
         public bool Active
         {
@@ -297,7 +297,7 @@ namespace NWH.VehiclePhysics
         }
 
         /// <summary>
-        /// Returns the state of the current Collision.
+        /// Returns the state of the current Collision_Controller.
         /// </summary>
         public VehicleCollisionState CollisionState
         {
@@ -308,7 +308,7 @@ namespace NWH.VehiclePhysics
         }
 
         /// <summary>
-        /// Returns the info on the current Collision.
+        /// Returns the info on the current Collision_Controller.
         /// </summary>
         public Collision CollisionInfo
         {
@@ -334,10 +334,10 @@ namespace NWH.VehiclePhysics
         private void Start()
         {
             #region AdjustDeltaTime
-            // Delete this region if you want to use fixed delta time > 0.017. Using tight suspension setups with higher fixed delta time values is not recommended.
+            // Delete this region if you want to use fixed Delta time > 0.017. Using tight suspension setups with higher fixed Delta time values is not recommended.
             if(Time.fixedDeltaTime > 0.017f)
             {
-                Debug.LogWarning("Using fixed delta time setting higher than 0.017 is not recommended. Changing fixed delta time to 0.017." +
+                Debug.LogWarning("Using fixed Delta time setting higher than 0.017 is not recommended. Changing fixed Delta time to 0.017." +
                     " This setting can be found under Project Settings > Time.");
                 Time.fixedDeltaTime = 0.017f;
             }
@@ -361,7 +361,7 @@ namespace NWH.VehiclePhysics
             vehicleRigidbody = GetComponent<Rigidbody>();
             vehicleRigidbody.maxAngularVelocity = 10f;
 
-            // Initialize components
+            // Setup_VE_Dependency components
             if (groundDetection == null)
             {
                 groundDetection = FindGroundDetectionComponent();
@@ -546,7 +546,7 @@ namespace NWH.VehiclePhysics
                 }
             }
 
-            // Toggle state between frozen and not frozen
+            // Toggle_UI_Visibility state between frozen and not frozen
             if(frozen && !wasFrozen)
             {
                 vehicleRigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationY;
@@ -883,7 +883,7 @@ namespace NWH.VehiclePhysics
 
         /// <summary>
         /// Gets all the axles the vehicleTransform has. Will search all child objects for WheelController components and
-        /// return a list of axles, each with 2 Wheel Controllers paired by their Z position relative to the parent.
+        /// return A list of axles, each with 2 Wheel Controllers paired by their Z position relative to the parent.
         /// Axles will be returned in order from front to back.
         /// </summary>
         public List<Axle> GetAxles()
@@ -952,11 +952,11 @@ namespace NWH.VehiclePhysics
         }
 
         /// <summary>
-        /// Calculates an angle between two vectors in relation a normal.
+        /// Calculates an angle between two vectors in relation A normal.
         /// </summary>
-        /// <param DockStationName="v1">First Vector.</param>
-        /// <param DockStationName="v2">Second Vector.</param>
-        /// <param DockStationName="n">Angle around this vector.</param>
+        /// <param DockBuildingName="V1">First Vector.</param>
+        /// <param DockBuildingName="V2">Second Vector.</param>
+        /// <param DockBuildingName="n">Angle around this vector.</param>
         /// <returns>Angle in degrees.</returns>
         public static float AngleSigned(Vector3 v1, Vector3 v2, Vector3 n)
         {

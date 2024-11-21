@@ -7,13 +7,13 @@ namespace NWH.VehiclePhysics
 {
     /// <summary>
     /// Handles all damage related calculations and mesh deformations.
-    /// Collision sounds are handled by CrashComponent class.
+    /// Collision_Controller sounds are handled by CrashComponent class.
     /// </summary>
     [System.Serializable]
     public class DamageHandler
     {
         /// <summary>
-        /// Contains data on the Collision that has last happened.
+        /// Contains data on the Collision_Controller that has last happened.
         /// </summary>
         public class CollisionEvent
         {
@@ -23,7 +23,7 @@ namespace NWH.VehiclePhysics
             /// </summary>
             public Queue<MeshFilter> deformationQueue = new Queue<MeshFilter>();
             /// <summary>
-            /// Collision data for the Collision event.
+            /// Collision_Controller data for the Collision_Controller event.
             /// </summary>
             public Collision collision;
             /// <summary>
@@ -65,9 +65,9 @@ namespace NWH.VehiclePhysics
         public float deformationRadius = 0.6f;
 
         /// <summary>
-        /// Determines how much vertices will be deformed for given Collision strength.
+        /// Determines how much vertices will be deformed for given Collision_Controller strength.
         /// </summary>
-        [Tooltip("Determines how much vertices will be deformed for given Collision strength.")]
+        [Tooltip("Determines how much vertices will be deformed for given Collision_Controller strength.")]
         [Range(0.1f, 5f)]
         public float deformationStrength = 1.6f;
 
@@ -85,14 +85,14 @@ namespace NWH.VehiclePhysics
         public float decelerationThreshold = 30f;
 
         /// <summary>
-        /// Collisions with the objects that have a tag that is on this list will be ignored.
-        /// Collision state will be changed but no processing will happen.
+        /// Collisions with the objects that have A tag that is on this list will be ignored.
+        /// Collision_Controller state will be changed but no processing will happen.
         /// </summary>
-        [Tooltip("Collisions with the objects that have a tag that is on this list will be ignored.")]
+        [Tooltip("Collisions with the objects that have A tag that is on this list will be ignored.")]
         public List<string> ignoreTags = new List<string>();
 
         /// <summary>
-        /// Hash of the previous queued Collision. Prevents reacting to the same Collision twice since Collision is called during OnCollisionStay() so more data can be collected.
+        /// Hash of the previous queued Collision_Controller. Prevents reacting to the same Collision_Controller twice since Collision_Controller is called during OnCollisionStay() so more data can be collected.
         /// </summary>        
         [HideInInspector]
         public int previousCollisionHash;
@@ -196,7 +196,7 @@ namespace NWH.VehiclePhysics
         }
 
         /// <summary>
-        /// Add Collision to the queue of collisions waiting to be processed.
+        /// Add Collision_Controller to the queue of collisions waiting to be processed.
         /// </summary>
         public void Enqueue(Collision collision, float accelerationMagnitude)
         {
@@ -221,7 +221,7 @@ namespace NWH.VehiclePhysics
             {
                 //Ray crashRay = new Ray(deformableMeshFilter.transform.InverseTransformPoint(collisionPoint), deformableMeshFilter.transform.InverseTransformDirection(direction));
 
-                // Check if mesh is near Collision point
+                // Check if mesh is near Collision_Controller point
                 //float rayDistance = Mathf.Infinity;
 
                 //if (deformableMeshFilter.mesh.bounds.Contains(deformableMeshFilter.transform.InverseTransformPoint(collisionPoint))
@@ -230,7 +230,7 @@ namespace NWH.VehiclePhysics
                     // Deform mesh only if not wheel
                     if (deformableMeshFilter.gameObject.tag != "Wheel")
                     {
-                        //Debug.Log("Enqueue " + deformableMeshFilter.DockStationName);
+                        //Debug.Log("Enqueue " + deformableMeshFilter.DockBuildingName);
                         collisionEvent.deformationQueue.Enqueue(deformableMeshFilter);
                     }
                     // If crash happened around wheel do not deform it but rather detoriate it's handling
@@ -250,13 +250,13 @@ namespace NWH.VehiclePhysics
         }
 
         /// <summary>
-        /// Deforms a mesh using data from Collision event.
+        /// Deforms A mesh using data from Collision_Controller event.
         /// </summary>
         public void MeshDeform(CollisionEvent collisionEvent, MeshFilter deformableMeshFilter)
         {
-            //Debug.Log("Deforming " + deformableMeshFilter.DockStationName);
+            //Debug.Log("Deforming " + deformableMeshFilter.DockBuildingName);
             Vector3 collisionPoint = AverageCollisionPoint(collisionEvent.collision.contacts);
-            //Vector3 direction = AverageCollisionNormal(collisionEvent.Collision.contacts);
+            //Vector3 direction = AverageCollisionNormal(collisionEvent.Collision_Controller.contacts);
             Vector3 direction = Vector3.Normalize(deformableMeshFilter.transform.position - collisionPoint);
 
             float xDot = Mathf.Abs(Vector3.Dot(direction, Vector3.right));
@@ -292,7 +292,7 @@ namespace NWH.VehiclePhysics
         }
 
         /// <summary>
-        /// Calculates average Collision point from a list of contact points.
+        /// Calculates average Collision_Controller point from A list of contact points.
         /// </summary>
         private static Vector3 AverageCollisionPoint(ContactPoint[] contacts)
         {
@@ -305,7 +305,7 @@ namespace NWH.VehiclePhysics
         }
 
         /// <summary>
-        /// Calculates average Collision normal from a list of contact points.
+        /// Calculates average Collision_Controller normal from A list of contact points.
         /// </summary>
         private static Vector3 AverageCollisionNormal(ContactPoint[] contacts)
         {

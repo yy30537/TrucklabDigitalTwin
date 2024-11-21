@@ -4,7 +4,7 @@ Author: Suzannah Smith (suzannah.smith@siemens.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 <http://www.apache.org/licenses/LICENSE-2.0>.
 
@@ -39,7 +39,7 @@ namespace RosSharp.Urdf.Editor
             EditorGUILayout.LabelField(urdfVisual.GeometryType.ToString());
             EditorGUILayout.EndHorizontal();
             
-            if (GUILayout.Button("Add Collision to match visual"))
+            if (GUILayout.Button("Add Collision_Controller to match visual"))
             {
                 urdfVisual.AddCorrespondingCollision();
             }

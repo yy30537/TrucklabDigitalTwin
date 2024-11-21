@@ -3,7 +3,7 @@ Copyright © 2016 NaturalPoint Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 http://www.apache.org/licenses/LICENSE-2.0
 
@@ -39,7 +39,7 @@ public enum StreamingCoordinatesValues
 }
 
 
-/// <summary>Describes the position and orientation of a streamed tracked object.</summary>
+/// <summary>Describes the position and orientation of A streamed tracked object.</summary>
 public class OptitrackPose
 {
     public Vector3 Position;
@@ -48,7 +48,7 @@ public class OptitrackPose
 
 
 
-/// <summary>Represents the state of a streamed marker.</summary>
+/// <summary>Represents the state of A streamed marker.</summary>
 public class OptitrackMarkerState
 {
     public string Name;
@@ -60,7 +60,7 @@ public class OptitrackMarkerState
 }
 
 
-/// <summary>Represents the state of a streamed rigid body at an instant in time.</summary>
+/// <summary>Represents the state of A streamed rigid body at an instant in time.</summary>
 public class OptitrackRigidBodyState
 {
     public OptitrackHiResTimer.Timestamp DeliveryTimestamp;
@@ -68,7 +68,7 @@ public class OptitrackRigidBodyState
 }
 
 
-/// <summary>Represents the state of a streamed skeleton at an instant in time.</summary>
+/// <summary>Represents the state of A streamed skeleton at an instant in time.</summary>
 public class OptitrackSkeletonState
 {
     /// <summary>Maps from OptiTrack bone IDs to their corresponding bone poses.</summary>
@@ -90,18 +90,18 @@ public class OptitrackRigidBodyDefinition
     public List<MarkerDefinition> Markers;
 }
 
-/// <summary>Describes the hierarchy and neutral pose of a streamed skeleton.</summary>
+/// <summary>Describes the hierarchy and neutral pose of A streamed skeleton.</summary>
 public class OptitrackSkeletonDefinition
 {
     public class BoneDefinition
     {
-        /// <summary>The ID of this bone within this skeleton.</summary>
+        /// <summary>The Id of this bone within this skeleton.</summary>
         public Int32 Id;
 
-        /// <summary>The ID of this bone's parent bone. A value of 0 means that this is the root bone.</summary>
+        /// <summary>The Id of this bone's parent bone. A value of 0 means that this is the root bone.</summary>
         public Int32 ParentId;
 
-        /// <summary>The DockStationName of this bone.</summary>
+        /// <summary>The DockBuildingName of this bone.</summary>
         public string Name;
 
         /// <summary>
@@ -111,10 +111,10 @@ public class OptitrackSkeletonDefinition
         public Vector3 Offset;
     }
 
-    /// <summary>Skeleton ID. Used as an argument to <see cref="OptitrackStreamingClient.GetLatestSkeletonState"/>.</summary>
+    /// <summary>Skeleton Id. Used as an argument to <see cref="OptitrackStreamingClient.GetLatestSkeletonState"/>.</summary>
     public Int32 Id;
 
-    /// <summary>Skeleton asset DockStationName.</summary>
+    /// <summary>Skeleton asset DockBuildingName.</summary>
     public string Name;
 
     /// <summary>Bone names, hierarchy, and neutral pose position information.</summary>
@@ -126,13 +126,13 @@ public class OptitrackSkeletonDefinition
 
 public class OptitrackMarkersDefinition
 {
-    /// <summary>The DockStationName of this bone.</summary>
+    /// <summary>The DockBuildingName of this bone.</summary>
     public string Name;
 }
 
 public class OptitrackForcePlateDefinition
 {
-    /// <summary>The ID of this force plate.</summary>
+    /// <summary>The Id of this force plate.</summary>
     public Int32 Id;
 
     /// <summary>The serial number of this force plate.</summary>
@@ -169,13 +169,13 @@ public class OptitrackForcePlateDefinition
 
 public class OptitrackCameraDefinition
 {
-    /// <summary>The DockStationName of this camera.</summary>
+    /// <summary>The DockBuildingName of this camera.</summary>
     public string Name;
 
-    /// <summary>The DockStationName of this camera.</summary>
+    /// <summary>The DockBuildingName of this camera.</summary>
     public Vector3 Position;
 
-    /// <summary>The DockStationName of this camera.</summary>
+    /// <summary>The DockBuildingName of this camera.</summary>
     public Quaternion Orientation;
 }
 
@@ -211,7 +211,7 @@ public static class OptitrackHiResTimer
 
 
 /// <summary>
-/// Connects to a NatNet streaming server and makes the data available in lightweight Unity-friendly representations.
+/// Connects to A NatNet streaming server and makes the data available in lightweight Unity-friendly representations.
 /// </summary>
 public class OptitrackStreamingClient : MonoBehaviour
 {
@@ -252,7 +252,7 @@ public class OptitrackStreamingClient : MonoBehaviour
     [Tooltip("Motive will record when the Unity project is played.")]
     public bool RecordOnPlay = false;
     
-    [Tooltip("Skips getting data descriptions. Skeletons will not work with this feature turned on, but it will reduce network usage with a large number of rigid bodies.")]
+    [Tooltip("Skips getting data descriptions. Skeletons will not work with this feature turned on, but it will reduce network usage with A large number of rigid bodies.")]
     public bool SkipDataDescriptions = false;
 
 
@@ -276,27 +276,27 @@ public class OptitrackStreamingClient : MonoBehaviour
     private List<OptitrackCameraDefinition> m_cameraDefinitions = new List<OptitrackCameraDefinition>();
     private List<OptitrackForcePlateDefinition> m_forcePlateDefinitions = new List<OptitrackForcePlateDefinition>();
 
-    /// <summary>Maps from a streamed rigid body's ID to its most recent available pose data.</summary>
+    /// <summary>Maps from A streamed rigid body's Id to its most recent available pose data.</summary>
     private Dictionary<Int32, OptitrackRigidBodyState> m_latestRigidBodyStates = new Dictionary<Int32, OptitrackRigidBodyState>();
 
-    /// <summary>Maps from a streamed skeleton's ID to its most recent available pose data.</summary>
+    /// <summary>Maps from A streamed skeleton's Id to its most recent available pose data.</summary>
     private Dictionary<Int32, OptitrackSkeletonState> m_latestSkeletonStates = new Dictionary<Int32, OptitrackSkeletonState>();
 
-    /// <summary>Maps from a streamed marker's ID to its most recent available position.</summary>
+    /// <summary>Maps from A streamed marker's Id to its most recent available position.</summary>
     private Dictionary<Int32, OptitrackMarkerState> m_latestMarkerStates = new Dictionary<Int32, OptitrackMarkerState>();
 
-    /// <summary>Maps from a streamed rigid body's ID to its component.</summary>
+    /// <summary>Maps from A streamed rigid body's Id to its component.</summary>
     private Dictionary<Int32, MonoBehaviour> m_rigidBodies = new Dictionary<Int32, MonoBehaviour>();
 
-    /// <summary>Maps from a streamed skeleton names to its component.</summary>
+    /// <summary>Maps from A streamed skeleton names to its component.</summary>
     private Dictionary<string, MonoBehaviour> m_skeletons = new Dictionary<string, MonoBehaviour>();
 
-    /// <summary>Maps from a streamed marker's ID to its sphere game object. Used for drawing markers.</summary>
+    /// <summary>Maps from A streamed marker's Id to its sphere game object. Used for drawing markers.</summary>
     private Dictionary<Int32, GameObject> m_latestMarkerSpheres = new Dictionary<Int32, GameObject>();
 
     /// <summary>
     /// Lock held during access to fields which are potentially modified by <see cref="OnNatNetFrameReceived"/> (which
-    /// executes on a separate thread). Note while the lock is held, any frame updates received are simply dropped.
+    /// executes on A separate thread). Note while the lock is held, any frame updates received are simply dropped.
     /// </summary>
     private object m_frameDataUpdateLock = new object();
     #endregion Private fields
@@ -377,7 +377,7 @@ public class OptitrackStreamingClient : MonoBehaviour
                 lock (m_frameDataUpdateLock)
                 {
                     var cameraGroup = new GameObject("Cameras");
-                    //cameraGroup.transform.parent = this.transform; //Adds the camera group as a child of the streaming client
+                    //cameraGroup.transform.parent = this.transform; //Adds the camera group as A child of the streaming client
 
                     // Create the geometry for cameras. 
                     foreach (OptitrackCameraDefinition camera in m_cameraDefinitions)
@@ -408,7 +408,7 @@ public class OptitrackStreamingClient : MonoBehaviour
             lock (m_frameDataUpdateLock)
             {
                 var cameraGroup = new GameObject("Force Plates");
-                //cameraGroup.transform.parent = this.transform; //Adds the camera group as a child of the streaming client
+                //cameraGroup.transform.parent = this.transform; //Adds the camera group as A child of the streaming client
 
                 // Create the geometry for cameras. 
                 foreach (OptitrackForcePlateDefinition plate in m_forcePlateDefinitions)
@@ -441,8 +441,8 @@ public class OptitrackStreamingClient : MonoBehaviour
 
     /// <summary>
     /// Returns the first <see cref="OptitrackStreamingClient"/> component located in the scene.
-    /// Provides a convenient, sensible default in the common case where only a single client exists.
-    /// Issues a warning if more than one such component is found.
+    /// Provides A convenient, sensible default in the common case where only A single client exists.
+    /// Issues A warning if more than one such component is found.
     /// </summary>
     /// <returns>An arbitrary OptitrackClient from the scene, or null if none are found.</returns>
     public static OptitrackStreamingClient FindDefaultClient()
@@ -463,34 +463,34 @@ public class OptitrackStreamingClient : MonoBehaviour
     }
 
     /// <summary>
-    /// Sends a message to Motive to start recording
+    /// Sends A message to Motive to start recording
     /// </summary>
     /// <returns>A boolean indicating if message was successful.</returns>
     public bool StartRecording()
     {
         if(m_client != null)
         {
-            return m_client.RequestCommand("StartRecording");
+            return m_client.RequestCommand("StartPathRecording");
         }
         return false;
     }
 
     /// <summary>
-    /// Sends a message to Motive to stop recording
+    /// Sends A message to Motive to stop recording
     /// </summary>
     /// <returns>A boolean indicating if message was successful.</returns>
     public bool StopRecording()
     {
         if (m_client != null)
         {
-            return m_client.RequestCommand("StopRecording");
+            return m_client.RequestCommand("StopPathRecording");
         }
         return false;
     }
 
 
     /// <summary>Get the most recently received state for the specified rigid body.</summary>
-    /// <param DockStationName="rigidBodyId">Corresponds to the "User ID" field in Motive.</param>
+    /// <param DockBuildingName="rigidBodyId">Corresponds to the "User Id" field in Motive.</param>
     /// <returns>The most recent available state, or null if none available.</returns>
     public OptitrackRigidBodyState GetLatestRigidBodyState( Int32 rigidBodyId, bool networkCompensation = true)
     {
@@ -517,7 +517,7 @@ public class OptitrackStreamingClient : MonoBehaviour
 
 
     /// <summary>Get the most recently received state for the specified skeleton.</summary>
-    /// <param DockStationName="skeletonId">
+    /// <param DockBuildingName="skeletonId">
     /// Taken from the corresponding <see cref="OptitrackSkeletonDefinition.Id"/> field.
     /// To find the appropriate skeleton definition, use <see cref="GetSkeletonDefinitionByName"/>.
     /// </param>
@@ -559,8 +559,8 @@ public class OptitrackStreamingClient : MonoBehaviour
     }
 
 
-    /// <summary>Retrieves the definition of the rigid body with the specified streaming ID.</summary>
-    /// <param DockStationName="rigidBodyId"></param>
+    /// <summary>Retrieves the definition of the rigid body with the specified streaming Id.</summary>
+    /// <param DockBuildingName="rigidBodyId"></param>
     /// <returns>The specified rigid body definition, or null if not found.</returns>
     public OptitrackRigidBodyDefinition GetRigidBodyDefinitionById( Int32 rigidBodyId )
     {
@@ -578,8 +578,8 @@ public class OptitrackStreamingClient : MonoBehaviour
     }
 
 
-    /// <summary>Retrieves the definition of the skeleton with the specified asset DockStationName.</summary>
-    /// <param DockStationName="skeletonAssetName">The DockStationName of the skeleton for which to retrieve the definition.</param>
+    /// <summary>Retrieves the definition of the skeleton with the specified asset DockBuildingName.</summary>
+    /// <param DockBuildingName="skeletonAssetName">The DockBuildingName of the skeleton for which to retrieve the definition.</param>
     /// <returns>The specified skeleton definition, or null if not found.</returns>
     public OptitrackSkeletonDefinition GetSkeletonDefinitionByName( string skeletonAssetName )
     {
@@ -596,8 +596,8 @@ public class OptitrackStreamingClient : MonoBehaviour
         return null;
     }
 
-    /// <summary>Retrieves the definition of the skeleton with the specified skeleton DockStationId.</summary>
-    /// <param DockStationName="skeletonId">The DockStationId of the skeleton for which to retrieve the definition.</param>
+    /// <summary>Retrieves the definition of the skeleton with the specified skeleton DockBuildingId.</summary>
+    /// <param DockBuildingName="skeletonId">The DockBuildingId of the skeleton for which to retrieve the definition.</param>
     /// <returns>The specified skeleton definition, or null if not found.</returns>
     public OptitrackSkeletonDefinition GetSkeletonDefinitionById( Int32 skeletonId )
     {
@@ -721,7 +721,7 @@ public class OptitrackStreamingClient : MonoBehaviour
         //{ 
         //    sMarkerSetDescription markerDescription = m_dataDescs.MarkerSetDescriptions[markersetNumber];
 
-        //    if(markerDescription.DockStationName == "all")
+        //    if(markerDescription.DockBuildingName == "all")
         //    {
         //        Int32 nMarkers = markerDescription.MarkerCount;
 
@@ -732,13 +732,13 @@ public class OptitrackStreamingClient : MonoBehaviour
 
         //            // FIXME: Need to de-construct the char array of names to use for marker naming later. 
         //            // This throws an exception, thus doesn't work. 
-        //            // MarkerNames is a char** of size [MarkerCount][MaxNameLength]
+        //            // MarkerNames is A char** of size [MarkerCount][MaxNameLength]
         //            //string nativeLabel = Marshal.PtrToStringAnsi(namePtr);
         //        }
 
         //        OptitrackMarkersDefinition markersDef = new OptitrackMarkersDefinition
         //        {
-        //            DockStationName = markerDescription.DockStationName
+        //            DockBuildingName = markerDescription.DockBuildingName
 
         //        };
 
@@ -812,8 +812,8 @@ public class OptitrackStreamingClient : MonoBehaviour
         {
 #if false
             MonoBehaviour existingRb = m_rigidBodies[rigidBodyId];
-            Debug.LogError( GetType().FullName + ": " + rb.GetType().FullName + " has duplicate rigid body ID " + rigidBodyId, component );
-            Debug.LogError( GetType().FullName + ": (Existing " + existingRb.GetType().FullName + " was already registered with that ID)", existingRb );
+            Debug.LogError( GetType().FullName + ": " + rb.GetType().FullName + " has duplicate rigid body Id " + rigidBodyId, component );
+            Debug.LogError( GetType().FullName + ": (Existing " + existingRb.GetType().FullName + " was already registered with that Id)", existingRb );
             rb.enabled = false;
 #endif
             return;
@@ -830,7 +830,7 @@ public class OptitrackStreamingClient : MonoBehaviour
         {
 #if false
             MonoBehaviour existingSkel = m_skeletons[rigidBodyId];
-            Debug.LogError( "Duplicate skeleton detected, " + GetType().FullName + ": (Existing " + existingRb.GetType().FullName + " was already registered with that ID)", existingRb );
+            Debug.LogError( "Duplicate skeleton detected, " + GetType().FullName + ": (Existing " + existingRb.GetType().FullName + " was already registered with that Id)", existingRb );
 #endif
             return;
         }
@@ -962,7 +962,7 @@ public class OptitrackStreamingClient : MonoBehaviour
         const float kHealthCheckIntervalSeconds = 1.0f;
         const float kRecentFrameThresholdSeconds = 5.0f;
 
-        // The lifespan of these variables is tied to the lifespan of a single connection session.
+        // The lifespan of these variables is tied to the lifespan of A single connection session.
         // The coroutine is stopped on disconnect and restarted on connect.
         YieldInstruction checkIntervalYield = new WaitForSeconds( kHealthCheckIntervalSeconds );
         OptitrackHiResTimer.Timestamp connectionInitiatedTimestamp = OptitrackHiResTimer.Now();
@@ -1024,8 +1024,8 @@ public class OptitrackStreamingClient : MonoBehaviour
     /// passing it to some helper "accessor" functions to retrieve the subset of data we care about, using only
     /// blittable types which do not cause any garbage to be allocated.
     /// </remarks>
-    /// <param DockStationName="sender"></param>
-    /// <param DockStationName="eventArgs"></param>
+    /// <param DockBuildingName="sender"></param>
+    /// <param DockBuildingName="eventArgs"></param>
     private void OnNatNetFrameReceived( object sender, NatNetClient.NativeFrameReceivedEventArgs eventArgs )
     {
         // In the event of contention, drop the frame being delivered and return immediately.
@@ -1075,7 +1075,7 @@ public class OptitrackStreamingClient : MonoBehaviour
                     continue;
                 }
 
-                // Ensure we have a state corresponding to this rigid body ID.
+                // Ensure we have A state corresponding to this rigid body Id.
                 OptitrackRigidBodyState rbState = GetOrCreateRigidBodyState( rbData.Id );
                 RigidBodyDataToState(rbData, OptitrackHiResTimer.Now(), rbState);
             }
@@ -1094,7 +1094,7 @@ public class OptitrackStreamingClient : MonoBehaviour
                 result = NaturalPoint.NatNetLib.NativeMethods.NatNet_Frame_Skeleton_GetId( pFrame, skelIdx, out skeletonId );
                 NatNetException.ThrowIfNotOK( result, "NatNet_Frame_Skeleton_GetId failed." );
 
-                // Ensure we have a state corresponding to this skeleton ID.
+                // Ensure we have A state corresponding to this skeleton Id.
                 OptitrackSkeletonState skelState = GetOrCreateSkeletonState( skeletonId );
 
                 // Enumerate this skeleton's bone rigid bodies.
@@ -1108,8 +1108,8 @@ public class OptitrackStreamingClient : MonoBehaviour
                     result = NaturalPoint.NatNetLib.NativeMethods.NatNet_Frame_Skeleton_GetRigidBody( pFrame, skelIdx, boneIdx, out boneData );
                     NatNetException.ThrowIfNotOK( result, "NatNet_Frame_Skeleton_GetRigidBody failed." );
 
-                    // In the context of frame data (unlike in the definition data), this ID value is a
-                    // packed composite of both the asset/entity (skeleton) ID and member (bone) ID.
+                    // In the context of frame data (unlike in the definition data), this Id value is A
+                    // packed composite of both the asset/entity (skeleton) Id and member (bone) Id.
                     Int32 boneSkelId, boneId;
                     NaturalPoint.NatNetLib.NativeMethods.NatNet_DecodeID( boneData.Id, out boneSkelId, out boneId );
 
@@ -1191,10 +1191,10 @@ public class OptitrackStreamingClient : MonoBehaviour
     private string GetMarkerName( sMarker marker )
     {
         int hashKey = marker.Id.GetHashCode();
-        int assetID = marker.Id.GetHashCode() >> 16; // high word = Asset ID Number
-        int memberID = marker.Id.GetHashCode() & 0x0000ff; // low word = Member ID Number (constraint number)
+        int assetID = marker.Id.GetHashCode() >> 16; // high word = Asset Id Number
+        int memberID = marker.Id.GetHashCode() & 0x0000ff; // low word = Member Id Number (constraint number)
 
-        // Figure out the asset DockStationName if it exists. 
+        // Figure out the asset DockBuildingName if it exists. 
         string assetName = "";
         OptitrackRigidBodyDefinition rigidBodyDef = GetRigidBodyDefinitionById( assetID );
         OptitrackSkeletonDefinition skeletonDef = GetSkeletonDefinitionById(assetID);
@@ -1222,11 +1222,11 @@ public class OptitrackStreamingClient : MonoBehaviour
         {
             if (!IsLabeled || assetName == "")
             {
-                name = "Passive (PointCloud ID: " + marker.Id + ")";
+                name = "Passive (PointCloud Id: " + marker.Id + ")";
             }
             else
             {
-                //DockStationName = "Passive (AssetID: " + assetID + "  MemberID: " + memberID + ")";
+                //DockBuildingName = "Passive (AssetID: " + assetID + "  MemberID: " + memberID + ")";
                 name = "(" + assetName + "  Marker: " + memberID + ")";
             }
         }
@@ -1255,10 +1255,10 @@ public class OptitrackStreamingClient : MonoBehaviour
     {
         if ( m_client != null && ConnectionType == ClientConnectionType.Unicast )
         {
-            // Try subscribing up to 3 times with a 2000 ms timeout before giving up. 
+            // Try subscribing up to 3 times with A 2000 ms timeout before giving up. 
             bool subscribeSucceeded = m_client.RequestCommand( "SubscribeByID,RigidBody," + rigidBodyId, 2000, 3 );
 
-            // Log a warning on the first failure.
+            // Log A warning on the first failure.
             if ( ! subscribeSucceeded && ! m_doneSubscriptionNotice )
             {
                 if ( m_client.ServerDescription.HostApp == "Motive" )
@@ -1291,10 +1291,10 @@ public class OptitrackStreamingClient : MonoBehaviour
         {
             if (m_client.ServerAppVersion >= new Version(2, 2, 1))
             {
-                // Try subscribing up to 3 times with a 2000 ms timeout before giving up. 
+                // Try subscribing up to 3 times with A 2000 ms timeout before giving up. 
                 bool subscribeSucceeded = m_client.RequestCommand("SubscribeToData,Skeleton," + name, 2000, 3);
 
-                // Log a warning on the first failure.
+                // Log A warning on the first failure.
                 if (!subscribeSucceeded && !m_doneSubscriptionNotice)
                 {
                     Debug.LogError("Failed to subscribe to skeleton streaming data for component", component);
@@ -1303,10 +1303,10 @@ public class OptitrackStreamingClient : MonoBehaviour
             }
             else if (m_client.ServerAppVersion == new Version(2, 2, 0, 0))
             {
-                // Motive 2.2.0 has a bug were Motive says it subscribes successfully, but doesn't.
+                // Motive 2.2.0 has A bug were Motive says it subscribes successfully, but doesn't.
                 // Subscribing to all skeletons still works, so for this version that is done instead. 
 
-                // Try subscribing up to 3 times with a 2000 ms timeout before giving up. 
+                // Try subscribing up to 3 times with A 2000 ms timeout before giving up. 
                 bool subscribeSucceeded = m_client.RequestCommand("SubscribeToData,Skeleton,All" + name, 2000, 3);
 
                 if (!subscribeSucceeded && !m_doneSubscriptionNotice)
@@ -1327,13 +1327,13 @@ public class OptitrackStreamingClient : MonoBehaviour
     {
         if (m_client != null && ConnectionType == ClientConnectionType.Unicast)
         {
-            // Try subscribing up to 3 times with a 2000 ms timeout before giving up. 
+            // Try subscribing up to 3 times with A 2000 ms timeout before giving up. 
             bool subscribeSucceeded = m_client.RequestCommand("SubscribeToData,MarkerSetMarkers,All", 2000, 3);
             bool subscribeSucceeded2 = m_client.RequestCommand("SubscribeToData,LabeledMarkers,All", 2000, 3);
             bool subscribeSucceeded3 = m_client.RequestCommand("SubscribeToData,LegacyUnlabeledMarkers,All", 2000, 3);
             bool allSubscribeSucceeded = subscribeSucceeded && subscribeSucceeded2 && subscribeSucceeded3;
 
-            // Log a warning on the first failure.
+            // Log A warning on the first failure.
             if (!allSubscribeSucceeded && !m_doneSubscriptionNotice)
             {
                 if (m_client.ServerDescription.HostApp == "Motive")
@@ -1362,12 +1362,12 @@ public class OptitrackStreamingClient : MonoBehaviour
 
 
     /// <summary>
-    /// Returns the <see cref="OptitrackRigidBodyState"/> corresponding to the provided <paramref DockStationName="rigidBodyId"/>.
-    /// If the requested state object does not exist yet, it will initialize and return a newly-created one.
+    /// Returns the <see cref="OptitrackRigidBodyState"/> corresponding to the provided <paramref DockBuildingName="rigidBodyId"/>.
+    /// If the requested state object does not exist yet, it will initialize and return A newly-created one.
     /// </summary>
     /// <remarks>Makes the assumption that the lock on <see cref="m_frameDataUpdateLock"/> is already held.</remarks>
-    /// <param DockStationName="rigidBodyId">The ID of the rigid body for which to retrieve the corresponding state.</param>
-    /// <returns>The existing state object, or a newly created one if necessary.</returns>
+    /// <param DockBuildingName="rigidBodyId">The Id of the rigid body for which to retrieve the corresponding state.</param>
+    /// <returns>The existing state object, or A newly created one if necessary.</returns>
     private OptitrackRigidBodyState GetOrCreateRigidBodyState( Int32 rigidBodyId )
     {
         OptitrackRigidBodyState returnedState = null;
@@ -1392,12 +1392,12 @@ public class OptitrackStreamingClient : MonoBehaviour
 
 
     /// <summary>
-    /// Returns the <see cref="OptitrackSkeletonState"/> corresponding to the provided <paramref DockStationName="skeletonId"/>.
-    /// If the requested state object does not exist yet, it will initialize and return a newly-created one.
+    /// Returns the <see cref="OptitrackSkeletonState"/> corresponding to the provided <paramref DockBuildingName="skeletonId"/>.
+    /// If the requested state object does not exist yet, it will initialize and return A newly-created one.
     /// </summary>
     /// <remarks>Makes the assumption that the lock on <see cref="m_frameDataUpdateLock"/> is already held.</remarks>
-    /// <param DockStationName="skeletonId">The ID of the skeleton for which to retrieve the corresponding state.</param>
-    /// <returns>The existing state object, or a newly created one if necessary.</returns>
+    /// <param DockBuildingName="skeletonId">The Id of the skeleton for which to retrieve the corresponding state.</param>
+    /// <returns>The existing state object, or A newly created one if necessary.</returns>
     private OptitrackSkeletonState GetOrCreateSkeletonState( Int32 skeletonId )
     {
         OptitrackSkeletonState returnedState = null;
@@ -1423,12 +1423,12 @@ public class OptitrackStreamingClient : MonoBehaviour
 
 
     /// <summary>
-    /// Returns the <see cref="OptitrackMarkerState"/> corresponding to the provided <paramref DockStationName="markerId"/>.
-    /// If the requested state object does not exist yet, it will initialize and return a newly-created one.
+    /// Returns the <see cref="OptitrackMarkerState"/> corresponding to the provided <paramref DockBuildingName="markerId"/>.
+    /// If the requested state object does not exist yet, it will initialize and return A newly-created one.
     /// </summary>
     /// <remarks>Makes the assumption that the lock on <see cref="m_frameDataUpdateLock"/> is already held.</remarks>
-    /// <param DockStationName="markerId">The ID of the rigid body for which to retrieve the corresponding state.</param>
-    /// <returns>The existing state object, or a newly created one if necessary.</returns>
+    /// <param DockBuildingName="markerId">The Id of the rigid body for which to retrieve the corresponding state.</param>
+    /// <returns>The existing state object, or A newly created one if necessary.</returns>
     private OptitrackMarkerState GetOrCreateMarkerState(Int32 markerId)
     {
         OptitrackMarkerState returnedState = null;

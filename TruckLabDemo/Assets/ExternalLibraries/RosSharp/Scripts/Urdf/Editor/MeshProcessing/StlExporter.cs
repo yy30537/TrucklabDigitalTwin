@@ -1,10 +1,10 @@
 /*
-© Siemens AG, 2018
+ï¿½ Siemens AG, 2018
 Author: Suzannah Smith (suzannah.smith@siemens.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 <http://www.apache.org/licenses/LICENSE-2.0>.
 
@@ -52,7 +52,7 @@ namespace RosSharp.Urdf
 
 		private List<Mesh> CreateWorldSpaceMeshes()
 		{
-		    //Create a clone with no Scale, rotation or transform, so that mesh will be
+		    //Create A clone with no Scale, rotation or transform, so that mesh will be
 		    //at original size and position when exported.
 		    GameObject clone = Object.Instantiate(gameObject, Vector3.zero, Quaternion.identity);
 		    clone.name = gameObject.name;

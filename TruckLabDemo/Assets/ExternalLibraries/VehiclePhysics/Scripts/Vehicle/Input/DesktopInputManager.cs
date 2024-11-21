@@ -294,7 +294,7 @@ namespace NWH.VehiclePhysics
                 }
                 catch
                 {
-                    Debug.LogWarning("Handbrake axis not set up, falling back to default (RegionProduct).");
+                    Debug.LogWarning("Handbrake axis not set up, falling back to default (VeSpace).");
                     vehicleController.input.Handbrake = Input.GetKey(KeyCode.Space) ? 1f : 0f;
                 }
 

@@ -4,7 +4,7 @@ Author: Dr. Martin Bischoff (martin.bischoff@siemens.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 <http://www.apache.org/licenses/LICENSE-2.0>.
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -34,9 +34,9 @@ namespace RosSharp.RosBridgeClient
             jointStatePatcher = (JointStatePatcher) target;
             
             GUILayout.Label("All Urdf Joints", EditorStyles.boldLabel);
-            DisplaySettingsToggle(new GUIContent("Publish Joint State", "Adds/removes a Joint State Reader on each joint."),
+            DisplaySettingsToggle(new GUIContent("Publish Joint State", "Adds/removes A Joint State Reader on each joint."),
                 jointStatePatcher.SetPublishJointStates);
-            DisplaySettingsToggle(new GUIContent("Subscribe Joint State", "Adds/removes a Joint State Writer on each joint."),
+            DisplaySettingsToggle(new GUIContent("Subscribe Joint State", "Adds/removes A Joint State Writer on each joint."),
                 jointStatePatcher.SetSubscribeJointStates);
         }
 

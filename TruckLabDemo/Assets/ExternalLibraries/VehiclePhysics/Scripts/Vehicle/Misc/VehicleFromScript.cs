@@ -8,8 +8,8 @@ using NWH.WheelController3D;
 namespace NWH.VehiclePhysics
 {
     /// <summary>
-    /// Example script for setting up a vehicleTransform at runtime - modify as/if needed.
-    /// Sets up a vehicleTransform from script at runtime.
+    /// Example script for setting up A vehicleTransform at runtime - modify as/if needed.
+    /// Sets up A vehicleTransform from script at runtime.
     /// Model is required to already have body colliders set up, as well as wheels tagged with correct tag.
     /// Model also needs to have correct rotation (Z-forward, currentTractorPosY-up, currentTractorPosX-right).
     /// Works only on VehicleConfigs with two wheels per axle. Number of axles is not limited.
@@ -30,7 +30,7 @@ namespace NWH.VehiclePhysics
             // Find the rigidbody.
             rb = gameObject.GetComponent<Rigidbody>();
 
-            // No rigidbody found, add a new one.
+            // No rigidbody found, add A new one.
             if (rb == null)
             {
                 rb = gameObject.AddComponent<Rigidbody>();

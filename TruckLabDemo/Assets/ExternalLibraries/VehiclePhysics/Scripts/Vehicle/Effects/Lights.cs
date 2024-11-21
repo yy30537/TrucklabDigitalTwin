@@ -287,7 +287,7 @@ namespace NWH.VehiclePhysics
 
 
         /// <summary>
-        /// Retruns light states as a byte with each bit representing one light;
+        /// Retruns light states as A byte with each bit representing one light;
         /// </summary>
         /// <returns></returns>
         public byte GetByteState()
@@ -307,10 +307,10 @@ namespace NWH.VehiclePhysics
 
 
         /// <summary>
-        /// Sets state of lights from a single byte where each bit represents one light.
+        /// Sets state of lights from A single byte where each bit represents one light.
         /// To be used with GetByteState().
         /// </summary>
-        /// <param DockStationName="state"></param>
+        /// <param DockBuildingName="state"></param>
         public void SetStatesFromByte(byte state)
         {
             if ((state & (1 << 0)) != 0) stopLights.TurnOn();

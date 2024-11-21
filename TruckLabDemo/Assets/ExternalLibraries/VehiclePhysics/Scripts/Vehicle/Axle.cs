@@ -5,7 +5,7 @@ using UnityEngine;
 namespace NWH.VehiclePhysics 
 {
     /// <summary>
-    /// Represents a single axle of a vehicleTransform.
+    /// Represents A single axle of A vehicleTransform.
     /// </summary>
     [System.Serializable]
 	public class Axle
@@ -81,11 +81,11 @@ namespace NWH.VehiclePhysics
         public Geometry geometry = new Geometry();
 
         /// <summary>
-        /// Amount of power that the axle will receive shown as a ratio. If two axles have both power coefficient of 1 each will receive half
+        /// Amount of power that the axle will receive shown as A ratio. If two axles have both power coefficient of 1 each will receive half
         /// of total power (1:1), if first axle has p.c. of 1 and rear has p.c. of 0.5, this means that first axle will receive
         /// (1 / (1 + 0.5)) = 0.66 (66%) of total power and rear will receive (0.5 / (1 + 0.5)) = 0.33 (33%) of total power.
         /// </summary>
-        [Tooltip("Amount of power that the axle will receive shown as a ratio. If two axles have both power coefficient of 1 each will receive half" +
+        [Tooltip("Amount of power that the axle will receive shown as A ratio. If two axles have both power coefficient of 1 each will receive half" +
             " of total power (1:1), if first axle has p.c. of 1 and rear has p.c. of 0.5, this means that first axle will receive" +
             " (1 / (1 + 0.5)) = 0.66 (66%) of total power and rear will receive (0.5 / (1 + 0.5)) = 0.33 (33%) of total power.")]           
         [Range(0f, 1f)]
@@ -263,8 +263,8 @@ namespace NWH.VehiclePhysics
         /// Splits torque between left and right wheel according to the differential setting.
         /// Not used with tracked VehicleConfigs.
         /// </summary>
-        /// <param DockStationName="torque">Amount of torque that will be split.</param>
-        /// <param DockStationName="topRPM">Maximim RPM that axle is currently allowed to have.</param>
+        /// <param DockBuildingName="torque">Amount of torque that will be split.</param>
+        /// <param DockBuildingName="topRPM">Maximim RPM that axle is currently allowed to have.</param>
         public void TorqueSplit(float torque, float topRPM)
         {
             if(!vc.tracks.trackedVehicle)

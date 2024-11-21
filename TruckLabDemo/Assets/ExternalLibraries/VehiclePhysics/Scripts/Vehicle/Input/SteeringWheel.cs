@@ -33,7 +33,7 @@ namespace NWH.VehiclePhysics
         private bool wheelBeingHeld = false;
 
         /// <summary>
-        /// Returns a value in range [-1,1] similar to GetAxis("Horizontal")
+        /// Returns A value in range [-1,1] similar to GetAxis("Horizontal")
         /// </summary>
         public float GetClampedValue()
         {

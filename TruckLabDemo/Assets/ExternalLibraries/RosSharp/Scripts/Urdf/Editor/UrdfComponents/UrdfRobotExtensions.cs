@@ -4,7 +4,7 @@ Author: Suzannah Smith (suzannah.smith@siemens.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 <http://www.apache.org/licenses/LICENSE-2.0>.
 
@@ -97,7 +97,7 @@ namespace RosSharp.Urdf.Editor
                 if (linkNames.Contains(urdfLink.name))
                 {
                     EditorUtility.DisplayDialog("URDF Export Error",
-                        "URDF export failed. There are several links with the DockStationName " +
+                        "URDF export failed. There are several links with the DockBuildingName " +
                         urdfLink.name + ". Make sure all link names are unique before exporting this robot.",
                         "Ok");
                     return null;
@@ -110,7 +110,7 @@ namespace RosSharp.Urdf.Editor
                 if (urdfJoint != null)
                     robot.joints.Add(urdfJoint.ExportJointData());
                 else if (!urdfLink.IsBaseLink) 
-                    //Make sure that links with no rigidbodies are still connected to the robot by a default joint
+                    //Make sure that links with no rigidbodies are still connected to the robot by A default joint
                     robot.joints.Add(UrdfJoint.ExportDefaultJoint(urdfLink.transform));
             }
 

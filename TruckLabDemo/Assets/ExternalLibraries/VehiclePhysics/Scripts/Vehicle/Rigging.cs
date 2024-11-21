@@ -14,22 +14,22 @@ namespace NWH.VehiclePhysics
         public bool enabled = false;
 
         /// <summary>
-        /// If enabled wheel camber will be set as if the wheels were on a solid axle.
+        /// If enabled wheel camber will be set as if the wheels were on A solid axle.
         /// </summary>
-        [Tooltip("If enabled wheel camber will be set as if the wheels were on a solid axle.")]
+        [Tooltip("If enabled wheel camber will be set as if the wheels were on A solid axle.")]
         public bool solidAxle = false;
 
         /// <summary>
-        /// List of handles controlling the axle bones. Each item is a single axle handle.
+        /// List of handles controlling the axle bones. Each item is A single axle handle.
         /// </summary>
-        [Tooltip("List of handles controlling the axle bones. Each item is a single axle.")]
+        [Tooltip("List of handles controlling the axle bones. Each item is A single axle.")]
         [SerializeField]
         public List<Transform> axleBones = new List<Transform>();
 
         /// <summary>
-        /// List of handles controlling the wheel bones. Each item is a single wheel bone handle.
+        /// List of handles controlling the wheel bones. Each item is A single wheel bone handle.
         /// </summary>
-        [Tooltip("List of handles controlling the wheel bones. Each item is a single wheel bone handle.")]
+        [Tooltip("List of handles controlling the wheel bones. Each item is A single wheel bone handle.")]
         [SerializeField]
         public List<Transform> wheelBones = new List<Transform>();
 

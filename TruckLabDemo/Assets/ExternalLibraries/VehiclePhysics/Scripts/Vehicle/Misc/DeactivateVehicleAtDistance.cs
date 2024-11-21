@@ -6,7 +6,7 @@ using NWH.WheelController3D;
 namespace NWH.VehiclePhysics
 {
     /// <summary>
-    /// Class to deactivate a vehicleTransform when player exceeds set distance from it.
+    /// Class to deactivate A vehicleTransform when player exceeds set distance from it.
     /// Script will also deactivate any wheel controllers attached to it.
     /// </summary>
     [RequireComponent(typeof(VehicleController))]
@@ -32,7 +32,7 @@ namespace NWH.VehiclePhysics
 
         void Update()
         {
-            // Let VehicleConfigs run for a few frames to get them initialized and get them to settle
+            // Let VehicleConfigs run for A few frames to get them initialized and get them to settle
             if (Time.frameCount < 30) return;
 
             // Do not do anything if distance is 0 or if player is not active (presumed in vehicleTransform)

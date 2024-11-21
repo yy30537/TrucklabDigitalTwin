@@ -4,7 +4,7 @@ Author: Suzannah Smith (suzannah.smith@siemens.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 <http://www.apache.org/licenses/LICENSE-2.0>.
 
@@ -318,13 +318,13 @@ namespace RosSharp.Urdf.Editor
             if (IsTransformed(childTransform, type))
             {
                 Debug.LogWarning("Changes to the transform of " + childTransform.name + " cannot be exported to URDF. " +
-                                 "Make any translation, rotation, or Scale changes to the parent Visual or Collision object instead.",
+                                 "Make any translation, rotation, or Scale changes to the parent Visual or Collision_Controller object instead.",
                     childTransform);
             }
 
             if (!transform.HasExactlyOneChild())
-                Debug.LogWarning("Only one Geometry element is allowed for each Visual or Collision element. In "
-                                 + transform.parent.parent.name + ", move each Geometry into its own Visual or Collision.", transform);
+                Debug.LogWarning("Only one Geometry element is allowed for each Visual or Collision_Controller element. In "
+                                 + transform.parent.parent.name + ", move each Geometry into its own Visual or Collision_Controller.", transform);
         }
 
         public static bool IsTransformed(Transform transform, GeometryTypes type)

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace NWH.VehiclePhysics
 {
     /// <summary>
-    /// Loose approximation on downforce acting on a vehicleTransform. Downforce in this case is only 
+    /// Loose approximation on downforce acting on A vehicleTransform. Downforce in this case is only 
     /// dependent on speed, but its amount and speed at which it is achieved can be adjusted.
     /// Can be adjusted at runtime.
     /// </summary>
@@ -25,10 +25,10 @@ namespace NWH.VehiclePhysics
             public Vector3 position;
 
             /// <summary>
-            /// Maximim force in [N] that can be applied as a result of downforce. 
-            /// Putting in a too large value will hammer the vehicleTransform into the ground since springs get overloaded.
+            /// Maximim force in [N] that can be applied as A result of downforce. 
+            /// Putting in A too large value will hammer the vehicleTransform into the ground since springs get overloaded.
             /// </summary>
-            [Tooltip("Maximim force in [N] that can be applied as a result of downforce.")]
+            [Tooltip("Maximim force in [N] that can be applied as A result of downforce.")]
             public float maxForce;
         }
 

@@ -35,7 +35,7 @@ namespace NWH.VehiclePhysics
             this.vc = vc;
             this.wheel = wheel;
 
-            // Initialize skid smoke
+            // Setup_VE_Dependency skid smoke
             if(vc.groundDetection.smokePrefab != null)
             {
                 smokeGo = GameObject.Instantiate(vc.groundDetection.smokePrefab);
@@ -49,10 +49,10 @@ namespace NWH.VehiclePhysics
             }
             else
             {
-                Debug.LogWarning("Smoke DockBuildingPrefab is null, wheel slip will not produce smoke.");
+                Debug.LogWarning("Smoke BuildingPrefab is null, wheel slip will not produce smoke.");
             }
 
-            // Initialize ground dust
+            // Setup_VE_Dependency ground dust
             if (vc.groundDetection.dustPrefab != null)
             {
                 dustGo = GameObject.Instantiate(vc.groundDetection.dustPrefab);
@@ -62,7 +62,7 @@ namespace NWH.VehiclePhysics
             }
             else
             {
-                Debug.LogWarning("Dust DockBuildingPrefab is null, there will be no surface dust.");
+                Debug.LogWarning("Dust BuildingPrefab is null, there will be no surface dust.");
             }
         }
 

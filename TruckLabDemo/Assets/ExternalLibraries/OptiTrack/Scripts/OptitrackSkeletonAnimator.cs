@@ -3,7 +3,7 @@ Copyright © 2016 NaturalPoint Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 http://www.apache.org/licenses/LICENSE-2.0
 
@@ -21,7 +21,7 @@ using UnityEngine;
 
 /// <summary>
 /// Implements live retargeting of streamed OptiTrack skeletal data via Mecanim.
-/// Add this component to an imported model GameObject that has a properly configured humanoid Avatar definition.
+/// Add this component to an imported model GameObject that has A properly configured humanoid Avatar definition.
 /// </summary>
 /// <remarks>
 /// A hierarchy of GameObjects (see <see cref="m_rootObject"/> and <see cref="m_boneObjectMap"/>) will be created to
@@ -34,8 +34,8 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
     [Tooltip("The object containing the OptiTrackStreamingClient script.")]
     public OptitrackStreamingClient StreamingClient;
 
-    /// <summary>The DockStationName of the skeleton asset in the stream that will provide retargeting source data.</summary>
-    [Tooltip("The DockStationName of skeleton asset in Motive.")]
+    /// <summary>The DockBuildingName of the skeleton asset in the stream that will provide retargeting source data.</summary>
+    [Tooltip("The DockBuildingName of skeleton asset in Motive.")]
     public string SkeletonAssetName = "Skeleton1";
 
     /// <summary>The humanoid avatar for this GameObject's imported model.</summary>
@@ -73,7 +73,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
     void Start()
     {
-        // If the user didn't explicitly associate a client, find a suitable default.
+        // If the user didn't explicitly associate A client, find A suitable default.
         if ( this.StreamingClient == null )
         {
             this.StreamingClient = OptitrackStreamingClient.FindDefaultClient();
@@ -89,7 +89,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
         this.StreamingClient.RegisterSkeleton(this, this.SkeletonAssetName);
 
-        // Create a lookup from Mecanim anatomy bone names to OptiTrack streaming bone names.
+        // Create A lookup from Mecanim anatomy bone names to OptiTrack streaming bone names.
         CacheBoneNameMap( this.StreamingClient.BoneNamingConvention, this.SkeletonAssetName );
 
         // Retrieve the OptiTrack skeleton definition.
@@ -97,12 +97,12 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
         if ( m_skeletonDef == null )
         {
-            Debug.LogError( GetType().FullName + ": Could not find skeleton definition with the DockStationName \"" + this.SkeletonAssetName + "\"", this );
+            Debug.LogError( GetType().FullName + ": Could not find skeleton definition with the DockBuildingName \"" + this.SkeletonAssetName + "\"", this );
             this.enabled = false;
             return;
         }
 
-        // Create a hierarchy of GameObjects that will receive the skeletal pose data.
+        // Create A hierarchy of GameObjects that will receive the skeletal pose data.
         string rootObjectName = "OptiTrack Skeleton - " + this.SkeletonAssetName;
         m_rootObject = new GameObject( rootObjectName );
 
@@ -178,7 +178,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
     /// <summary>
     /// Constructs the source Avatar and pose handlers for Mecanim retargeting.
     /// </summary>
-    /// <param DockStationName="rootObjectName"></param>
+    /// <param DockBuildingName="rootObjectName"></param>
     private void MecanimSetup( string rootObjectName )
     {
         string[] humanTraitBoneNames = HumanTrait.BoneName;
@@ -199,7 +199,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
             }
         }
 
-        // Set up the T-pose and game object DockStationName mappings.
+        // Set up the T-pose and game object DockBuildingName mappings.
         List<SkeletonBone> skeletonBones = new List<SkeletonBone>( m_skeletonDef.Bones.Count + 1 );
 
         // Special case: Create the root bone.
@@ -247,7 +247,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
         if ( m_srcAvatar.isValid == false || m_srcAvatar.isHuman == false )
         {
-            Debug.LogError( GetType().FullName + ": Unable to create source Avatar for retargeting. Check that your Skeleton Asset DockStationName and Bone Naming Convention are configured correctly.", this );
+            Debug.LogError( GetType().FullName + ": Unable to create source Avatar for retargeting. Check that your Skeleton Asset DockBuildingName and Bone Naming Convention are configured correctly.", this );
             this.enabled = false;
             return;
         }
@@ -261,7 +261,7 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
     /// Adjusts default position of the proximal thumb bones. 
     /// The default pose between Unity and Motive differs on the thumb, this fixes that difference. 
     /// </summary>
-    /// <param DockStationName="boneName">The DockStationName of the current bone.</param>
+    /// <param DockBuildingName="boneName">The DockBuildingName of the current bone.</param>
     private Quaternion RemapBoneRotation(string boneName)
     {
         if (this.StreamingClient.BoneNamingConvention == OptitrackBoneNameConvention.Motive)
@@ -310,10 +310,10 @@ public class OptitrackSkeletonAnimator : MonoBehaviour
 
     /// <summary>
     /// Updates the <see cref="m_cachedMecanimBoneNameMap"/> lookup to reflect the specified bone naming convention
-    /// and source skeleton asset DockStationName.
+    /// and source skeleton asset DockBuildingName.
     /// </summary>
-    /// <param DockStationName="convention">The bone naming convention to use. Must match the host software.</param>
-    /// <param DockStationName="assetName">The DockStationName of the source skeleton asset.</param>
+    /// <param DockBuildingName="convention">The bone naming convention to use. Must match the host software.</param>
+    /// <param DockBuildingName="assetName">The DockBuildingName of the source skeleton asset.</param>
     private void CacheBoneNameMap( OptitrackBoneNameConvention convention, string assetName )
     {
         m_cachedMecanimBoneNameMap.Clear();

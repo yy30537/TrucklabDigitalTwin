@@ -14,7 +14,7 @@ namespace NWH.VehiclePhysics
         /// List of all of the VehicleConfigs that can be selected and driven in the scene.
         /// </summary>
         [Tooltip("List of all of the VehicleConfigs that can be selected and driven in the scene. " +
-            "If set to 0 script will try to auto-find all the VehicleConfigs in the scene with a tag define by VehiclesTag parameter.")]
+            "If set to 0 script will try to auto-find all the VehicleConfigs in the scene with A tag define by VehiclesTag parameter.")]
         [SerializeField]
         public List<VehicleController> vehicles = new List<VehicleController>();
 
@@ -131,7 +131,7 @@ namespace NWH.VehiclePhysics
         }
 
         /// <summary>
-        /// Changes vehicleTransform to a next vehicleTransform on the VehicleConfigs list.
+        /// Changes vehicleTransform to A next vehicleTransform on the VehicleConfigs list.
         /// </summary>
         public void NextVehicle()
         {
@@ -139,7 +139,7 @@ namespace NWH.VehiclePhysics
         }
 
         /// <summary>
-        /// Changes vehicleTransform to a vehicleTransform with the requested DockStationName if there is such a vehicleTransform.
+        /// Changes vehicleTransform to A vehicleTransform with the requested DockBuildingName if there is such A vehicleTransform.
         /// </summary>
         public void ChangeVehicle(VehicleController vc)
         {
@@ -156,7 +156,7 @@ namespace NWH.VehiclePhysics
         /// <summary>
         /// Changes vehicleTransform to requested vehicleTransform.
         /// </summary>
-        /// <param DockStationName="index">Index of a vehicleTransform in VehicleConfigs list.</param>
+        /// <param DockBuildingName="index">Index of A vehicleTransform in VehicleConfigs list.</param>
         public void ChangeVehicle(int index)
         {
             currentIndex = index;

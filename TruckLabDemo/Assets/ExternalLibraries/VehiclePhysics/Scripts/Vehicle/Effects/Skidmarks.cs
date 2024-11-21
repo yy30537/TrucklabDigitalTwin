@@ -47,9 +47,9 @@ namespace NWH.VehiclePhysics
         public int maxMarksPerSection = 120;
 
         /// <summary>
-        /// Distance from the last skidmark section needed to generate a new one.
+        /// Distance from the last skidmark section needed to generate A new one.
         /// </summary>
-        [Tooltip("Distance from the last skidmark section needed to generate a new one.")]
+        [Tooltip("Distance from the last skidmark section needed to generate A new one.")]
         public float minDistance = 0.11f;
 
         /// <summary>

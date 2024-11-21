@@ -20,7 +20,7 @@ namespace NWH.VehiclePhysics
 
             foreach (Wheel wheel in vc.Wheels)
             {
-                // Initialize surface audio source
+                // Setup_VE_Dependency surface audio source
                 AudioSource a = wheel.ControllerGO.AddComponent<AudioSource>();
                 vc.sound.SetAudioSourceDefaults(a, false, false, volume);
                 Sources.Add(a);

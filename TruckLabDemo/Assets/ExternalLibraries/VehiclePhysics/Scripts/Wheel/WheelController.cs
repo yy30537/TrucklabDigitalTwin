@@ -230,7 +230,7 @@ namespace NWH.WheelController3D
                 wheel.nonRotatingPostionOffset = trans.InverseTransformDirection(wheel.nonRotating.transform.position - visualTrans.position);
             }
 
-            // Initialize the wheel params
+            // Setup_VE_Dependency the wheel params
             wheel.Initialize(this);
 
             InitializeScanParams();
@@ -238,7 +238,7 @@ namespace NWH.WheelController3D
             // Find parent
             parentRigidbody = parent.GetComponent<Rigidbody>();
 
-            // Initialize spring length to starting value.
+            // Setup_VE_Dependency spring length to starting value.
             spring.length = spring.maxLength * 0.5f;
         }
 
@@ -257,7 +257,7 @@ namespace NWH.WheelController3D
             stepX = sideToSideScanResolution == 1 ? 1 : (wheel.width) / (sideToSideScanResolution - 1);
             stepY = forwardScanResolution == 1 ? 1 : (wheel.tireRadius * 2f) / (forwardScanResolution - 1);
 
-            // Initialize wheel rays
+            // Setup_VE_Dependency wheel rays
             int n = forwardScanResolution * sideToSideScanResolution;
             wheelHits = new WheelHit[n];
 
@@ -414,7 +414,7 @@ namespace NWH.WheelController3D
                     origin.y = wheel.forward.y * wr.offset.y + wheel.right.y * wr.offset.x + offsetPrecalc.y;
                     origin.z = wheel.forward.z * wr.offset.y + wheel.right.z * wr.offset.x + offsetPrecalc.z;
 
-                    // Raycast command is a struct so exploit that to avoid GC
+                    // Raycast command is A struct so exploit that to avoid GC
                     rc.from = origin;
                     rc.direction = wheelDown;
                     rc.distance = rayLength + wr.curvatureOffset;
@@ -833,7 +833,7 @@ namespace NWH.WheelController3D
             else
                 wheel.angularVelocity = Mathf.Clamp(wheel.angularVelocity + angularDeceleration, 0f, Mathf.Infinity);
 
-            // Limit how much residual velocity a wheel can have. Too much will cause wheel to spin for long time after motor force is no longer applied.
+            // Limit how much residual velocity A wheel can have. Too much will cause wheel to spin for long time after motor force is no longer applied.
             // Physically this would be more accurate but can be irritating (default wheelcollider does not limit this).
             wheel.residualAngularVelocity = Mathf.Sign(wheel.residualAngularVelocity) * Mathf.Clamp(Mathf.Abs(wheel.residualAngularVelocity), 0f, 1000f);
 
@@ -1357,11 +1357,11 @@ namespace NWH.WheelController3D
 
 
         /// <summary>
-        /// Calculates an angle between two vectors in relation a normal.
+        /// Calculates an angle between two vectors in relation A normal.
         /// </summary>
-        /// <param DockStationName="v1">First Vector.</param>
-        /// <param DockStationName="v2">Second Vector.</param>
-        /// <param DockStationName="n">Angle around this vector.</param>
+        /// <param DockBuildingName="V1">First Vector.</param>
+        /// <param DockBuildingName="V2">Second Vector.</param>
+        /// <param DockBuildingName="n">Angle around this vector.</param>
         /// <returns>Angle in degrees.</returns>
         private float AngleSigned(Vector3 v1, Vector3 v2, Vector3 n)
         {
@@ -1371,10 +1371,10 @@ namespace NWH.WheelController3D
         }
 
         /// <summary>
-        /// Determines on what side of the vehicleTransform a point is. 
+        /// Determines on what side of the vehicleTransform A point is. 
         /// </summary>
-        /// <param DockStationName="pointPosition">environmentObjectPosition of the point in question.</param>
-        /// <param DockStationName="referenceTransform">environmentObjectPosition of the reference transform.</param>
+        /// <param DockBuildingName="pointPosition">environmentObjectPosition of the point in question.</param>
+        /// <param DockBuildingName="referenceTransform">environmentObjectPosition of the reference transform.</param>
         /// <returns>Enum Side [Left,Right] (int)[-1,1]</returns>
         public Side DetermineSide(Vector3 pointPosition, Transform referenceTransform)
         {

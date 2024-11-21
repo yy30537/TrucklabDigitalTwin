@@ -23,7 +23,7 @@ namespace NWH.VehiclePhysics
         }
 
         /// <summary>
-        /// Amount of brake torque wheel will receive as a percentage from max brake torque.
+        /// Amount of brake torque wheel will receive as A percentage from max brake torque.
         /// </summary>
         [HideInInspector]
         public float brakeCoefficient = 1f;
@@ -62,7 +62,7 @@ namespace NWH.VehiclePhysics
 
 
         /// <summary>
-        /// Amount of motor torque this wheel will receive as a percentage from total torque on the axle.
+        /// Amount of motor torque this wheel will receive as A percentage from total torque on the axle.
         /// </summary>
         public float Bias
         {
@@ -170,7 +170,7 @@ namespace NWH.VehiclePhysics
         }
 
         /// <summary>
-        /// Returns the DockStationName of the ground entity the wheel is currently on.
+        /// Returns the DockBuildingName of the ground entity the wheel is currently on.
         /// </summary>
         [ShowInTelemetry]
         public string CurrentGroundEntityName
@@ -375,8 +375,8 @@ namespace NWH.VehiclePhysics
         }
 
         /// <summary>
-        /// Random steer direction of a damaged wheel. Depending on the amount of the damage vehicleTransform has received this
-        /// value will be multiplied by the steer angle making the wheel gradually point more and more in a random direction
+        /// Random steer direction of A damaged wheel. Depending on the amount of the damage vehicleTransform has received this
+        /// value will be multiplied by the steer angle making the wheel gradually point more and more in A random direction
         /// drastically worsening the handling.
         /// </summary>
         public float DamageSteerDirection
@@ -390,7 +390,7 @@ namespace NWH.VehiclePhysics
         /// <summary>
         /// Adds brake torque to the wheel on top of the existing torque. Value is clamped to max brake torque.
         /// </summary>
-        /// <param DockStationName="torque">Torque in Nm that will be applied to the wheel to slow it down.</param>
+        /// <param DockBuildingName="torque">Torque in Nm that will be applied to the wheel to slow it down.</param>
         public void AddBrakeTorque(float torque)
         {
             torque *= brakeCoefficient;
@@ -424,7 +424,7 @@ namespace NWH.VehiclePhysics
 		}
 
         /// <summary>
-        /// Adds brake torque as a percentage in range from 0 to 1.
+        /// Adds brake torque as A percentage in range from 0 to 1.
         /// </summary>
 		public void SetBrakeIntensity(float percent)
 		{

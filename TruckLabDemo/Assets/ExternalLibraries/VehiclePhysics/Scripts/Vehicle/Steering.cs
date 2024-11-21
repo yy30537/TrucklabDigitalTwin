@@ -56,7 +56,7 @@ namespace NWH.VehiclePhysics
         public GameObject steeringWheel;
 
         /// <summary>
-        /// Intensity of braking used when steering a tracked vehicleTransform. Percentage of the max brake torque.
+        /// Intensity of braking used when steering A tracked vehicleTransform. Percentage of the max brake torque.
         /// Set to 1 for 100% braking torque when using steer. Higer value will make the tracked vehicleTransform
         /// turn tighter but will slow it down more.
         /// </summary>

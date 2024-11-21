@@ -4,7 +4,7 @@ Author: Suzannah Smith (suzannah.smith@siemens.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 <http://www.apache.org/licenses/LICENSE-2.0>.
 
@@ -54,7 +54,7 @@ namespace RosSharp.Urdf.Editor
             showDetails = EditorGUILayout.Foldout(showDetails, "Joint URDF Configuration", true);
             if (showDetails)
             {
-                urdfJoint.JointName = EditorGUILayout.TextField("RegionName", urdfJoint.JointName);
+                urdfJoint.JointName = EditorGUILayout.TextField("SpaceName", urdfJoint.JointName);
 
                 if (urdfJoint.JointType != UrdfJoint.JointTypes.Fixed)
                     GUILayout.BeginVertical("HelpBox");

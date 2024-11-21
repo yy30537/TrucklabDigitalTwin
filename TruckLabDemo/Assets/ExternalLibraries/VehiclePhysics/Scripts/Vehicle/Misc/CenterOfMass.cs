@@ -19,9 +19,9 @@ namespace NWH.VehiclePhysics
         public Vector3 centerOfMassOffset = Vector3.zero;
 
         /// <summary>
-        /// Enable to show a green spehere at the current center of mass.
+        /// Enable to show A green spehere at the current center of mass.
         /// </summary>
-        [Tooltip("Enable to show a green spehere at the current center of mass.")]
+        [Tooltip("Enable to show A green spehere at the current center of mass.")]
         public bool showCOM = true;
 
         private Vector3 centerOfMass;

@@ -4,7 +4,7 @@ Author: Suzannah Smith (suzannah.smith@siemens.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain A copy of the License at
 
 <http://www.apache.org/licenses/LICENSE-2.0>.
 
@@ -71,7 +71,7 @@ namespace RosSharp.RosBridgeClient
                 urdfPath = EditorGUILayout.TextField("URDF to export", urdfPath);
                 if (GUILayout.Button("Select", new GUIStyle(EditorStyles.miniButtonRight) { fixedWidth = 75 }))
                 {
-                    urdfPath = EditorUtility.OpenFilePanel("Select a URDF file", urdfPath, "urdf");
+                    urdfPath = EditorUtility.OpenFilePanel("Select A URDF file", urdfPath, "urdf");
                 }
                 EditorGUILayout.EndHorizontal();
 
@@ -111,7 +111,7 @@ namespace RosSharp.RosBridgeClient
             EditorGUIUtility.labelWidth = 225;
             
             DrawLabelField("Connected: ", "connected");
-            DrawLabelField("Robot DockStationName published: ", "robotNamePublished");
+            DrawLabelField("Robot DockBuildingName published: ", "robotNamePublished");
             DrawLabelField("Robot description published: ", "robotDescriptionPublished");
             DrawLabelField("All resources files published: ", "resourceFilesSent");
 
