@@ -58,6 +58,7 @@ Simulation of the Digital Twins is enabled only within the TruckLab Proving Grou
 ### Main Menu
 
 The main menu is located at the bottom of the screen and includes the following:
+
 - **System Log**: Toggle the system log. ![Demo](TruckLabDemo/Images/GIF/2 log and service menu.gif)
 - **Service Menu**: Toggle the service menu. 
 - **DC Schedule**: Toggle the distribution center schedule board. ![Demo](TruckLabDemo/Images/GIF/4 DC Schedule and Region states.gif)
